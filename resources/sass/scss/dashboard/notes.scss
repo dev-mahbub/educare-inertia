@@ -1,0 +1,14 @@
+.educare-common-notes-list {
+    @apply px-[20px] py-[20px] bg-supportingA/10 rounded;
+    h6 {
+        @apply font-semibold text-headingLight mb-2;
+    }
+    ul {
+        li {
+            @apply text-[16px] text-headingLight font-normal;
+            &:not(:last-child) {
+                @apply mb-2;
+            }
+        }
+    }
+}

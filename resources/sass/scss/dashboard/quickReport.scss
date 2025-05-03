@@ -1,0 +1,47 @@
+// quickReport style
+.educare-quick-report-item {
+    @apply flex justify-between items-center py-[20px] px-[30px] maxXs:px-[20px] shadow-[05px_2px_10px_0px_rgb(0,0,0,0.08)] bg-white rounded-lg;
+    .content {
+        span {
+            @apply block text-headingLight/70 text-[14px] mb-[3px];
+        }
+        h3 {
+            @apply text-[28px] font-bold;
+        }
+    }
+}
+.educare-quick-report-icon {
+    @apply h-[60px] w-[60px] min-w-[60px] flex items-center justify-center rounded-full;
+    i {
+        @apply text-[30px] text-white;
+    }
+}
+// quickFeeReport style
+.educare-quick-mis-report-item {
+    @apply min-h-full flex justify-between items-center py-[20px] px-[30px] gap-5 maxXs:px-[20px] shadow-[05px_2px_10px_0px_rgb(0,0,0,0.08)] bg-white rounded-lg;
+    .content {
+        .title {
+            @apply text-[18px] font-bold mb-[5px] text-headingLight;
+        }
+        .amount {
+            @apply inline-block font-medium text-headingLightest;
+        }
+    }
+
+    &.front-contact-wrapper{
+        @apply bg-white/70 hover:bg-white;
+    }
+}
+
+//help desk
+.educare-article {
+    @apply p-[30px] bg-white/70 rounded-lg transition duration-200;
+    &:hover {
+        @apply shadow-[0_2px_10px_0px_rgba(0,0,0,0.08)] bg-white;
+    }
+}
+div.help-desk-app-btn {
+    a,button {
+        @apply inline-flex;
+    }
+}

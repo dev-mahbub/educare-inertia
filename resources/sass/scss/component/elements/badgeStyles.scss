@@ -1,0 +1,25 @@
+//badge styles
+.badge {
+    @apply min-h-[20px] px-2 leading-5 text-[12px] text-white inline-block rounded;
+    &.success {
+        @apply bg-success/80;
+    }
+    &.danger {
+        @apply bg-danger/80;
+    }
+    &.primary {
+        @apply bg-primary/80;
+    }
+    &.warning {
+        @apply bg-warning/80;
+    }
+    &.info {
+        @apply bg-info/80;
+    }
+    &.dark {
+        @apply bg-dark/80;
+    }
+    &.gray {
+        @apply bg-grayLight/80;
+    }
+}

@@ -1,0 +1,374 @@
+.custom-id-header {
+    @apply pb-5 border-b border-grayLight/20;
+}
+
+.header-title {
+    @apply text-[22px] pb-2;
+}
+
+.custom-id-header-wrapper {
+    @apply flex flex-wrap justify-between items-start gap-5;
+
+    .header-file {
+        @apply flex flex-wrap gap-1;
+
+        .header-file-select {
+            @apply flex flex-wrap items-start gap-2;
+        }
+
+        .file-button {
+            @apply flex gap-1;
+        }
+    }
+}
+
+.header-color-picker {
+    @apply flex flex-wrap justify-between items-start gap-2;
+
+    .color-picker {
+        .p-colorpicker-preview {
+            @apply max-w-[38px] h-[38px] rounded-md;
+        }
+    }
+
+    .color-input {
+        @apply flex;
+    }
+}
+
+.header-title-wrapper {
+    @apply flex flex-wrap justify-between items-start gap-5 py-5;
+
+    .header-title {
+        @apply text-[15px] font-medium font-primary text-headingLight pb-1;
+    }
+}
+
+.title-style-btn {
+    .style-btn {
+        @apply w-[30px] p-2 rounded-md;
+    }
+}
+
+.preview-id-card-wrapper {
+    @apply relative w-[208px] h-[330px] overflow-hidden m-auto mt-5 shadow-md border-2 border-headingLight;
+
+    .preview-id-card-header {
+        @apply flex justify-center border-headingLight border-b w-full px-2 pt-2;
+
+        .id-card-info-wrapper {
+            @apply relative text-center;
+
+            .id-card-logo {
+                @apply absolute top-[11px] left-[-10px] w-[25px];
+
+                &.logo-landscape {
+                    @apply w-[35px];
+                }
+            }
+
+            .header-school-title {
+                @apply text-[12px] font-bold text-heading leading-none;
+            }
+
+            .header-title {
+                @apply text-[12px];
+            }
+
+            .affiliate-text {
+                @apply text-[6px] font-semibold leading-none;
+            }
+
+            .id-card-info {
+                @apply px-3;
+
+                span {
+                    @apply block text-[5px];
+                }
+            }
+        }
+    }
+
+    &.landscape-wrapper {
+        @apply relative w-full h-full;
+
+        .preview-id-card-header {
+            @apply border-b-2 border-border
+        }
+
+        @apply h-[208px] w-[330px] border-none;
+
+        .header-school-title {
+            @apply text-[13px] pl-[30px];
+        }
+
+        .id-card-info {
+            &.landscape-info {
+                @apply px-0;
+
+                .affiliate-text {
+                    @apply text-[9px];
+                }
+
+                span {
+                    @apply text-[7px] leading-[10px] text-heading;
+                }
+
+            }
+        }
+
+        .landscape-card-body {
+            @apply relative;
+
+            .student-name {
+                @apply text-[14px] font-semibold text-heading text-center;
+            }
+
+            .landscape-card-body {
+                @apply flex px-5;
+            }
+            .employee-id-text-landscape{
+                @apply bg-yellow-400 text-[14px] w-[130px] m-auto text-center font-semibold mt-1;
+            }
+
+            .id-card-user-logo {
+                @apply flex justify-center items-center w-[60px] h-[80px] border border;
+
+                img {
+                    @apply w-[50px];
+                }
+            }
+
+            .landscape-img-rotet-text {
+                @apply text-[11px] rotate-90;
+
+                &.text-identity-landscape {
+                    @apply absolute top-[32px] left-[-32px] font-semibold text-headingLight;
+                }
+
+                &.text-year-landscape {
+                    @apply absolute top-[32px] right-[-12px] text-[11px] font-semibold text-headingLight;
+                }
+
+            }
+            .landscape-img-rotet-text-emp{
+                @apply text-[11px] rotate-[-90deg];
+                &.emp-identity-landscape{
+                    @apply absolute top-[32px] left-[-32px] font-semibold text-danger;
+                }
+            }
+            .prev-drop-icon{
+                @apply flex items-center mt-[2px];
+                .icon-color-danger{
+                    @apply text-danger;
+                }
+                .prev-blood-group{
+                    @apply text-[12px];
+                }
+            }
+        }
+
+        .preview-id-card-footer-landscape {
+            @apply absolute bottom-0 w-full h-[33px] px-5;
+
+            .footer-info {
+                @apply flex justify-between items-end;
+
+                .mobile-no {
+                    @apply text-[11px] font-semibold text-heading;
+                }
+                .principle{
+                    @apply text-[11px] font-semibold text-heading;
+                }
+            }
+        }
+    }
+
+    .preview-id-card-img-wrapper {
+        @apply relative p-[5px];
+
+        .employee-id-text{
+            @apply bg-yellow-400 text-[14px] font-semibold text-center w-[130px] m-auto mb-1;
+        }
+
+        .body-img {
+            @apply relative flex flex-col gap-5 justify-center items-center;
+
+            .body-img-rotet-text {
+                @apply rotate-90 text-[10px] font-semibold text-headingLight;
+                &.card-rotet-employee{
+                    @apply rotate-[-90deg] absolute left-4 top-[28px] text-danger;
+                }
+
+                &.text-identity {
+                    @apply absolute left-4 top-8;
+                }
+
+                &.text-academic-year {
+                    @apply absolute right-4 top-8;
+                }
+            }
+
+            .id-card-user-logo {
+                @apply flex justify-center items-center w-[60px] h-[80px] border border;
+                &.employee-logo{
+                    @apply h-[70px];
+                }
+
+                img {
+                    @apply w-[50px];
+                }
+            }
+        }
+
+        .icon-drop {
+            @apply absolute left-4 top-5 flex flex-col justify-center items-center;
+
+            .icon-Drop {
+                @apply text-[25px] text-danger;
+                &.icon-color-danger{
+                    @apply text-danger;
+                }
+            }
+
+            .blood-group {
+                @apply text-[12px] font-semibold;
+            }
+
+        }
+        
+    }
+
+    .prev-id-card-student-name {
+        h5 {
+            @apply text-center text-[14px] font-semibold bg-danger text-white leading-none py-1;
+        }
+    }
+
+    .preview-id-student-info {
+        @apply px-4 block gap-2 pt-1;
+
+        &.style-one {
+            @apply flex;
+        }
+
+        &.style-two {
+            @apply flex px-2;
+        }
+
+        &.landscape-student-info {
+            @apply px-2;
+        }
+
+        .student-info {
+            @apply block text-[10px] font-semibold leading-4;
+
+            &.info-address {
+                @apply text-[8px];
+            }
+
+            &.info-father-name {
+                @apply text-[9px];
+            }
+
+            .info-name {
+                @apply text-heading;
+            }
+
+            .info-value {
+                @apply text-primary;
+            }
+        }
+
+    }
+
+    .preview-id-card-footer {
+        @apply absolute bottom-0 left-0 w-full h-[33px];
+
+        .footer-info {
+            @apply h-full pb-0 px-2 flex justify-between items-end;
+
+            .mobile-no {
+                @apply text-heading text-[8px] font-semibold;
+
+                span {
+                    @apply font-bold text-[10px];
+                }
+            }
+
+            .principle {
+                @apply text-[8px] font-semibold pr-2 leading-4;
+            }
+        }
+    }
+}
+
+.preview-id-card-footer-landscape{
+    .principle {
+        @apply text-[8px] font-semibold pr-2 leading-3;
+    }
+}
+
+//landscape footer 
+.preview-id-card-wrapper-landscape{
+    @apply relative h-[208px] w-[330px] m-auto mt-5 shadow-md ;
+}
+
+.card-bg-wrapper {
+    @apply flex gap-4;
+
+    .card-bg {
+        @apply flex gap-5 flex-wrap justify-center items-center py-5;
+
+        .card-bg-img {
+            @apply relative w-[100px] shadow-md;
+        }
+
+        .card-bg-btn {
+            @apply absolute bottom-0 right-0;
+
+            .card-bg-style {
+                @apply bg-success w-[30px] h-[30px] text-white rounded-sm;
+            }
+        }
+    }
+}
+
+//preview footer
+.id-card-backpage {
+    @apply p-1.5 w-full h-full flex justify-between flex-col bg-supportingA/10;
+
+    .instruction-title {
+        @apply flex flex-col;
+
+        p {
+            @apply text-[12px] text-heading font-bold leading-none pb-1.5;
+        }
+
+        .instruction-desc {
+            @apply text-[12px] italic leading-4;
+        }
+    }
+
+    .instruction-note {
+        @apply leading-none;
+
+        .note-title {
+            @apply text-[12px] font-bold leading-none;
+        }
+
+        .note-desc {
+            @apply text-[11px] italic leading-none;
+        }
+    }
+}
+.landscape-student-info {
+    @apply px-2;
+    .student-info{
+        @apply leading-3;
+        .info-name {
+            @apply text-heading text-[12px];
+        }
+    }
+}
+

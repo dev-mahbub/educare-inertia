@@ -1,0 +1,25 @@
+// UpcomingEvent style
+.event-date-tag {
+	@apply inline-block text-white px-[10px] py-[6px] rounded-[3px] font-semibold bg-primary;
+}
+.educare-upcoming-event-list {
+	ul {
+		li {
+			@apply flex justify-between items-center;
+			&:not(:last-child) {
+				@apply mb-[10px];
+			}
+		}
+	}
+}
+.educare-upcoming-list-title {
+	@apply text-[14px] text-headingLight;
+	a {
+		&:hover {
+			@apply text-primary;
+		}
+	}
+}
+.educare-upcoming-list-timeline  {
+	@apply text-headingLight/70 font-medium;
+}

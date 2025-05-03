@@ -1,0 +1,242 @@
+.educare-dashboard-header-main {
+    @apply flex justify-between relative z-50 items-center min-h-[73px] px-[60px] max2Xl:px-[30px] maxSm:px-[15px] maxSm:py-[5px] bg-dark;
+}
+.educare-dashboard-header-left {
+    @apply min-w-[260px] w-[260px] maxSm:w-auto maxSm:min-w-[40px] border-r border-white/10;
+}
+.educare-dashboard-header-right {
+    width: calc(100% - 260px);
+    @apply maxSm:w-full;
+}
+.educare-dashboard-header-logo-wrap {
+    @apply flex justify-between items-center py-[13px] pr-5;
+}
+.educare-dashboard-header-logo {
+    @apply maxSm:hidden;
+    img {
+        @apply h-[60px] max-w-[170px];
+    }
+}
+.educare-dashboard-header-logged {
+    @apply maxLg:hidden flex gap-x-2 pl-7;
+    &-text {
+        h4 {
+            @apply maxXl:text-[20px] text-[22px] font-semibold text-light;
+        }
+        span {
+            @apply block text-[14px] text-grayLight;
+        }
+    }
+}
+
+.educare-dashboard-header-right {
+    @apply flex justify-between maxLg:justify-end sm:gap-x-5;
+}
+.educare-dashboard-header-info {
+    @apply flex maxXl:gap-[10px] gap-x-5 items-center;
+}
+.educare-dashboard-header-info-date {
+    @apply flex items-center gap-x-2 maxSm:hidden;
+}
+.educare-dashboard-header-info-date-select {
+    select {
+        @apply bg-transparent p-0 pr-10 text-light border-none outline-none outline-0;
+        option {
+            @apply text-headingLight cursor-pointer;
+        }
+    }
+}
+.educare-dashboard-header-info-date-select {
+    [type="text"]:focus,
+    input:where(:not([type])):focus,
+    [type="email"]:focus,
+    [type="url"]:focus,
+    [type="password"]:focus,
+    [type="number"]:focus,
+    [type="date"]:focus,
+    [type="datetime-local"]:focus,
+    [type="month"]:focus,
+    [type="search"]:focus,
+    [type="tel"]:focus,
+    [type="time"]:focus,
+    [type="week"]:focus,
+    [multiple]:focus,
+    textarea:focus,
+    select:focus {
+        --tw-ring-color: trasparent;
+        border-color: trasparent;
+    }
+}
+.educare-dashboard-header-info-notification {
+    @apply flex gap-x-4 px-5 maxSm:border-l-[0] border-x border-white/10;
+    button {
+        @apply h-[50px] w-[50px] inline-flex items-center justify-center text-center bg-white/10 rounded-[50%] relative;
+        i {
+            @apply inline-block text-white text-[20px];
+        }
+        span {
+            @apply absolute -top-[1px] -right-[-1px] text-[12px] font-medium text-white h-4 w-4 leading-4 rounded-[50%] text-center;
+        }
+    }
+}
+.educare-dashboard-header-info-profile {
+    @apply flex gap-x-3;
+    &-img {
+        img {
+            @apply h-[50px] w-[50px] min-w-[50px] rounded-[50%] object-cover;
+        }
+    }
+    &-text {
+        a,
+        button {
+            @apply text-[16px] font-medium font-primary;
+        }
+        span {
+            @apply text-[16px] text-grayLight;
+        }
+    }
+    .educare-dropdown-list {
+        @apply min-w-[180px];
+    }
+}
+.educare-dashboard-header-info-profile-text {
+    .profile-user-img {
+        img {
+            @apply h-[50px] w-[50px] min-w-[50px] rounded-[50%] object-cover;
+        }
+    }
+}
+
+// NotificationStyle
+.educare-notify-dropdown {
+    @apply w-[300px] bg-white p-[20px] maxSm:w-[290px] shadow-[0_0px_70px_rgb(15,38,71,0.2)];
+    ul {
+        li {
+            &:not(:last-child) {
+                @apply mb-[10px];
+            }
+        }
+    }
+}
+.educare-dashboard-header-info-notification {
+    .educare-dropdown-list {
+        @apply mt-0 maxSm:top-[61px];
+        .py-1 {
+            @apply p-0;
+        }
+    }
+}
+.educare-dashboard-header-info-notification-noti {
+    .educare-dropdown-list {
+        @apply md:top-[65px] maxSm:right-[17px] maxXs:right-[-75px];
+    }
+}
+.educare-dashboard-header-info-notification-email {
+    .educare-dropdown-list {
+        @apply md:top-[65px] maxSm:-right-12 maxXs:right-[-144px];
+    }
+}
+.educare-notify-dropdown-item {
+    @apply flex items-start gap-[10px];
+    .thumb {
+        @apply w-[58px] h-[58px] min-w-[58px];
+    }
+    .content {
+        h6 {
+            @apply text-[14px] font-semibold mb-[2px] text-headingLight leading-[1.3];
+            a {
+                @apply hover:text-primary transition duration-300 ease-in-out;
+            }
+        }
+        span {
+            @apply text-[12px] text-headingLight;
+        }
+    }
+}
+
+//online payment style start
+.online-payment-top-header {
+    @apply bg-dark border-b border-[#0d3e89] flex justify-center md:justify-end flex-wrap py-1;
+    ul {
+        @apply flex justify-end gap-4 p-[5px] flex-wrap;
+
+        li {
+            @apply flex items-center gap-[4px];
+
+            a {
+                @apply text-white flex items-center gap-[4px];
+                &:hover {
+                    @apply underline;
+                }
+            }
+
+            span,
+            i {
+                @apply text-white text-[14px];
+            }
+        }
+    }
+}
+
+.school-status-badge {
+    @apply absolute top-[27px] right-0 bg-info text-[12px] px-2 py-[2px] rounded-sm text-white text-center;
+}
+
+.welcome-message {
+    h3 {
+        @apply text-[32px] text-primary/70 font-semibold;
+    }
+    p {
+        @apply text-headingLight;
+    }
+}
+
+.message-btn {
+    @apply grid grid-cols-12 gap-5;
+    .login-box {
+        @apply col-span-12 lg:col-span-4 border border-border rounded-[12px];
+
+        a {
+            @apply flex justify-center items-center flex-col gap-4 py-[55px] px-[20px];
+            i {
+                @apply text-[50px] text-headingLightest;
+            }
+            p {
+                @apply text-center text-headingLightest;
+            }
+        }
+
+        &:hover {
+            @apply bg-supportingA/20 border-supportingA/30;
+        }
+    }
+    &.login-quad-box{
+        .login-box{
+            @apply col-span-12 md:col-span-6 lg:col-span-3;
+        }
+    }
+}
+
+//online payment style end
+
+//front header style start
+.front-header-main {
+    @apply bg-white py-2.5 w-full;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.educare-dashboard-header {
+    @apply flex flex-wrap xl:flex-nowrap w-full items-center justify-between gap-0 xxl:gap-2 xxxl:gap-5;
+}
+
+.header-menus {
+    @apply flex items-center h-full px-5 xl:px-0 mt-2.5 xl:mt-0;
+
+    ul {
+        @apply flex flex-wrap gap-5;
+        li {
+            @apply relative text-headingLight hover:text-headingLight;
+        }
+    }
+}
+//front header style end

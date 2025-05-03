@@ -1,0 +1,179 @@
+.educare-login-area {
+    @apply min-h-[calc(100vh-72px)] flex justify-center items-center;
+}
+.educare-login-wrapper {
+    @apply inline-flex max-w-[1200px] mx-auto items-center maxSm:flex-col maxSm:gap-y-8;
+}
+.educare-login-banner {
+    @apply w-[50%] pt-11 bg-dark maxSm:w-full;
+    &-logo {
+        @apply pl-[50px] minMaxMd:pl-[30px] maxXs:pl-[30px] font-primary;
+    }
+    &-info {
+        @apply px-[50px] minMaxMd:px-[30px] maxXs:px-[30px] text-left;
+        &-item {
+            p {
+                @apply text-[16px] leading-[24px] text-grayLight font-primary;
+            }
+            .educare-login-banner-info-title {
+                @apply text-light leading-none font-primary font-semibold;
+            }
+        }
+    }
+}
+
+.educare-login-form-wraper {
+    @apply w-[50%] px-[70px] py-6 minMaxMd:px-[30px] maxXs:px-[30px] bg-white maxSm:w-full;
+    p {
+        @apply text-[16px] leading-[24px] text-grayLight font-primary;
+    }
+}
+.educare-login-form-title {
+    @apply text-[28px] font-semibold leading-none text-heading font-primary;
+}
+.educare-login-form-social-btn {
+    @apply flex flex-col gap-5;
+    a {
+        @apply h-[60px] w-full flex justify-center items-center leading-[60px] bg-primary/10 text-[16px] text-primary font-medium font-primary rounded-md;
+        img {
+            @apply mr-2;
+        }
+    }
+}
+.educare-login-form-btn {
+    button {
+        @apply h-[60px] w-full leading-[60px] bg-primary text-[16px] text-white font-medium font-primary rounded-md;
+    }
+}
+.educare-form-input-style {
+    position: relative;
+    label {
+        @apply font-medium text-[15px] text-headingLight block mb-2.5;
+    }
+    input {
+        @apply h-[60px] w-full border border-solid border-border text-heading pl-12 pr-10 rounded-md text-[16px] font-primary focus:border-primary;
+    }
+    &-field {
+        @apply relative;
+        span {
+            @apply absolute top-[50%] translate-y-[-50%] left-4;
+            i {
+                @apply text-[20px] text-headingLightest;
+            }
+            &.eye-icon {
+                @apply right-4 left-auto;
+            }
+        }
+        .educare-input-eye-style {
+            input {
+                @apply py-0 border-0 rounded;
+                &::placeholder {
+                    @apply text-border opacity-100 font-primary;
+                }
+            }
+            .MuiFilledInput-root {
+                @apply rounded-md;
+            }
+        }
+    }
+    p {
+        @apply absolute -bottom-5 text-danger text-[12px] font-primary;
+    }
+ }
+
+
+ //site login start here
+ .educare-site-login-wrapper {
+    @apply inline-flex xxxl:w-[1480px] xxxl:max-w-full mx-auto items-stretch gap-x-[60px] maxLg:gap-x-[30px] minMax2Xl:w-[1200px] w-full max-w-full maxMd:flex-col;
+ }
+ .educare-site-login-banner {
+    @apply w-[66%] minMaxXl:w-[60%] minMaxLg:w-[56%] maxMd:w-full bg-primary rounded-t-[10px];
+ }
+ .educare-site-login-form-wraper {
+    @apply w-[34%] minMaxXl:w-[40%] minMaxLg:w-[44%] maxMd:w-full px-[60px] minMax2Xl:px-10 maxXl:px-[30px] maxMd:rounded-b-none py-6 minMaxMd:px-[30px] maxXs:px-[30px] bg-light rounded-[10px];
+ }
+ .educare-site-login-banner-logo {
+    @apply flex gap-5 maxXs:flex-col pb-7 mb-6 border-b border-solid border-white/10;
+    &-left {
+        &-thumb {
+            @apply flex items-center justify-center rounded-lg;
+            a{
+                @apply h-[140px] w-[140px] flex justify-center items-center; 
+                img{
+                    @apply h-full;
+                }
+            }
+        }
+    }
+    &-right {
+        @apply text-left;
+        h4 {
+            @apply text-[28px] maxXs:text-[26px] mb-1 font-bold text-light leading-none;
+        }
+        span {
+            @apply text-[14px] font-medium text-grayLight block mb-3;
+        }
+        .educare-school-address {
+            @apply flex items-center text-[16px] text-light gap-1 mb-5;
+        }
+        &-btn {
+            @apply flex gap-4 flex-wrap;
+            a {
+                @apply h-10 w-10 flex items-center justify-center min-w-[130px] px-4 bg-heading rounded;
+            }
+        }
+    }
+ }
+ .educare-site-login-banner-content {
+    @apply flex flex-wrap;
+    &-address {
+        @apply w-[33%] maxXs:w-[50%] gap-4 text-left mb-4;
+        span {
+            @apply text-[14px] text-grayLight block;
+        }
+        h6 {
+            @apply text-[16px] font-medium text-light;
+        }
+    }
+ }
+ .educare-site-login-banner-top {
+    @apply  p-[50px] pb-2 maxLg:p-[30px] rounded-t-[10px] bg-primary;
+ }
+ .educare-site-login-banner-welcome {
+    @apply text-left p-[50px] maxLg:p-[30px] pr-[290px] minMaxLg:pr-[240px] minMaxMd:pr-[290px] bg-[#073273] rounded-t-[10px] relative;
+    &-img {
+        @apply absolute bottom-0 -right-2.5 maxMd:right-0 maxSm:static maxSm:text-center;
+        img {
+            @apply maxSm:inline-block;
+        }
+    }
+    h4 {
+        @apply text-[24px] font-semibold text-light mb-6;
+    }
+    p {
+        @apply text-[16px] font-normal text-grayLight mb-4;
+    }
+ }
+ .educare-site-login-form-logo {
+    @apply h-[65px] w-[65px] flex items-center justify-center rounded-lg;
+ }
+ .educare-site-login-form-social {
+    @apply flex gap-2;
+    a {
+        @apply h-7 w-7 rounded-[50%] text-center leading-7 bg-borderLight text-white hover:bg-primary transition-colors duration-300;
+    }
+ }
+
+
+ .educare-login-form {
+    .educare-form-input-style {
+        input {
+            @apply outline-none focus:border-border;
+        }
+        .educare-input-eye-style {
+            input {
+                @apply outline-none focus:border-border focus:ring-transparent;
+            }
+        }
+    }
+ }

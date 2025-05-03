@@ -1,0 +1,66 @@
+<?php
+
+namespace App\Models;
+
+use App\Enums\Status;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class SchoolSetting extends Model
+{
+    use HasFactory;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    protected $fillable = [
+        'school_id',
+        'academic_year_id',
+        'admission_seed',
+        'admission_prefix',
+        'admission_postfix',
+        'ticket_url',
+        'ticket_userid',
+        'ticket_password',
+        'admin_number',
+        'training_url',
+        'email_notification',
+        'sms_notification',
+        'is_email_notify',
+        'is_sms_notify',
+        'is_teacher_reply',
+        'is_teacher_compose',
+        'is_parent_reply',
+        'is_parent_compose',
+        'is_enable_email',
+        'is_attendance_backdate',
+        'is_teacher_newsletter',
+        'is_parent_newsletter',
+        'is_student_roll_softable',
+        'is_class_wise_report',
+        'is_teacher_self_attendance',
+        'is_password_visible',
+        'is_biometric_integration',
+        'is_student_biometric_attendance',
+        'is_view_parent_contact',
+        'is_view_tc_copy',
+        'is_pay_online_fee_voucher',
+        'is_uploaded_photo_app',
+        'is_transport_boarding_student',
+        'is_event_module_teacher_login',
+        'is_allow_upload_document',
+        'is_weekly_status_send_to_parent',
+        'status',
+    ];
+
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array<string, string>
+    */
+    protected $casts = [
+        'status' => Status::class,
+    ];
+}

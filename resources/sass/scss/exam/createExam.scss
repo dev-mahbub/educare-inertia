@@ -1,0 +1,80 @@
+.educare-create-school-settings-list {
+    .react-datepicker-wrapper {
+        @apply w-full;
+    }
+}
+.educare-exam-create-form {
+    .educare-create-school-settings-list-check {
+        @apply w-full;
+    }
+    .react-datepicker__close-icon::after {
+        vertical-align: initial;
+    }
+}
+
+//stepper styles
+.educare-exam-stepper-label {
+    @apply bg-white/70 shadow-[0_2px_10px_0px_rgba(0,0,0,0.08)] px-[30px] pb-[24px] pt-7 maxXs:p-[15px] rounded-lg mb-5;
+    .MuiStepper-root {
+        @apply items-start gap-0.5;
+        .MuiStep-root {
+            @apply p-0;
+            .MuiStepLabel-root {
+                @apply flex-col gap-1.5;
+                .MuiSvgIcon-root {
+                    @apply h-[50px] w-[50px] maxSm:w-8 maxSm:h-8 bg-white text-white rounded-[50%] shadow-[0_0px_10px_0px_rgba(0,0,0,0.10)];
+                    &.Mui-active {
+                        @apply text-primary/30;
+                        .MuiStepIcon-text {
+                            @apply fill-white;
+                        }
+                    }
+                    &.Mui-completed {
+                        @apply text-primary;
+                        .MuiStepIcon-text {
+                            @apply fill-white;
+                        }
+                    }
+                    .MuiStepIcon-text {
+                        @apply text-[16px] maxSm:text-[14px] font-semibold fill-headingLight font-primary;
+                    }
+                }
+                .MuiStepLabel-label {
+                    @apply text-[16px] maxSm:text-[14px] font-semibold text-headingLight font-primary;
+                }
+                .MuiStepLabel-iconContainer {
+                    @apply pr-0;
+                }
+            }
+        }
+        .MuiStepConnector-line {
+            @apply mt-[25px] minMaxSm:mt-[25px] border-border/50;
+        }
+    }
+}
+.educare-exam-stepper-btn {
+    @apply flex;
+}
+
+.educare-admission-list.educare-stepper-exam-list,
+.educare-admission-list.educare-stepper-assign-grade-list {
+    table {
+        tr {
+            @apply text-left h-[56px] shadow-[0_4px_9px_0px_rgba(0,0,0,0.04)] relative;
+            th {
+                @apply font-semibold;
+            }
+            th,td {
+                @apply bg-white/70;
+            }
+        }
+    }
+    .educare-exam-field-order {
+        @apply w-[100px] font-primary;
+    }
+}
+.educare-admission-list.educare-stepper-assign-grade-list {
+    table {
+        @apply maxMd:min-w-full;
+    }
+}

@@ -1,0 +1,78 @@
+div {
+    .fc-direction-ltr .fc-toolbar > * > :not(:first-child) {
+        @apply capitalize;
+    }
+    .fc-direction-ltr .fc-button-group > .fc-button:not(:last-child) {
+        @apply capitalize;
+    }
+    .fc .fc-daygrid-day-top {
+        @apply justify-center;
+    }
+    .fc .fc-button-primary {
+        @apply bg-transparent border-border text-headingLight outline-none;
+        &:hover {
+            @apply bg-supportingA/10 border-border text-headingLight;
+        }
+        &:focus {
+            @apply shadow-none;
+        }
+    }
+    .fc .fc-button-primary:not(:disabled).fc-button-active, .fc .fc-button-primary:not(:disabled):active {
+        @apply bg-supportingA/10 border-border text-headingLight shadow-none;
+    }
+    .fc .fc-daygrid-day.fc-day-today {
+        @apply bg-warning/20;
+    }
+    .fc .fc-button-primary:disabled {
+        @apply bg-supportingA/10 border-border text-heading outline-none shadow-none opacity-100;
+    }
+    .fc .fc-button-primary:not(:disabled).fc-button-active:focus, .fc .fc-button-primary:not(:disabled):active:focus {
+        @apply shadow-none;
+    }
+    .fc-direction-ltr .fc-timegrid-slot-label-frame {
+        @apply text-center;
+    }
+    .fc-event {
+        @apply px-2;
+    }
+    .fc .fc-daygrid-day-frame {
+        @apply flex flex-col justify-center items-center;
+    }
+    .fc-h-event {
+        @apply bg-transparent border-transparent;
+    }
+    .fc .fc-toolbar {
+        @apply flex-wrap gap-2.5;
+    }
+    // .fc-col-header,
+    // .fc-col-header {
+    //     min-width: 100% !important;
+    // }
+    // .fc-col-header {
+    //     min-width: 800px !important;
+    // }
+    // .fc-scroller {
+    //     overflow: scroll !important;
+    // }
+    @media only screen and (max-width: 767px){
+        .fc .fc-scrollgrid, .fc .fc-scrollgrid table {
+            table-layout: auto !important;
+        }
+        .fc-scrollgrid-sync-table {
+            width: 100% !important;
+        }
+        .fc-daygrid-body {
+            width: 800px !important;
+        }
+        .fc-scroller {
+            overflow: scroll !important;
+        }
+        // .fc-col-header {
+        //     width: 800px !important;
+        // }
+        // .fc-view-harness {
+        //     height: 400px !important;
+        // }
+    }
+    
+}

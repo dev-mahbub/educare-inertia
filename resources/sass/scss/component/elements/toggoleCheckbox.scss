@@ -1,0 +1,76 @@
+//togglecheckbox
+.educare-toggle-checkbox-button-styles {
+    @apply cursor-pointer inline-block;
+    input[type=checkbox]{
+        @apply hidden;
+    }
+    label{
+        @apply bg-grayLight/80 text-white w-[60px] h-6 pr-3.5 inline-block relative rounded-[50px] text-right transition cursor-pointer;
+        button,span {
+            @apply font-primary text-[14px];
+        }
+    }
+    label:before{
+        content: '';
+        transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+        @apply absolute h-4 w-4 left-1 top-1 rounded-[50%] bg-white;
+    }
+    input[type=checkbox]:checked + label {
+        @apply text-left pr-0 pl-3;
+    }
+    input[type=checkbox]:checked + label:before{
+        @apply left-[40px];
+        transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+    }
+    input[type=checkbox]:checked + label .off{
+        @apply hidden;
+    }
+    input[type=checkbox]:checked + label .on{
+        @apply inline;
+    }
+    input[type=checkbox] + label .on{
+        @apply hidden;
+    }
+    input[type=checkbox] + label .off{
+        @apply inline;
+    }
+    input[type=checkbox]:checked + label{
+        @apply bg-primary/80;
+    }
+    &.educare-toggle-checkbox-button-styles-two {
+        label{
+            @apply w-[90px] bg-success/80 h-10 rounded leading-10;
+        }
+        input[type=checkbox]:checked + label:before{
+            @apply left-[70px];
+        }
+        input[type=checkbox]:checked + label {
+            @apply pl-2 bg-danger/80;
+        }
+        label:before{
+            content: '';
+            @apply top-[4px] h-8 rounded;
+        }
+    }
+    &.educare-toggle-checkbox-button-styles-three {
+        label{
+            @apply w-[90px] bg-danger/80 h-10 rounded leading-10;
+        }
+        input[type=checkbox]:checked + label:before{
+            @apply left-[70px];
+        }
+        input[type=checkbox]:checked + label {
+            @apply pl-2 bg-success/80;
+        }
+        label:before{
+            content: '';
+            @apply top-[4px] h-8 rounded;
+        }
+    }
+}
+
+.input-hidden {
+    input {
+        @apply hidden;
+    }
+}

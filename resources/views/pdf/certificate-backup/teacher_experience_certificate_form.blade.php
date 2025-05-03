@@ -1,0 +1,789 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <title>Training Certificate</title>
+
+    <style>
+        .educare-OuterTable {
+            margin: 0 auto;
+        }
+
+        /* Create a custom checkbox */
+        .educare-container {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Hide the browser's default checkbox */
+        .educare-container input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        /* Create a custom checkbox */
+        .educare-checkmark {
+            position: absolute;
+            top: 0;
+            left: 47%;
+            height: 25px;
+            width: 25px;
+            background-color: #0b52bd;
+        }
+
+        /* When the checkbox is checked, add a blue background */
+        .educare-container input:checked~.educare-checkmark {
+            background-color: #0b52bd;
+        }
+
+        /* Create the educare-checkmark/indicator (hidden when not checked) */
+        .educare-checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        /* Show the educare-checkmark when checked */
+        .educare-container input:checked~.educare-checkmark:after {
+            display: block;
+        }
+
+        /* Style the educare-checkmark/indicator */
+        .educare-container .educare-checkmark:after {
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    </style>
+    <style type="text/css" media="print">
+        @media print {
+            .educare-printarea {
+                display: none;
+            }
+
+            .educare-checkmark {
+                display: none;
+            }
+        }
+
+        @page {
+            size: portrait
+        }
+
+        @page rotated {
+            size: portrait
+        }
+
+        table {
+            page: rotated
+        }
+
+        @page {
+            margin: 0cm
+        }
+
+        /* All margins set to 2cm */
+
+        @page {
+            size: 8.27in 11.69in;
+            /* width height 8.5in 14in */
+        }
+
+        /*@page{orphans:4; widows:2;}*/
+    </style>
+
+</head>
+
+<body style="margin:0;">
+    <form action="/Teacher/SaveExprienceCertificate" method="post">
+        <table style="width: 100%;">
+            <tbody>
+                <tr class="printarea">
+                    <th style="width: 50%;">
+                        <label class="educare-container" style="margin-top: 15px;">
+                            <span
+                                style="padding-left: 90px; font-family: Inter; font-weight: 400; font-size: 16px;">Include
+                                Header</span>
+                            <input type="checkbox" checked="checked" id="showcheck" onclick="myFunction()">
+                            <span class="educare-checkmark"></span>
+                        </label>
+                    </th>
+
+                    <th
+                        style="width: 50%; text-align: right; font-weight: 400; font-size: 13px; height: 30px; padding-right: 23%;">
+
+                        <input type="submit" value="Save" id="btnSaveCertificate"
+                            style="color: #fff; background: #0b52bd; border:0px; padding: 3px 9px; margin-right: 5px; border-radius: 3px; text-decoration: none;">
+                        <input type="button" value="Print" id="btnPrint" onclick="window.print()"
+                            style="color: #fff; background: #0b52bd; border:0px; padding: 3px 9px; margin-right: 5px; border-radius: 3px; text-decoration: none;">
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width: 793.92px; border-collapse: collapse; margin: 0 auto;">
+            <tbody>
+                <tr style="vertical-align: top;">
+                    <td style="width: 100%; height: 1100.24px; border: 1px solid #d9d9d9;">
+                        <table class="educare-OuterTable"
+                            style="margin: 0 auto; font-family: Nunito; border-spacing: 0; border-collapse: collapse; width: 725.92px; height: auto; margin-top: 25px;">
+                            <thead>
+                                <!--title row-->
+                                <tr>
+                                    <th id="myP"
+                                        style="width: 100%; text-align: center; font-weight: 400; font-size: 13px; /* padding-top:15px; */">
+                                        <table style="width: 100%;">
+                                            <tbody>
+                                                <!--Header Row Start-->
+                                                <tr style="vertical-align: top;">
+                                                    <td style="width: 20%;">
+                                                        @if (!empty($teacherData) && !empty($teacherData['school_logo']['path']))
+                                                            <img src="{{ $teacherData['school_logo']['path'] }}"
+                                                                alt="School Logo" style="width:100px;height:90px; ">
+                                                        @else
+                                                            <svg width="100" height="90" viewBox="0 0 80 80"
+                                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <g clip-path="url(#clip0_537_28)">
+                                                                    <path
+                                                                        d="M7.6832 72.3167L14.1828 78.8163L20.6818 72.3167L27.1814 78.8163L33.681 72.3167L40.1806 78.8163L46.6802 72.3167L53.1792 78.8163V1.18359H1.18359V78.8163L7.6832 72.3167Z"
+                                                                        fill="#DDF5FF" />
+                                                                    <path
+                                                                        d="M49.671 1.18359V70.4161L46.6802 67.4254L40.1806 73.925L33.681 67.4254L27.1814 73.925L20.6818 67.4254L14.1828 73.925L7.6832 67.4254L1.18359 73.925V78.8163L7.6832 72.3167L14.1828 78.8163L20.6818 72.3167L27.1814 78.8163L33.681 72.3167L40.1806 78.8163L46.6802 72.3167L53.1792 78.8163V1.18359H49.671Z"
+                                                                        fill="#C1E9F4" />
+                                                                    <path
+                                                                        d="M74.9681 67.1398H35.3277C33.2025 67.1398 31.4795 65.4168 31.4795 63.2915V39.4305C31.4795 37.3053 33.2025 35.5823 35.3277 35.5823H74.9681C77.0933 35.5823 78.8163 37.3053 78.8163 39.4305V63.2915C78.8163 65.4174 77.0933 67.1398 74.9681 67.1398Z"
+                                                                        fill="#6DC54A" />
+                                                                    <path
+                                                                        d="M75.9941 35.7214C76.0844 36.0486 76.1339 36.3922 76.1339 36.748V62.8795C76.1339 63.7511 75.4277 64.4579 74.5561 64.4579H32.6453C32.29 64.4579 31.9458 64.4085 31.6187 64.3181C32.0685 65.9453 33.5583 67.1404 35.3277 67.1404H74.9681C77.0933 67.1404 78.8163 65.4174 78.8163 63.2915V39.4305C78.8163 37.6605 77.6213 36.1707 75.9941 35.7214Z"
+                                                                        fill="#5DB33A" />
+                                                                    <path
+                                                                        d="M45.0448 48.667H37.3476C36.285 48.667 35.4238 47.8058 35.4238 46.7431V41.4514C35.4238 40.3882 36.285 39.527 37.3476 39.527H45.0448C46.108 39.527 46.9692 40.3888 46.9692 41.4514V46.7431C46.9692 47.8058 46.108 48.667 45.0448 48.667Z"
+                                                                        fill="#FFCD50" />
+                                                                    <path
+                                                                        d="M45.0449 39.527H42.9941C44.0568 39.527 44.918 40.3882 44.918 41.4508V46.7425C44.918 47.8051 44.0568 48.667 42.9941 48.667H45.0449C46.1081 48.667 46.9693 47.8051 46.9693 46.7425V41.4508C46.9693 40.3882 46.1081 39.527 45.0449 39.527Z"
+                                                                        fill="#FFBC27" />
+                                                                    <path
+                                                                        d="M74.5827 60.0201C74.5827 61.6143 73.2906 62.9064 71.6964 62.9064C70.1022 62.9064 68.8101 61.6143 68.8101 60.0201C68.8101 58.4258 70.1022 57.1337 71.6964 57.1337C73.2906 57.1337 74.5827 58.4258 74.5827 60.0201Z"
+                                                                        fill="#FF7C48" />
+                                                                    <path
+                                                                        d="M70.2532 60.0201C70.2532 61.6143 68.961 62.9064 67.3668 62.9064C65.7732 62.9064 64.4805 61.6143 64.4805 60.0201C64.4805 58.4258 65.7732 57.1337 67.3668 57.1337C68.961 57.1337 70.2532 58.4258 70.2532 60.0201Z"
+                                                                        fill="#FFCD50" />
+                                                                    <path
+                                                                        d="M1.18347 47.7386C1.83715 47.7386 2.36693 47.2088 2.36693 46.5551V2.36706H51.9969V10.2503C51.9969 10.9034 52.5267 11.4338 53.1803 11.4338C53.8334 11.4338 54.3638 10.9034 54.3638 10.2503V1.18359C54.3638 0.529905 53.8334 0.00012207 53.1803 0.00012207H1.18347C0.529783 0.00012207 0 0.529905 0 1.18359V46.5551C0 47.2088 0.529783 47.7386 1.18347 47.7386Z"
+                                                                        fill="black" />
+                                                                    <path
+                                                                        d="M19.2918 10.1777C19.2918 8.307 17.7702 6.7854 15.8995 6.7854H12.5859C11.4983 6.7854 10.6133 7.67041 10.6133 8.75744V17.5941C10.6133 18.6817 11.4983 19.5661 12.5859 19.5661H15.8995C17.7696 19.5661 19.2918 18.0445 19.2918 16.1738V15.3852C19.2918 14.5417 18.9824 13.7696 18.4721 13.1758C18.9824 12.5819 19.2918 11.8098 19.2918 10.9669V10.1777ZM15.8995 9.15233C16.4647 9.15233 16.9249 9.61254 16.9249 10.1777V10.9669C16.9249 11.5321 16.4647 11.9923 15.8995 11.9923H12.9802V9.15233H15.8995ZM16.9249 16.1738C16.9249 16.7396 16.4647 17.1992 15.8995 17.1992H12.9802V14.3592H15.8995C16.4647 14.3592 16.9249 14.8194 16.9249 15.3846V16.1738Z"
+                                                                        fill="black" />
+                                                                    <path
+                                                                        d="M33.8084 18.3826C33.8084 17.7296 33.2787 17.1992 32.625 17.1992H27.4968V7.96887C27.4968 7.31518 26.967 6.7854 26.3133 6.7854C25.6597 6.7854 25.1299 7.31518 25.1299 7.96887V18.3826C25.1299 19.0363 25.6597 19.5661 26.3133 19.5661H32.625C33.2787 19.5661 33.8084 19.0363 33.8084 18.3826Z"
+                                                                        fill="black" />
+                                                                    <path
+                                                                        d="M36.2543 6.7854C35.6012 6.7854 35.0708 7.31518 35.0708 7.96887V18.3826C35.0708 19.0363 35.6012 19.5661 36.2543 19.5661H42.5659C43.2196 19.5661 43.7494 19.0363 43.7494 18.3826C43.7494 17.7296 43.2196 17.1992 42.5659 17.1992H37.4377V7.96887C37.4377 7.31518 36.908 6.7854 36.2543 6.7854Z"
+                                                                        fill="black" />
+                                                                    <path
+                                                                        d="M23.3948 18.3826V7.96887C23.3948 7.31518 22.865 6.7854 22.2113 6.7854C21.5576 6.7854 21.0278 7.31518 21.0278 7.96887V18.3826C21.0278 19.0363 21.5576 19.5661 22.2113 19.5661C22.865 19.5661 23.3948 19.0363 23.3948 18.3826Z"
+                                                                        fill="black" />
+                                                                    <path
+                                                                        d="M10.061 29.5862C10.061 30.2393 10.5908 30.7697 11.2445 30.7697H31.1266C31.7797 30.7697 32.3095 30.2393 32.3095 29.5862C32.3095 28.9326 31.7797 28.4028 31.1266 28.4028H11.2445C10.5908 28.4028 10.061 28.9326 10.061 29.5862Z"
+                                                                        fill="black" />
+                                                                    <path
+                                                                        d="M34.6763 29.5862C34.6763 30.2393 35.2061 30.7697 35.8597 30.7697H43.118C43.7717 30.7697 44.3015 30.2393 44.3015 29.5862C44.3015 28.9326 43.7717 28.4028 43.118 28.4028H35.8597C35.2061 28.4028 34.6763 28.9326 34.6763 29.5862Z"
+                                                                        fill="black" />
+                                                                    <path
+                                                                        d="M74.968 34.3988H68.9511C68.2975 34.3988 67.7677 34.9286 67.7677 35.5823C67.7677 36.2354 68.2975 36.7658 68.9511 36.7658H74.968C76.4371 36.7658 77.6327 37.9608 77.6327 39.4306V63.2916C77.6327 64.7613 76.4371 65.9569 74.968 65.9569H35.3276C33.8585 65.9569 32.6628 64.7613 32.6628 63.2916V39.4306C32.6628 37.9608 33.8585 36.7658 35.3276 36.7658H63.4189C64.072 36.7658 64.6018 36.2354 64.6018 35.5823C64.6018 34.9286 64.072 34.3988 63.4189 34.3988H54.3638V15.7917C54.3638 15.1381 53.8334 14.6083 53.1803 14.6083C52.5266 14.6083 51.9969 15.1381 51.9969 15.7917V34.3988H35.3276C33.098 34.3988 31.2029 35.857 30.5449 37.8699H11.2445C10.5908 37.8699 10.061 38.3997 10.061 39.0534C10.061 39.7071 10.5908 40.2368 11.2445 40.2368H30.2959V47.3376H11.2445C10.5908 47.3376 10.061 47.8674 10.061 48.5211C10.061 49.1748 10.5908 49.7046 11.2445 49.7046H30.2959V63.2916C30.2959 66.0662 32.553 68.3239 35.3276 68.3239H51.9969V75.96L47.5157 71.4806C47.0536 71.0186 46.3047 71.0186 45.8421 71.4806L40.1793 77.1434L34.5171 71.4806C34.2949 71.2584 33.994 71.1339 33.6803 71.1339C33.3666 71.1339 33.0651 71.2584 32.8435 71.4806L27.1807 77.1434L21.5185 71.4806C21.2963 71.2584 20.9954 71.1339 20.6811 71.1339C20.3673 71.1339 20.0664 71.2584 19.8443 71.4806L14.1821 77.1434L8.51925 71.4806C8.29709 71.2584 7.99618 71.1339 7.68246 71.1339C7.36874 71.1339 7.06784 71.2584 6.84568 71.4806L2.36632 75.96V52.0813C2.36632 51.4276 1.83654 50.8978 1.18286 50.8978C0.529173 50.8978 0 51.4276 0 52.0813V78.8164C0 79.2955 0.288085 79.727 0.730588 79.9101C0.877072 79.9706 1.03088 79.9999 1.18286 79.9999C1.49108 79.9999 1.79382 79.8796 2.02026 79.6532L7.68307 73.991L13.3453 79.6532C13.5675 79.8753 13.8684 79.9999 14.1821 79.9999C14.4964 79.9999 14.7973 79.8753 15.0189 79.6532L20.6817 73.991L26.3445 79.6532C26.5661 79.8753 26.867 79.9999 27.1813 79.9999C27.495 79.9999 27.7959 79.8753 28.0181 79.6532L33.6809 73.991L39.3431 79.6532C39.5653 79.8753 39.8662 79.9999 40.1799 79.9999C40.4936 79.9999 40.7951 79.8753 41.0167 79.6532L46.6795 73.991L52.3435 79.6538C52.6817 79.9919 53.1913 80.0932 53.6332 79.9101C54.0757 79.727 54.3638 79.2955 54.3638 78.817V68.3233H74.968C77.7426 68.3233 80.0003 66.0662 80.0003 63.2916V39.4306C79.9997 36.6559 77.7426 34.3988 74.968 34.3988Z"
+                                                                        fill="black" />
+                                                                    <path
+                                                                        d="M37.3486 49.8504H45.0451C46.759 49.8504 48.153 48.4564 48.153 46.7425V41.4508C48.153 39.7375 46.759 38.3435 45.0451 38.3435H37.3486C35.6348 38.3435 34.2407 39.7375 34.2407 41.4508V46.7425C34.2407 48.4564 35.6348 49.8504 37.3486 49.8504ZM36.6077 41.4508C36.6077 41.0425 36.9397 40.7104 37.3486 40.7104H45.0451C45.4541 40.7104 45.7861 41.0425 45.7861 41.4508V46.7425C45.7861 47.1515 45.4541 47.4835 45.0451 47.4835H37.3486C36.9397 47.4835 36.6077 47.1515 36.6077 46.7425V41.4508Z"
+                                                                        fill="black" />
+                                                                    <path
+                                                                        d="M69.531 56.5765C68.9035 56.1804 68.162 55.9509 67.3667 55.9509C65.1224 55.9509 63.2969 57.7764 63.2969 60.0207C63.2969 62.2643 65.1224 64.0905 67.3667 64.0905C68.162 64.0905 68.9035 63.8604 69.531 63.4649C70.1737 63.8683 70.9226 64.0905 71.6965 64.0905C73.9408 64.0905 75.7663 62.2643 75.7663 60.0207C75.7663 57.7764 73.9408 55.9509 71.6965 55.9509C70.9226 55.9503 70.1737 56.1724 69.531 56.5765ZM65.6638 60.0201C65.6638 59.0813 66.428 58.3172 67.3667 58.3172C68.306 58.3172 69.0696 59.0813 69.0696 60.0201C69.0696 60.9594 68.306 61.7229 67.3667 61.7229C66.428 61.7229 65.6638 60.9594 65.6638 60.0201ZM73.3994 60.0201C73.3994 60.9594 72.6352 61.7229 71.6965 61.7229C71.4939 61.7229 71.2961 61.6851 71.11 61.6167C71.3199 61.126 71.4365 60.5865 71.4365 60.0201C71.4365 59.4537 71.3199 58.9141 71.11 58.4234C71.2961 58.355 71.4939 58.3172 71.6965 58.3172C72.6352 58.3172 73.3994 59.0813 73.3994 60.0201Z"
+                                                                        fill="black" />
+                                                                    <path
+                                                                        d="M42.7646 53.189C42.7646 52.5353 42.2348 52.0056 41.5811 52.0056H35.8085C35.1548 52.0056 34.625 52.5353 34.625 53.189C34.625 53.8427 35.1548 54.3725 35.8085 54.3725H41.5811C42.2354 54.3725 42.7646 53.8427 42.7646 53.189Z"
+                                                                        fill="black" />
+                                                                    <path
+                                                                        d="M35.809 58.6443C35.1553 58.6443 34.6255 59.1741 34.6255 59.8278C34.6255 60.4815 35.1553 61.0113 35.809 61.0113H39.6572C40.3109 61.0113 40.8407 60.4815 40.8407 59.8278C40.8407 59.1741 40.3109 58.6443 39.6572 58.6443H35.809Z"
+                                                                        fill="black" />
+                                                                    <path
+                                                                        d="M43.0248 61.0113H46.873C47.5267 61.0113 48.0565 60.4815 48.0565 59.8278C48.0565 59.1741 47.5267 58.6443 46.873 58.6443H43.0248C42.3711 58.6443 41.8413 59.1741 41.8413 59.8278C41.8413 60.4815 42.3711 61.0113 43.0248 61.0113Z"
+                                                                        fill="black" />
+                                                                    <path
+                                                                        d="M50.2411 61.0113H54.0899C54.743 61.0113 55.2728 60.4815 55.2728 59.8278C55.2728 59.1741 54.743 58.6443 54.0899 58.6443H50.2411C49.5874 58.6443 49.0576 59.1741 49.0576 59.8278C49.0576 60.4815 49.5874 61.0113 50.2411 61.0113Z"
+                                                                        fill="black" />
+                                                                    <path
+                                                                        d="M52.8672 53.189C52.8672 52.5353 52.3374 52.0056 51.6837 52.0056H45.911C45.2573 52.0056 44.7275 52.5353 44.7275 53.189C44.7275 53.8427 45.2573 54.3725 45.911 54.3725H51.6837C52.338 54.3725 52.8672 53.8427 52.8672 53.189Z"
+                                                                        fill="black" />
+                                                                    <path
+                                                                        d="M61.7862 54.3725C62.4399 54.3725 62.9697 53.8427 62.9697 53.189C62.9697 52.5353 62.4399 52.0056 61.7862 52.0056H56.0135C55.3599 52.0056 54.8301 52.5353 54.8301 53.189C54.8301 53.8427 55.3599 54.3725 56.0135 54.3725H61.7862Z"
+                                                                        fill="black" />
+                                                                    <path
+                                                                        d="M66.1161 54.3725H71.8888C72.5425 54.3725 73.0722 53.8427 73.0722 53.189C73.0722 52.5353 72.5425 52.0056 71.8888 52.0056H66.1161C65.4624 52.0056 64.9326 52.5353 64.9326 53.189C64.9326 53.8427 65.4624 54.3725 66.1161 54.3725Z"
+                                                                        fill="black" />
+                                                                </g>
+                                                                <defs>
+                                                                    <clipPath id="clip0_537_28">
+                                                                        <rect width="80" height="80"
+                                                                            fill="white" />
+                                                                    </clipPath>
+                                                                </defs>
+                                                            </svg>
+                                                        @endif
+
+                                                    </td>
+                                                    <td style="width: 80%; padding-top: 10px;">
+
+                                                        <table style="width: 100%;">
+                                                            <tbody>
+
+                                                                <tr>
+                                                                    <th colspan="3"
+                                                                        style="width: 100%; text-align: center; font-weight: 600; padding-top: 0; font-size: 32px; font-family: Inter; color: #8b2c26;">
+                                                                        <b>{{ $teacherData['school']['title'] }}</b>
+                                                                    </th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th colspan="3"
+                                                                        style="width: 100%; font-weight: 600; font-size: 13px; font-family: sans-serif; text-align: center;">
+                                                                        <b>{{ $teacherData['school']['street_address'] ?? '' }},
+                                                                            {{ $teacherData['school']['city'] ?? '' }}
+                                                                            India,
+                                                                            {{ $teacherData['school']['zip'] ?? '' }}</b>
+                                                                    </th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th colspan="3"
+                                                                        style="width: 100%; font-weight: 600; font-size: 13px; font-family: sans-serif; text-align: center;">
+                                                                        <b>Mobile:
+                                                                            {{ $teacherData['school']['phone'] ?? '' }},
+                                                                            Email:
+                                                                            {{ $teacherData['school']['mail'] ?? '' }}</b>
+                                                                    </th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th colspan="3"
+                                                                        style="width: 100%; font-weight: 600; font-size: 13px; font-family: sans-serif; text-align: center;">
+
+                                                                    </th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th colspan="3"
+                                                                        style="width: 100%; font-weight: 600; font-size: 13px; font-family: sans-serif; text-align: center;">
+                                                                        (Affiliated to the Cental Board of Secondary
+                                                                        Education)
+                                                                    </th>
+                                                                </tr>
+
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <!--header Row End-->
+                                            </tbody>
+                                        </table>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th colspan="3"
+                                        style="width: 100%; font-weight: 500; font-size: 23px; text-align: center; padding-top: 7px; padding-left: 77px; font-family: Inter; margin-top: 0px;">
+                                        <span style="border-bottom: 2px solid #000;">TEACHING EXPERIENCE
+                                            CERTIFICATE</span>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th style="width: 100%;">
+                                        <table style="width: 100%;">
+                                            <tbody>
+                                                <tr style="vertical-align: top;">
+                                                    <td style="width: 100%; text-align: left; padding-top: 25px;">
+                                                        <!--School Code-->
+                                                        <table style="width: 100%;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td
+                                                                        style="width: 8%; font-weight: 400; font-size: 16px; font-family: sans-serif; text-align: left;">
+                                                                        Ref No:</td>
+                                                                    <td style="width: 71%; text-align: right;">
+                                                                        <input id="ReferenceNo" maxlength="10"
+                                                                            name="ReferenceNo"
+                                                                            style="border: none; width: 16%; font-weight: 600; font-size: 16px; font-family: serif; text-align: left; float: left; padding-top: 6px; height: 12px; text-transform: uppercase;"
+                                                                            type="text" value="" />
+                                                                    </td>
+                                                                    <td style="width: 71%; text-align: right; ">
+                                                                        <img src="//style.anu.edu.au/_anu/4/images/placeholders/person.png"
+                                                                            style="width: 80px; height: 80px;" />
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--School CodeEnd-->
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </th>
+                                </tr>
+                                <!--continue lines-->
+                                <tr>
+                                    <th style="width: 100%;">
+                                        <table style="width: 100%; margin-top: 27px;">
+                                            <tbody>
+                                                <tr style="vertical-align: top;">
+                                                    <td
+                                                        style="width: 28%; font-weight: 400; font-size: 16px; /* font-weight: 500; *//* margin-top: 23px; */font-family: sans-serif; text-align: left; padding-left: 59px; line-height: 20px;">
+                                                        Certified that Mr./Miss/Mrs/</td>
+                                                    <td
+                                                        style="width: 50%; text-align: right; border-bottom: 1px dotted #ddd;">
+                                                        <input id="TeacherName" name="TeacherName"
+                                                            style="border: none; width: 100%; font-weight: 600; font-size: 16px; font-family: serif; text-align: left; float: left; padding-top: 6px; height: 12px; text-transform: uppercase;"
+                                                            type="text"
+                                                            value="{{ $teacherData['first_name'] ?? '' }} {{ $teacherData['middle_name'] ?? '' }} {{ $teacherData['last_name'] ?? '' }}" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="height: 10px;"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th style="width: 100%;">
+                                        <table style="width: 100%;">
+                                            <tbody>
+                                                <tr style="vertical-align: top;">
+                                                    <td
+                                                        style="width: 12%; font-weight: 400; font-size: 16px; font-family: sans-serif; text-align: left; line-height: 20px;">
+                                                        <span>S/o/D/o Shri</span>
+                                                    </td>
+
+                                                    <td
+                                                        style="width: 35%; text-align: right; border-bottom: 1px dotted #ddd;">
+                                                        <input id="FatherName" name="FatherName"
+                                                            style="border: none; width: 100%; font-weight: 600; font-size: 16px; font-family: serif; text-align: left; float: left; padding-top: 6px; height: 12px; text-transform: uppercase;"
+                                                            type="text" value="" />
+                                                    </td>
+                                                    <td
+                                                        style="width: 15%; font-weight: 400; font-size: 16px; font-family: sans-serif; text-align: left; line-height: 20px;">
+                                                        <span>Employment Id: </span>
+                                                    </td>
+
+                                                    <td
+                                                        style="width: 25%; text-align: right; border-bottom: 1px dotted #ddd;">
+                                                        <input id="EmployeeId" name="EmployeeId"
+                                                            style="border: none; width: 100%; font-weight: 600; font-size: 16px; font-family: serif; text-align: left; float: left; padding-top: 6px; height: 12px; text-transform: uppercase;"
+                                                            type="text"
+                                                            value="{{ $teacherData['employee_id'] ?? '' }}" />
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </th>
+                                </tr>
+
+                                <tr>
+                                    <td style="height: 10px;"></td>
+                                </tr>
+                                <!--  2-column grid-->
+                                <tr>
+                                    <th>
+                                        <table style="width: 100%;">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="width: 50%;">
+                                                        <table style="width: 100%;">
+                                                            <tbody>
+                                                                <tr style="vertical-align: top;">
+                                                                    <td
+                                                                        style="width: 33%; font-weight: 400; font-size: 16px; font-family: sans-serif; text-align: left; line-height: 20px;">
+                                                                        resident of</td>
+                                                                    <td
+                                                                        style="width: 35%; text-align: right; border-bottom: 1px dotted #ddd;">
+                                                                        <input id="Village" name="Village"
+                                                                            style="border: none; width: 100%; font-weight: 600; font-size: 16px; font-family: serif; text-align: left; float: left; padding-top: 6px; height: 12px; text-transform: uppercase;"
+                                                                            type="text" value="" />
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                    <td style="width: 50%;">
+                                                        <table style="width: 100%;">
+                                                            <tbody>
+                                                                <tr style="vertical-align: top;">
+                                                                    <td
+                                                                        style="width: 28%; font-weight: 400; font-size: 16px; font-family: sans-serif; text-align: center; line-height: 20px;">
+                                                                        Tehsil </td>
+                                                                    <td
+                                                                        style="width: 72%; text-align: right; border-bottom: 1px dotted #ddd;">
+                                                                        <input id="Tehsil" name="Tehsil"
+                                                                            style="border: none; width: 100%; font-weight: 600; font-size: 16px; font-family: serif; text-align: left; float: left; padding-top: 6px; height: 12px; text-transform: uppercase;"
+                                                                            type="text" value="" />
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td style="height: 10px;"></td>
+                                </tr>
+
+                                <!--three column grid-->
+                                <tr>
+                                    <th>
+                                        <table style="width: 100%;">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="width: 50%;">
+                                                        <table style="width: 100%;">
+                                                            <tbody>
+                                                                <tr style="vertical-align: top;">
+                                                                    <td
+                                                                        style="width: 20%; font-weight: 400; font-size: 16px; font-family: sans-serif; text-align: left; line-height: 20px;">
+                                                                        Distt.</td>
+
+                                                                    <td
+                                                                        style="width: 80%; text-align: right; border-bottom: 1px dotted #ddd;">
+                                                                        <input id="District" name="District"
+                                                                            style="border: none; width: 100%; font-weight: 600; font-size: 16px; font-family: serif; text-align: left; float: left; padding-top: 6px; height: 12px; text-transform: uppercase;"
+                                                                            type="text" value="" />
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                    <td style="width: 50%;">
+                                                        <table style="width: 100%;">
+                                                            <tbody>
+                                                                <tr style="vertical-align: top;">
+                                                                    <td
+                                                                        style="width: 25%; font-weight: 400; font-size: 16px; font-family: sans-serif; text-align: left; line-height: 20px;">
+                                                                        having qualification </td>
+                                                                    <td
+                                                                        style="width: 35%; text-align: right; border-bottom: 1px dotted #ddd;">
+                                                                        <input id="Qualification" name="Qualification"
+                                                                            style="border: none; width: 100%; font-weight: 600; font-size: 16px; font-family: serif; text-align: left; float: left; padding-top: 6px; height: 12px; text-transform: uppercase;"
+                                                                            type="text" value="" />
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td style="height: 10px;"></td>
+                                </tr>
+                                <!--            2-column grid-->
+                                <tr>
+                                    <th>
+                                        <table style="width: 100%;">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="width: 100%;">
+                                                        <table style="width: 100%;">
+                                                            <tbody>
+                                                                <tr style="vertical-align: top;">
+                                                                    <td
+                                                                        style="width: 40%; font-weight: 400; font-size: 16px; font-family: sans-serif; text-align: left; line-height: 20px;">
+                                                                        has been working in this School since</td>
+                                                                    <td
+                                                                        style="width: 30%; text-align: right; border-bottom: 1px dotted #ddd;">
+                                                                        <input id="SchoolAttendYear"
+                                                                            name="SchoolAttendYear"
+                                                                            style="border: none; width: 100%; font-weight: 600; font-size: 16px; font-family: serif; text-align: left; float: left; padding-top: 6px; height: 12px; text-transform: uppercase;"
+                                                                            type="text" value="" />
+                                                                    </td>
+                                                                    <td
+                                                                        style="width: 20%; font-weight: 400; font-size: 16px; font-family: sans-serif; text-align: left; line-height: 20px;">
+                                                                        as a Nursery</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td style="height: 10px;"></td>
+                                </tr>
+
+                                <!--            2-column grid-->
+                                <tr>
+                                    <th>
+                                        <table style="width: 100%;">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="width: 100%;">
+                                                        <table style="width: 100%;">
+                                                            <tbody>
+                                                                <tr style="vertical-align: top;">
+                                                                    <td
+                                                                        style="width: 39%; font-weight: 400; font-size: 16px; font-family: sans-serif; text-align: left; line-height: 20px;">
+                                                                        Teacher/ Primary Teacher/TGT/PGT till</td>
+                                                                    <td
+                                                                        style="width: 50%; text-align: right; border-bottom: 1px dotted #ddd;">
+                                                                        <input id="SchoolLeaveYear"
+                                                                            name="SchoolLeaveYear"
+                                                                            style="border: none; width: 100%; font-weight: 600; font-size: 16px; font-family: serif; text-align: left; float: left; padding-top: 6px; height: 12px; text-transform: uppercase;"
+                                                                            type="text" value="" />
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td style="height: 10px;"></td>
+                                </tr>
+                                <!--Whether the pupil was in receipt of any fee concession, if so the nature of such consession-->
+                                <!--Single column column grid-->
+                                <tr>
+                                    <th>
+                                        <table style="width: 100%;">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="width: 40%;">
+                                                        <table style="width: 100%;">
+                                                            <tbody>
+                                                                <tr style="vertical-align: top;">
+                                                                    <td
+                                                                        style="width: 25%; font-weight: 400; font-size: 16px; font-family: sans-serif; text-align: left; line-height: 20px;">
+                                                                        He/She has</td>
+                                                                    <td
+                                                                        style="width: 44%; text-align: right; border-bottom: 1px dotted #ddd;">
+                                                                        <input id="YearExprience" name="YearExprience"
+                                                                            style="border: none; width: 100%; font-weight: 600; font-size: 16px; font-family: serif; text-align: left; float: left; padding-top: 6px; height: 12px; text-transform: uppercase;"
+                                                                            type="text" value="" />
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                    <td style="width: 60%;">
+                                                        <table style="width: 100%;">
+                                                            <tbody>
+                                                                <tr style="vertical-align: top;">
+                                                                    <td
+                                                                        style="width: 12%; font-weight: 400; font-size: 16px; font-family: sans-serif; text-align: left; line-height: 20px;">
+                                                                        years</td>
+                                                                    <td
+                                                                        style="width: 0%; text-align: right; border-bottom: 1px dotted #ddd;">
+                                                                        <input id="MonthExprience"
+                                                                            name="MonthExprience"
+                                                                            style="border: none; width: 100%; font-weight: 600; font-size: 16px; font-family: serif; text-align: left; float: left; padding-top: 6px; height: 12px; text-transform: uppercase;"
+                                                                            type="text" value="" />
+                                                                    </td>
+                                                                    <td
+                                                                        style="width: 66%; font-weight: 400; font-size: 16px; font-family: sans-serif; text-align: left; line-height: 20px;">
+                                                                        months of teaching experience.</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td style="height: 10px;"></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <table style="width: 100%;">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="width: 70%;">
+                                                        <table style="width: 100%;">
+                                                            <tbody>
+                                                                <tr style="vertical-align: top;">
+                                                                    <td
+                                                                        style="width: 25%; font-weight: 400; font-size: 16px; font-family: sans-serif; text-align: left; line-height: 20px;">
+                                                                        His/Her Date Of Birth is </td>
+                                                                    <td
+                                                                        style="width: 44%; text-align: right; border-bottom: 1px dotted #ddd;">
+                                                                        <input id="DateOfBirthString"
+                                                                            name="DateOfBirthString"
+                                                                            style="border: none; width: 100%; font-weight: 600; font-size: 16px; font-family: serif; text-align: left; float: left; padding-top: 6px; height: 12px; text-transform: uppercase;"
+                                                                            type="text" value="" />
+                                                                        <input type="hidden" name="DateOfBirth" />
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                    <td style="width: 30%;">
+                                                        <table style="width: 100%;">
+                                                            <tbody>
+                                                                <tr style="vertical-align: top;">
+                                                                    <td
+                                                                        style="width: 25%; font-weight: 400; font-size: 16px; font-family: sans-serif; text-align: left; line-height: 20px;">
+                                                                    </td>
+
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </th>
+                                </tr>
+
+                                <tr>
+                                    <td style="height: 10px;"></td>
+                                </tr>
+                                <!--blank line-->
+
+                                <tr>
+                                    <th>
+                                        <table style="width: 100%;">
+                                            <tbody>
+                                                <tr>
+                                                    <td
+                                                        style="width: 100%; font-weight: 400; font-size: 16px; font-family: sans-serif; text-align: left; line-height: 20px;">
+                                                        During his/her service in this school, his/her work and conduct
+                                                        remained good.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td
+                                                        style="width: 100%; font-weight: 400; font-size: 16px; font-family: sans-serif; text-align: left; line-height: 20px;">
+                                                        We with for his/her bright future.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td style="height: 10px;"></td>
+                                </tr>
+                                <!-- Heading Row-->
+                                <tr>
+                                    <th>
+                                        <table style="width: 100%;">
+                                            <tbody>
+                                                <tr>
+                                                    <td
+                                                        style="width: 7%; font-weight: 600; font-size: 16px; font-family: sans-serif; line-height: 20px; padding-top: 47px; text-align: left;">
+                                                        Date:-</td>
+                                                    <td style="width: 25%; padding-top: 47px;">
+                                                        <input id="NewDate" name="NewDate"
+                                                            style="border: none; width: 60%; font-weight: 600; font-size: 16px; font-family: serif; text-align: left; float: left; padding-top: 6px; height: 12px; text-transform: uppercase;"
+                                                            type="text" value="" />
+                                                    </td>
+                                                    <td style="width: 23%;"></td>
+                                                    <td
+                                                        style="width: 50%; font-weight: 600; font-size: 16px; font-family: sans-serif; text-align: right; line-height: 20px; padding-top: 47px;">
+                                                        Principal</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <table style="width: 100%;">
+                                            <tbody>
+                                                <tr>
+
+                                                    <td style="width: 50%;">
+                                                        <input type="text" value=""
+                                                            style="border: none; width: 30%; font-weight: 600; font-size: 16px; font-family: serif; text-align: left; float: right; padding-top: 6px; height: 12px; text-transform: uppercase;">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous"></script>
+
+    <script language="javascript" type="text/javascript">
+        $(function() {
+            // generate tc
+            $("#btnSaveCertificate").click(function(e) {
+                e.preventDefault();
+                var result = confirm(
+                    "Are you sure to save."
+                );
+                if (result == true) {
+                    $.ajax({
+                        url: '{{ route('staff_certificate_save') }}',
+                        data: {
+                            staff_id: {{ $teacherData['id'] }}
+                        },
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                        type: "POST",
+                        success: function(response) {
+                            if (response.status == 200) {
+                                alert(response.message);
+                            } else {
+                                alert(response.message);
+                            }
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
+    <script language="javascript" type="text/javascript">
+        function myFunction() {
+
+            var checkBox = document.getElementById("showcheck");
+
+            // If the checkbox is checked, display the output text
+            if (checkBox.checked == true) {
+                document.getElementById("myP").style.visibility = "visible";
+
+            } else {
+                document.getElementById("myP").style.visibility = "hidden";
+            }
+        }
+    </script>
+</body>
+
+</html>

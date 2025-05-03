@@ -1,0 +1,113 @@
+.educare-sidebar-navs {
+    @apply opacity-0 invisible bg-dark h-0;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+
+    &.active {
+        @apply opacity-[1] visible h-full;
+    }
+}
+
+.educare-sidebar-navs-btn {
+    @apply font-primary;
+
+    button {
+        @apply text-[14px] font-medium text-white rounded inline-flex gap-0.5 items-center bg-[#38B3FE] px-2 py-[9px] leading-none transition duration-300 ease-in-out whitespace-nowrap;
+    }
+}
+
+.educare-sidebar-navs .educare-shelf {
+    @apply w-full bg-dark py-4 px-0.5 border-t border-supportingA/10;
+}
+
+.educare-sidebar-navs .educare-shelf,
+.educare-sidebar-navs .educare-shelf ul {
+    @apply m-0 list-none;
+
+    button {
+        @apply whitespace-nowrap;
+    }
+}
+
+.educare-sidebar-navs .educare-shelf ul {
+    @apply ml-4 relative;
+}
+
+.educare-sidebar-navs .educare-shelf ul ul {
+    @apply ml-2;
+}
+
+.educare-sidebar-navs .educare-shelf ul:before {
+    content: "";
+    @apply block w-0 absolute top-0 bottom-0 left-0 border-l border-white/10;
+}
+
+.educare-sidebar-navs .educare-shelf li {
+    @apply m-0 py-0 mx-4 leading-[32px] text-white/70 font-bold relative border-b border-white/10 last:border-b-0;
+}
+
+.educare-sidebar-navs .educare-shelf ul li:before {
+    content: "";
+    @apply block w-2.5 h-0 border-t mt-[-1px] border-white/10 absolute top-4 left-0;
+}
+
+.educare-sidebar-navs .educare-shelf ul li:last-child:before {
+    @apply bg-dark h-auto top-4 bottom-0;
+}
+
+.educare-sidebar-navs .indicator {
+    @apply mr-1;
+}
+
+.educare-sidebar-navs .educare-shelf li button,
+.educare-sidebar-navs .educare-shelf li a {
+    @apply text-white/70 font-primary text-[16px] font-medium inline-flex items-center gap-1 h-auto min-h-[24px] leading-tight px-0 py-1 capitalize bg-transparent;
+}
+
+.educare-sidebar-navs .educare-shelf li button.active-element,
+.educare-sidebar-navs .educare-shelf li a.active-element {
+    @apply bg-transparent text-white/70 py-1 min-h-[44px] w-full rounded-none;
+}
+
+.educare-sidebar-navs .educare-shelf li button {
+    @apply bg-transparent min-h-[44px] w-full block text-left rounded-none;
+
+    span {
+        @apply float-right translate-y-[0px] text-[20px] inline-block;
+    }
+}
+
+.educare-sidebar-navs .educare-shelf li a.shelf-parent-url {
+    @apply bg-transparent min-h-[44px] w-full flex items-center text-left rounded-none;
+}
+
+.educare-sidebar-navs .educare-shelf li ul li a,
+.educare-sidebar-navs .educare-shelf li ul li button {
+    @apply px-1 text-[15px];
+}
+
+.educare-sidebar-navs .educare-shelf li ul li:last-child {
+    @apply mb-1;
+}
+
+.educare-sidebar-navs .educare-shelf li ul li {
+    @apply border-b-0 px-4 mx-0;
+}
+
+.ul-390::-webkit-scrollbar {
+    @apply w-2.5 mr-3;
+}
+
+.ul-390::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(213, 213, 213, 0.7);
+}
+
+.ul-390::-webkit-scrollbar {
+    @apply w-2.5 mr-3;
+}
+
+.ul-390::-webkit-scrollbar-thumb {
+    @apply bg-grayLight rounded-[10px];
+}

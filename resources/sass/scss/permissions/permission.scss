@@ -1,0 +1,142 @@
+.educare-permission-filtar-bar-filter-fields {
+    .educare-select-field-styles {
+        select {
+            @apply w-[300px] maxMd:w-[200px];
+        }
+    }
+}
+.educare-permission-filtar-bar-filter {
+    .educare-card-title {
+        @apply mb-0 pb-0;
+    }
+}
+
+//role permission start
+.permission-role-category-list {
+    @apply last:border-b-0 items-stretch;
+}
+.permission-role-category h5 {
+    @apply text-[15px] font-semibold text-headingLight;
+}
+.permission-role-category h6 {
+    @apply maxMd:pb-2;
+}
+.permission-role-left {
+	@apply xxxl:min-w-[250px] xxxl:w-[250px] pl-7;
+    @apply h-full;
+    @media (min-width: 1201px) and (max-width: 1600px) {
+        min-width: 200px;
+        width: 200px;
+    }
+    @media (min-width: 992px) and (max-width: 1200px) {
+        min-width: 160px;
+        width: 160px;
+        @apply pl-4;
+    }
+    @media (max-width: 991px) {
+        min-width: 160px;
+        width: 160px;
+        @apply pl-4;
+    }
+    @media (max-width: 575px) {
+        min-width: 120px;
+        width: 120px;
+        @apply pl-4;
+    }
+}
+.permission-role-category {
+	@apply min-w-[250px] w-[250px] pl-7 border-r border-solid border-border/50 bg-border/10 h-full flex flex-col justify-center;
+    @media (min-width: 1201px) and (max-width: 1600px) {
+        min-width: 200px;
+        width: 200px;
+    }
+    @media (min-width: 992px) and (max-width: 1200px) {
+        min-width: 180px;
+        width: 180px;
+        @apply pl-4;
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+        min-width: 180px;
+        width: 180px;
+        @apply pl-4;
+    }
+    @media (max-width: 991px) {
+        @apply border-r-0;
+        width: 100%;
+        min-width: 100%;
+        @apply pl-4 pt-2 h-auto;
+    }
+}
+.permission-role-checkbox {
+    @apply basis-1/4 inline-flex gap-2 h-full items-center border-border/20 pl-3;
+    label {
+        @apply text-[15px] font-medium translate-y-[2px] text-headingLight cursor-pointer;
+    }
+    &.permission-role-checkbox-parent,
+    &.permission-role-module-checkbox-parent {
+        label {
+            @apply font-semibold text-heading;
+        }
+    }
+    &.permission-role-module-checkbox,
+    &.permission-role-module-checkbox-parent {
+        @apply basis-full;
+    }
+}
+.permission-role-checkbox-all-hidden {
+    @apply hidden;
+}
+.permission-role-checkbox-wrapper {
+    @apply flex items-center h-full w-full px-4 justify-between maxLg:px-0;
+}
+.custom-height-100 {
+    @apply h-[100px];
+}
+.custom-height-70 {
+    @apply h-[70px];
+}
+.permission-role-category-list.custom-height-50 {
+    @apply maxLg:h-[100px];
+}
+.permission-role-category-list {
+    @media (max-width: 991px) {
+        display: inherit;
+        @apply flex flex-col justify-center;
+        & h5 {
+            @apply mb-2.5;
+        }
+    }
+}
+.permission-role-inner {
+	@media (max-width: 991px) {
+		overflow-x: auto;
+		scrollbar-height: thin;
+	}
+}
+.permission-role-inner-wrapper {
+	@media (max-width: 991px) {
+		width: 750px;
+        min-width: 100%;
+		scrollbar-height: thin;
+	}
+}
+
+.permission-role-module-right {
+    .permission-role-category-list {
+        @media (max-width: 991px) {
+            @apply flex-row;
+            & h5 {
+                @apply mb-2.5;
+            }
+        }
+        .permission-role-category {
+            @apply min-w-[180px] w-[180px] pl-4 border-r h-full pt-0;
+            h6 {
+                @apply pb-0;
+            }
+        }
+        .permission-role-topic {
+            @apply pr-1.5;
+        }
+    }
+}

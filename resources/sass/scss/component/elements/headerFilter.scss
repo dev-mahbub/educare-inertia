@@ -1,0 +1,274 @@
+.educare-admission-filtar-bar {
+    @apply flex items-stretch justify-between border-t-0 border-border;
+    &-count {
+        @apply w-auto self-center maxXs:order-1;
+        span {
+            @apply h-[30px] inline-block border px-4 leading-7 border-supportingA whitespace-nowrap rounded-2xl text-[14px] text-supportingA;
+        }
+    }
+    &-filter {
+        @apply flex gap-2 items-center w-full;
+        &-action {
+            @apply flex gap-1.5 justify-end maxXs:order-2;
+        }
+    }
+    
+}
+.educare-admission-filtar-bar-filter {
+    @apply justify-end;
+    form, .filter-form-box {
+        @apply flex w-full justify-between maxXs:flex-wrap gap-2 items-center;
+    }
+    &-fields {
+        @apply flex gap-2 justify-end;
+    }
+    .educare-select-field-styles,
+    .educare-input-field-styles {
+        select,input {
+            @apply w-[160px] text-[14px] minMax4Xl:w-[155px] maxMd:w-[140px] maxSm:w-[125px] maxSm:pl-1 maxSm:pr-3 font-primary;
+        }
+        .react-datepicker-wrapper {
+            transform: translateY(0px);
+            input {
+                @apply w-[160px] text-[14px] minMax4Xl:w-[155px] maxMd:w-[140px] maxSm:w-[125px] maxSm:pl-1 maxSm:pr-3 font-primary;
+            }
+        }
+        .react-datepicker__close-icon {
+            @apply top-[-1px] font-primary;
+            &:after {
+                @apply bg-primary/20 text-primary justify-center inline-flex align-baseline;
+            }
+        }
+    }
+}
+.educare-admission-filtar-bar-filter-action,
+.educare-admission-list .educare-admission-list-action-btn {
+    .educare-button-field-styles {
+        button, a {
+            @apply h-10 px-2.5 leading-10 text-center rounded-md;
+            i {
+                @apply translate-y-[3px] inline-block;
+                &::before {
+                    @apply text-[20px] text-white;
+                }
+            }
+        }
+    }
+}
+.educare-admission-filtar-bar.educare-attendance-filtar-bar {
+    .educare-admission-filtar-bar-count {
+        @apply maxLg:order-1;
+    }
+    .educare-admission-filtar-bar-filter-fields-wrap {
+        @apply maxLg:order-3 maxLg:max-w-full;
+    }
+    .educare-admission-filtar-bar-filter-action {
+        @apply maxLg:order-2;
+    }
+    form, .filter-form-box {
+        @apply maxLg:flex-wrap;
+    }
+}
+.educare-admission-filtar-bar-filter-fields-wrap {
+    @apply max-w-[1235px] font-primary;
+    @apply minMax4Xl:max-w-[1135px];
+    @apply minMax3Xl:max-w-[893px];
+    @apply minMax2Xl:max-w-[725px];
+    @apply minMaxXl:max-w-[800px];
+    @apply minMaxLg:max-w-[559px];
+    @apply minMaxMd:max-w-[450px];
+    @apply minMaxSm:max-w-[280px];
+    @apply maxXs:max-w-full maxXs:order-3;
+
+    @media screen and (max-width: 1800px) {
+        @apply overflow-x-clip whitespace-nowrap px-[30px];
+    }
+
+    .educare-admission-filter-next,
+    .educare-admission-filter-prev {
+        @apply h-10 min-w-[24px] leading-6 justify-center items-center flex-col bg-info cursor-pointer hidden rounded;
+
+        i:before {
+            @apply text-white;
+        }
+
+        @media screen and (max-width: 1800px) {
+            @apply inline-flex absolute z-[1] top-0;
+        }
+    }
+
+    .educare-admission-filter-next {
+        @apply right-0;
+    }
+
+    .educare-admission-filter-prev {
+        @apply left-0;
+    }
+}
+
+.educare-admission-filtar-bar-filter-fields {
+    @media screen and (max-width: 1800px) {
+        @apply flex-row-reverse;
+    }
+}
+.educare-admission-filtar-bar-filter-fields-wrap.educare-registration-filtar-bar-filter-fields-wrap {
+    @apply w-full overflow-x-clip whitespace-nowrap px-[30px] font-primary;
+    @apply max-w-[1220px];
+    @apply minMax4Xl:max-w-[1135px];
+    @apply minMax3Xl:max-w-[893px];
+    @apply minMax2Xl:max-w-[725px];
+    @apply minMaxXl:max-w-[800px];
+    @apply minMaxLg:max-w-[700px];
+    @apply minMaxMd:max-w-[450px];
+    @apply minMaxSm:max-w-[280px];
+    @apply maxXs:max-w-full maxXs:order-3;
+
+    .educare-admission-filter-next,
+    .educare-admission-filter-prev {
+        @apply inline-flex absolute z-[1] top-0;
+    }
+    .educare-admission-filtar-bar-filter-fields {
+        @apply flex-row-reverse;
+    }
+    .react-datepicker-popper {
+        @media screen and (max-width: 991px) {
+            inset: 0px auto auto -75px !important;
+        }
+    }
+}
+//old header filter style end
+
+
+//New Header Filter Styles
+.educare-header-filtar-bar-inner-main {
+    @apply flex gap-2.5 items-center w-full maxMd:justify-between maxMd:flex-wrap;
+    .educare-header-filtar-bar-inner-main-wrap {
+        @apply maxMd:w-full;
+        .educare-header-filtar-bar-fields-area {
+            .educare-header-filtar-bar-fields-wrap {
+                @apply flex gap-2.5;
+                .educare-select-field-styles,
+                .educare-input-field-styles {
+                    select,input {
+                        @apply w-[160px] text-[14px] minMax4Xl:w-[155px] maxMd:w-[140px] maxSm:w-[125px] maxSm:pl-1 maxSm:pr-3 font-primary;
+                    }
+                    .react-datepicker-wrapper {
+                        transform: translateY(0px);
+                        input {
+                            @apply w-[160px] text-[14px] minMax4Xl:w-[155px] maxMd:w-[140px] maxSm:w-[125px] maxSm:pl-1 maxSm:pr-3 font-primary;
+                        }
+                    }
+                    .react-datepicker__close-icon {
+                        @apply top-[-1px] font-primary;
+                        &:after {
+                            @apply bg-primary/20 text-primary justify-center inline-flex align-baseline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .educare-header-filtar-bar-action {
+        @apply inline-flex justify-between gap-2 maxSm:gap-1;
+    }
+    .educare-header-filtar-bar-count {
+        @apply order-1 maxMd:order-1;
+    }
+    .educare-header-filtar-bar-inner-main-wrap {
+        @apply order-2 maxMd:order-3;
+    }
+    .educare-header-filtar-bar-action {
+        @apply order-3 maxMd:order-2;
+    }
+    select.react-datepicker__month-select,
+    select.react-datepicker__year-select {
+        width: auto !important;
+        min-width: 75px !important;
+    }
+}
+.educare-header-filtar-bar-count {
+    span {
+        @apply h-[30px] inline-block border px-4 leading-7 border-supportingA whitespace-nowrap rounded-2xl text-[14px] text-supportingA;
+    }
+}
+.educare-header-filtar-bar-fields-area {
+    @apply max-w-[1235px] font-primary;
+    @apply minMax4Xl:max-w-[1135px];
+    @apply minMax3Xl:max-w-[893px];
+    @apply minMax2Xl:max-w-[725px];
+    @apply minMaxXl:max-w-[800px];
+    @apply minMaxLg:max-w-[559px];
+    @apply maxMd:max-w-full;
+    @apply minMaxSm:max-w-full;
+    @apply maxXs:max-w-full;
+    @media screen and (max-width: 1800px) {
+        @apply overflow-x-clip whitespace-nowrap px-[30px];
+    }
+
+    .educare-header-filter-next,
+    .educare-header-filter-prev {
+        @apply h-10 min-w-[24px] leading-6 justify-center items-center flex-col bg-info cursor-pointer hidden rounded;
+        i:before {
+            @apply text-white;
+        }
+        @media screen and (max-width: 1800px) {
+            @apply inline-flex absolute z-[1] top-0;
+        }
+    }
+    .educare-header-filter-next {
+        @apply right-0;
+    }
+    .educare-header-filter-prev {
+        @apply left-0;
+    }
+}
+
+//registration Extra Large Filter
+.educare-header-filtar-bar-fields-area.extra-large-filter,
+.educare-header-filtar-bar-fields-area.extra-large-filter.extra-large-filter-enquiry {
+    @apply w-full overflow-x-clip whitespace-nowrap px-[30px] font-primary;
+    @apply max-w-[1220px];
+    @apply minMax4Xl:max-w-[1135px];
+    @apply minMax3Xl:max-w-[893px];
+    @apply minMax2Xl:max-w-[725px];
+    @apply minMaxXl:max-w-[800px];
+    @apply minMaxLg:max-w-[700px];
+    @apply minMaxMd:max-w-full;
+    @apply minMaxSm:max-w-full;
+    @apply maxXs:max-w-full;
+    @media screen and (max-width: 1800px) {
+        @apply overflow-x-clip whitespace-nowrap px-[30px];
+    }
+    .educare-header-filter-next,
+    .educare-header-filter-prev {
+        @apply h-10 min-w-[24px] leading-6 justify-center items-center flex-col bg-info cursor-pointer inline-flex absolute z-[1] top-0 rounded;
+    }
+}
+//registration Extra Large Enquiry Filter
+.educare-header-filtar-bar-fields-area.extra-large-filter,
+.educare-header-filtar-bar-fields-area.extra-large-filter.extra-large-filter-enquiry {
+    @apply w-full overflow-x-clip whitespace-nowrap px-[30px] font-primary;
+    @apply max-w-[1170px];
+    @apply minMax4Xl:max-w-[1090px];
+    @apply minMax3Xl:max-w-[850px];
+    @apply minMax2Xl:max-w-[685px];
+    @apply minMaxXl:max-w-[750px];
+    @apply minMaxLg:max-w-[600px];
+}
+
+//Order filter for LG 
+.educare-header-filtar-bar-inner-main.educare-header-filtar-medium-main {
+    @apply maxLg:flex-wrap maxLg:justify-between;
+    .educare-header-filtar-bar-count {
+        @apply order-1 maxLg:order-1;
+    }
+    .educare-header-filtar-bar-inner-main-wrap {
+        @apply order-2 maxLg:order-3;
+    }
+    .educare-header-filtar-bar-action {
+        @apply order-3 maxLg:order-2;
+    }
+    .educare-header-filtar-bar-fields-area {
+        @apply minMax2Xl:max-w-[630px] minMax3Xl:max-w-[720px] minMaxXl:max-w-[690px];
+    }
+}

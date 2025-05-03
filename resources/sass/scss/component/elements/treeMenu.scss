@@ -1,0 +1,67 @@
+.educare-shelf-menu .educare-shelf,
+.educare-shelf-menu .educare-shelf ul {
+    @apply m-0 p-0 list-none;
+
+    button {
+        @apply whitespace-nowrap;
+    }
+}
+
+.educare-shelf-menu .educare-shelf ul {
+    @apply ml-4 relative;
+}
+
+.educare-shelf-menu .educare-shelf ul ul {
+    @apply ml-2;
+}
+
+.educare-shelf-menu .educare-shelf ul:before {
+    content: "";
+    @apply block w-0 absolute top-0 bottom-0 left-0 border-l border border-border;
+}
+
+.educare-shelf-menu .educare-shelf li {
+    @apply m-0 py-0 px-4 leading-[32px] text-supportingA font-bold relative;
+}
+
+.educare-shelf-menu .educare-shelf ul li:before {
+    content: "";
+    @apply block w-2.5 h-0 border-t mt-[-1px] border-border absolute top-4 left-0;
+}
+
+.educare-shelf-menu .educare-shelf ul li:last-child:before {
+    @apply bg-white h-auto top-4 bottom-0;
+}
+
+.educare-shelf-menu .indicator {
+    @apply mr-1;
+}
+
+.educare-shelf-menu .educare-shelf li button {
+    @apply text-supportingA font-primary text-[16px] font-medium inline-flex items-center gap-1 h-6 px-2 py-1 capitalize bg-border/5;
+}
+
+.educare-shelf-menu .educare-shelf li button.active-element {
+    @apply bg-supportingA text-white py-1 px-2 rounded;
+}
+
+// .educare-shelf-menu .educare-shelf li button,
+// .educare-shelf-menu .educare-shelf li button:active-element,
+// .educare-shelf-menu .educare-shelf li button:focus {
+//     @apply text-supportingA border-0 bg-transparent m-0 p-0 outline-none;
+// }
+.ul-390::-webkit-scrollbar {
+    @apply w-2.5 mr-3;
+}
+
+.ul-390::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(213, 213, 213, 0.7);
+}
+
+.ul-390::-webkit-scrollbar {
+    @apply w-2.5 mr-3;
+}
+
+.ul-390::-webkit-scrollbar-thumb {
+    @apply bg-grayLight rounded-[10px];
+}

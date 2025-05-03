@@ -1,0 +1,64 @@
+// UpcomingEvent style
+.school-manager-item {
+	&:not(:last-child) {
+		@apply mb-[17px]
+	}
+	@apply gap-[8px] flex items-center;
+	.icon {
+		span {
+			@apply w-[46px] h-[46px] p-[5px] m-[5px] text-[26px] text-white flex items-center justify-center bg-supportingA rounded-full relative;
+			&:before {
+				@apply absolute h-[56px] w-[56px] left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] border border-borderLight/20 rounded-full;
+				content: "";
+			}
+		}
+	}
+	.content {
+		h6 {
+			@apply font-semibold mb-[5px] text-headingLight hover:text-primary transition duration-300 ease-in-out;
+		}
+		& > span {
+			@apply text-headingLight/70;
+		}
+	}
+	&.supporting-two {
+		.icon {
+			span {
+				@apply bg-supportingB;
+				&:before {
+					@apply border-supportingB/20;
+				}
+			}
+		}
+	}
+	&.supporting-three {
+		.icon {
+			span {
+				@apply bg-supportingC;
+				&:before {
+					@apply border-supportingC/20;
+				}
+			}
+		}
+	}
+	&.supporting-four {
+		.icon {
+			span {
+				@apply bg-supportingD;
+				&:before {
+					@apply border-supportingD/20;
+				}
+			}
+		}
+	}
+	&.supporting-five {
+		.icon {
+			span {
+				@apply bg-supportingE;
+				&:before {
+					@apply border-supportingE/20;
+				}
+			}
+		}
+	}
+}

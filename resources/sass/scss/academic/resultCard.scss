@@ -1,0 +1,20 @@
+.select-board-wrap {
+    // input {
+    //     display: none;
+    // }
+    .select-board {
+        @apply flex flex-col items-center p-5 border border-border rounded-lg cursor-pointer transition duration-300;
+        &-img {
+            @apply mb-2.5;
+            img {
+                @apply h-[150px];
+            }
+        }
+        span {
+            @apply text-[15px] font-semibold text-headingLight;
+        }
+        &:focus {
+            @apply border-primary bg-primary/5;
+        }
+    }
+}

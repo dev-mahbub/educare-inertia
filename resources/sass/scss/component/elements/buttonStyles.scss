@@ -1,0 +1,539 @@
+.educare-button-action-field-wrapper {
+    .educare-button-field-styles {
+        button {
+            @apply h-6 w-6 text-white leading-6 text-center rounded-md;
+			i {
+				@apply translate-y-[0px];
+				&::before {
+					@apply text-[14px] text-white;
+				}
+			}
+        }
+    }
+}
+.educare-input-action-button {
+    button {
+        @apply h-8 w-8 leading-8 border border-border/50 rounded outline-none outline-0 text-[16px] font-semibold text-center bg-supportingA/10 text-primary hover:bg-primary/80 hover:text-white transition duration-300;
+        i {
+            @apply translate-y-[0px] text-[16px] text-heading;
+        }
+        &:hover {
+            i {
+                @apply text-white;
+            }
+        }
+    }
+    &.btn-red {
+        button {
+            @apply bg-danger/10 hover:bg-danger/80 text-white;
+        }
+    }
+}
+.educare-primary-btn {
+    @apply bg-primary text-white px-[10px] pt-[4px] h-[30px] pb-[5px] text-[14px] flex items-center gap-[5px] rounded-[5px] capitalize;
+    i {
+        @apply text-[16px];
+    }
+}
+.educare-upload-data-wrapper {
+    background-color: rgba(11, 82, 189, 0.03);
+}
+
+//small stroke btn
+.primary-stroke-small-btn {
+    button {
+        @apply h-6 leading-none px-2 font-primary text-[14px] font-medium border rounded text-primary/80 bg-transparent border-primary/80 hover:bg-primary/20 transition duration-300;
+    }
+}
+.secondary-stroke-small-btn {
+    button {
+        @apply h-6 leading-none px-2 font-primary text-[14px] font-medium border rounded text-supportingA/80 bg-transparent border-supportingA/80 hover:bg-supportingA/20 transition duration-300;
+    }
+}
+.warning-stroke-small-btn {
+    button {
+        @apply h-6 leading-none px-2 font-primary text-[14px] font-medium border rounded text-supportingB/80 bg-transparent border-supportingB/80 hover:bg-supportingB/20 transition duration-300;
+    }
+}
+.danger-stroke-small-btn {
+    button {
+        @apply h-6 leading-none px-2 font-primary text-[14px] font-medium border rounded text-danger/80 bg-transparent border-danger/80 hover:bg-danger/20 transition duration-300;
+    }
+}
+//old button styles end
+
+//exact button styles start
+
+//lg fill btn styles
+div {
+    .educare-primary-btn-lg-fill,
+    .educare-dark-btn-lg-fill,
+    .educare-secondary-btn-lg-fill,
+    .educare-warning-btn-lg-fill,
+    .educare-danger-btn-lg-fill,
+    .educare-success-btn-lg-fill,
+    .educare-tertiary-btn-lg-fill,
+    .educare-gray-btn-lg-fill {
+        @apply h-12 leading-[48px] text-white text-[16px] focus:outline-none shadow-sm tracking-widest rounded-md font-semibold px-6 font-primary inline-block capitalize focus:ring-2 focus:ring-offset-2 disabled:opacity-25;
+        i {
+            @apply translate-y-[3px] inline-block;
+
+            &::before {
+                @apply text-[22px] text-white;
+            }
+        }
+    }
+    .educare-primary-btn-lg-fill {
+        @apply bg-primary focus:ring-primary hover:bg-primary;
+    }
+    .educare-dark-btn-lg-fill {
+        @apply bg-dark focus:ring-dark hover:bg-dark;
+    }
+    .educare-secondary-btn-lg-fill {
+        @apply bg-supportingA focus:ring-supportingA hover:bg-supportingA;
+    }
+    .educare-warning-btn-lg-fill {
+        @apply bg-supportingB focus:ring-supportingB hover:bg-supportingB;
+    }
+    .educare-danger-btn-lg-fill {
+        @apply bg-danger focus:ring-danger hover:bg-danger;
+    }
+    .educare-success-btn-lg-fill {
+        @apply bg-success focus:ring-success hover:bg-success;
+    }
+    .educare-tertiary-btn-lg-fill {
+        @apply bg-supportingC focus:ring-supportingC hover:bg-supportingC;
+    }
+    .educare-gray-btn-lg-fill {
+        @apply bg-grayLight focus:ring-grayLight hover:bg-grayLight;
+    }
+}
+
+//lg stroke btn styles 
+div {
+    .educare-primary-btn-lg-stroke,
+    .educare-dark-btn-lg-stroke,
+    .educare-secondary-btn-lg-stroke,
+    .educare-warning-btn-lg-stroke,
+    .educare-danger-btn-lg-stroke,
+    .educare-success-btn-lg-stroke,
+    .educare-tertiary-btn-lg-stroke,
+    .educare-gray-btn-lg-stroke {
+        @apply h-12 leading-[48px] text-[16px] focus:outline-none shadow-sm tracking-widest rounded-md font-semibold px-6 font-primary inline-block capitalize focus:ring-2 focus:ring-offset-2 disabled:opacity-25 border;
+    }
+    .educare-primary-btn-lg-stroke {
+        @apply text-primary focus:ring-primary hover:bg-primary/20 border-primary;
+    }
+    .educare-dark-btn-lg-stroke {
+        @apply text-dark focus:ring-dark hover:bg-dark/20 border-dark;
+    }
+    .educare-secondary-btn-lg-stroke {
+        @apply text-supportingA focus:ring-supportingA hover:bg-supportingA/20 border-supportingA;
+    }
+    .educare-warning-btn-lg-stroke {
+        @apply text-supportingB focus:ring-supportingB hover:bg-supportingB/20 border-supportingB;
+    }
+    .educare-danger-btn-lg-stroke {
+        @apply text-danger focus:ring-danger hover:bg-danger/20 border-danger;
+    }
+    .educare-success-btn-lg-stroke {
+        @apply text-success focus:ring-success hover:bg-success/20 border-success;
+    }
+    .educare-tertiary-btn-lg-stroke {
+        @apply text-supportingC focus:ring-supportingC hover:bg-supportingC/20 border-supportingC;
+    }
+    .educare-gray-btn-lg-stroke {
+        @apply text-grayLight focus:ring-grayLight hover:bg-grayLight/20 border-grayLight;
+    }
+}
+
+//md fill btn styles
+div {
+    .educare-primary-btn-md-fill,
+    .educare-dark-btn-md-fill,
+    .educare-secondary-btn-md-fill,
+    .educare-warning-btn-md-fill,
+    .educare-danger-btn-md-fill,
+    .educare-success-btn-md-fill,
+    .educare-tertiary-btn-md-fill,
+    .educare-gray-btn-md-fill {
+        @apply h-10 min-w-[40px] leading-10 text-white text-[14px] focus:outline-none shadow-sm tracking-widest rounded-md font-semibold px-4 font-primary inline-block capitalize focus:ring-2 focus:ring-offset-2 disabled:opacity-25 border;
+        i {
+            @apply translate-y-[2px] inline-block;
+
+            &::before {
+                @apply text-[18px] text-white;
+            }
+        }
+        &.fix-btn-width{
+            @apply min-w-[100px];
+        }
+    }
+    .educare-primary-btn-md-fill {
+        @apply bg-primary focus:ring-primary hover:bg-primary;
+    }
+    .educare-dark-btn-md-fill {
+        @apply bg-dark focus:ring-dark hover:bg-dark;
+    }
+    .educare-secondary-btn-md-fill {
+        @apply bg-supportingA focus:ring-supportingA hover:bg-supportingA;
+    }
+    .educare-warning-btn-md-fill {
+        @apply bg-supportingB focus:ring-supportingB hover:bg-supportingB;
+    }
+    .educare-danger-btn-md-fill {
+        @apply bg-danger focus:ring-danger hover:bg-danger;
+    }
+    .educare-success-btn-md-fill {
+        @apply bg-success focus:ring-success hover:bg-success;
+    }
+    .educare-tertiary-btn-md-fill {
+        @apply bg-supportingC focus:ring-supportingC hover:bg-supportingC;
+    }
+    .educare-gray-btn-md-fill {
+        @apply bg-grayLight focus:ring-grayLight hover:bg-grayLight;
+    }
+}
+
+//sm fill btn styles
+div {
+    .educare-primary-btn-sm-fill,
+    .educare-dark-btn-sm-fill,
+    .educare-secondary-btn-sm-fill,
+    .educare-warning-btn-sm-fill,
+    .educare-danger-btn-sm-fill,
+    .educare-success-btn-sm-fill,
+    .educare-tertiary-btn-sm-fill,
+    .educare-gray-btn-sm-fill {
+        @apply h-8 text-white text-[14px] focus:outline-none shadow-sm tracking-widest rounded-sm font-semibold px-2 font-primary inline-block capitalize focus:ring-2 focus:ring-offset-2 disabled:opacity-25 border;
+        i {
+            @apply translate-y-[2px] inline-block;
+
+            &::before {
+                @apply text-[18px] text-white;
+            }
+        }
+    }
+    .educare-primary-btn-sm-fill {
+        @apply bg-primary focus:ring-primary hover:bg-primary;
+    }
+    .educare-dark-btn-sm-fill {
+        @apply bg-dark focus:ring-dark hover:bg-dark;
+    }
+    .educare-secondary-btn-sm-fill {
+        @apply bg-supportingA focus:ring-supportingA hover:bg-supportingA;
+    }
+    .educare-warning-btn-sm-fill {
+        @apply bg-supportingB focus:ring-supportingB hover:bg-supportingB;
+    }
+    .educare-danger-btn-sm-fill {
+        @apply bg-danger focus:ring-danger hover:bg-danger;
+    }
+    .educare-success-btn-sm-fill {
+        @apply bg-success focus:ring-success hover:bg-success;
+    }
+    .educare-tertiary-btn-sm-fill {
+        @apply bg-supportingC focus:ring-supportingC hover:bg-supportingC;
+    }
+}
+//xs fill btn styles
+div {
+    .educare-primary-btn-xs-fill,
+    .educare-dark-btn-xs-fill,
+    .educare-secondary-btn-xs-fill,
+    .educare-warning-btn-xs-fill,
+    .educare-danger-btn-xs-fill,
+    .educare-success-btn-xs-fill,
+    .educare-tertiary-btn-xs-fill {
+        @apply h-7 text-white text-[14px] focus:outline-none shadow-sm tracking-widest rounded-md font-semibold px-2 font-primary inline-block capitalize focus:ring-2 focus:ring-offset-2 disabled:opacity-25 border;
+        i {
+            @apply translate-y-[2px] inline-block;
+
+            &::before {
+                @apply text-[18px] text-white;
+            }
+        }
+    }
+    .educare-primary-btn-xs-fill {
+        @apply bg-primary focus:ring-primary hover:bg-primary;
+    }
+    .educare-dark-btn-xs-fill {
+        @apply bg-dark focus:ring-dark hover:bg-dark;
+    }
+    .educare-secondary-btn-xs-fill {
+        @apply bg-supportingA focus:ring-supportingA hover:bg-supportingA;
+    }
+    .educare-warning-btn-xs-fill {
+        @apply bg-supportingB focus:ring-supportingB hover:bg-supportingB;
+    }
+    .educare-danger-btn-xs-fill {
+        @apply bg-danger focus:ring-danger hover:bg-danger;
+    }
+    .educare-success-btn-xs-fill {
+        @apply bg-success focus:ring-success hover:bg-success;
+    }
+    .educare-tertiary-btn-xs-fill {
+        @apply bg-supportingC focus:ring-supportingC hover:bg-supportingC;
+    }
+}
+
+//md stroke btn styles
+div {
+    .educare-primary-btn-md-stroke,
+    .educare-dark-btn-md-stroke,
+    .educare-secondary-btn-md-stroke,
+    .educare-warning-btn-md-stroke,
+    .educare-danger-btn-md-stroke,
+    .educare-success-btn-md-stroke,
+    .educare-tertiary-btn-md-stroke,
+    .educare-gray-btn-md-stroke {
+        @apply h-10 text-white text-[14px] focus:outline-none shadow-sm tracking-widest rounded-md font-semibold px-4 font-primary inline-block capitalize focus:ring-2 focus:ring-offset-2 disabled:opacity-25 leading-[38px] border;
+        i {
+            @apply translate-y-[2px] inline-block;
+
+            &::before {
+                @apply text-[18px] text-white;
+            }
+        }
+    }
+    .educare-primary-btn-md-stroke {
+        @apply text-primary focus:ring-primary hover:bg-primary/20 border-primary;
+        i {
+            &::before {
+                @apply text-primary;
+            }
+        }
+    }
+    .educare-dark-btn-md-stroke {
+        @apply text-dark focus:ring-dark hover:bg-dark/20 border-dark;
+    }
+    .educare-secondary-btn-md-stroke {
+        @apply text-supportingA focus:ring-supportingA hover:bg-supportingA/20 border-supportingA;
+    }
+    .educare-warning-btn-md-stroke {
+        @apply text-supportingB focus:ring-supportingB hover:bg-supportingB/20 border-supportingB;
+    }
+    .educare-danger-btn-md-stroke {
+        @apply text-danger focus:ring-danger hover:bg-danger/20 border-danger;
+    }
+    .educare-success-btn-md-stroke {
+        @apply text-success focus:ring-success hover:bg-success/20 border-success;
+    }
+    .educare-tertiary-btn-md-stroke {
+        @apply text-supportingC focus:ring-supportingC hover:bg-supportingC/20 border-supportingC;
+    }
+    .educare-gray-btn-md-stroke {
+        @apply text-grayLight focus:ring-grayLight hover:bg-grayLight/20 border-grayLight;
+    }
+}
+
+//list action btn
+.educare-list-action-btn {
+    .educare-primary-btn-sm-fill,
+    .educare-dark-btn-sm-fill,
+    .educare-secondary-btn-sm-fill,
+    .educare-warning-btn-sm-fill,
+    .educare-danger-btn-sm-fill,
+    .educare-success-btn-sm-fill,
+    .educare-tertiary-btn-sm-fill,
+    .educare-gray-btn-sm-fill {
+        @apply h-6 w-6 text-white leading-6 text-center rounded-md inline-block px-0 pl-0;
+        i {
+            @apply translate-y-[0px];
+            &::before {
+                @apply text-[14px] text-white;
+            }
+            &.icon-TrashSimple {
+                @apply translate-y-[1px] inline-block;
+            }
+        }
+    }
+    .educare-primary-btn-sm-fill {
+        @apply bg-primary focus:ring-primary hover:bg-primary;
+    }
+    .educare-dark-btn-sm-fill {
+        @apply bg-dark focus:ring-dark hover:bg-dark;
+    }
+    .educare-secondary-btn-sm-fill {
+        @apply bg-supportingA focus:ring-supportingA hover:bg-supportingA;
+    }
+    .educare-warning-btn-sm-fill {
+        @apply bg-supportingB focus:ring-supportingB hover:bg-supportingB;
+    }
+    .educare-danger-btn-sm-fill {
+        @apply bg-danger focus:ring-danger hover:bg-danger;
+    }
+    .educare-success-btn-sm-fill {
+        @apply bg-success focus:ring-success hover:bg-success;
+    }
+    .educare-tertiary-btn-sm-fill {
+        @apply bg-supportingC focus:ring-supportingC hover:bg-supportingC;
+    }
+    .educare-gray-btn-sm-fill {
+        @apply bg-grayLight focus:ring-grayLight hover:bg-grayLight;
+    }
+    .educare-dropdown-list {
+        @apply top-6;
+        button,
+        a {
+            @apply w-full px-4 py-2 text-left text-sm h-9 text-headingLight flex items-center gap-1 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 whitespace-nowrap ease-in-out;
+            i {
+                &::before {
+                    @apply text-[20px] text-supportingA/80;
+                }
+            }
+        }
+    }
+}
+
+//sm stroke btn
+div {
+    .educare-primary-btn-sm-stroke,
+    .educare-dark-btn-sm-stroke,
+    .educare-secondary-btn-sm-stroke,
+    .educare-warning-btn-sm-stroke,
+    .educare-danger-btn-sm-stroke,
+    .educare-success-btn-sm-stroke,
+    .educare-tertiary-btn-sm-stroke {
+        @apply inline-flex h-6 items-center px-2.5 text-white leading-6 font-semibold text-[12px] text-center rounded-md border shadow-sm focus:outline-none focus:ring-2 disabled:opacity-25 transition ease-in-out duration-150 focus:ring-offset-2;
+        i {
+            @apply translate-y-[0px] translate-x-[-3px];
+            &::before {
+                @apply text-[16px];
+            }
+            margin-right: 0px !important;
+        }
+    }
+    .educare-primary-btn-sm-stroke {
+        @apply text-primary focus:ring-primary border-primary hover:bg-primary/20;
+    }
+    .educare-dark-btn-sm-stroke {
+        @apply text-dark focus:ring-dark border-dark hover:bg-dark/20;
+    }
+    .educare-secondary-btn-sm-stroke {
+        @apply text-supportingA focus:ring-supportingA border-supportingA hover:bg-supportingA/20;
+    }
+    .educare-warning-btn-sm-stroke {
+        @apply text-supportingB focus:ring-supportingB border-supportingB hover:bg-supportingB/20;
+    }
+    .educare-danger-btn-sm-stroke {
+        @apply text-danger focus:ring-danger border-danger hover:bg-danger/20;
+    }
+    .educare-success-btn-sm-stroke {
+        @apply text-success focus:ring-success border-success hover:bg-success/20;
+    }
+    .educare-tertiary-btn-sm-stroke {
+        @apply text-supportingC focus:ring-supportingC border-supportingC hover:bg-supportingC/20;
+    }
+}
+
+//sm Outline btn
+div {
+    .educare-primary-btn-sm-outline,
+    .educare-dark-btn-sm-outline,
+    .educare-secondary-btn-sm-outline,
+    .educare-warning-btn-sm-outline,
+    .educare-danger-btn-sm-outline,
+    .educare-success-btn-sm-outline,
+    .educare-tertiary-btn-sm-outline {
+        @apply inline-flex h-6 items-center px-2 text-white leading-6 font-semibold text-[12px] text-center rounded-sm border shadow-sm focus:outline-none focus:ring-2 disabled:opacity-25 transition ease-in-out duration-150 focus:ring-offset-2;
+        i {
+            @apply translate-y-[0px] translate-x-[-3px];
+            &::before {
+                @apply text-[16px];
+            }
+            margin-right: 0px !important;
+        }
+    }
+    .educare-primary-btn-sm-outline {
+        @apply text-primary focus:ring-primary border-primary hover:bg-primary/20;
+    }
+    .educare-dark-btn-sm-outline {
+        @apply text-dark focus:ring-dark border-dark hover:bg-dark/20;
+    }
+    .educare-secondary-btn-sm-outline {
+        @apply text-supportingA focus:ring-supportingA border-supportingA hover:bg-supportingA/20;
+    }
+    .educare-warning-btn-sm-outline {
+        @apply text-supportingB focus:ring-supportingB border-supportingB hover:bg-supportingB/20;
+    }
+    .educare-danger-btn-sm-outline {
+        @apply text-danger focus:ring-danger border-danger hover:bg-danger/20;
+    }
+    .educare-success-btn-sm-outline {
+        @apply text-success focus:ring-success border-success hover:bg-success/20;
+    }
+    .educare-tertiary-btn-sm-outline {
+        @apply text-supportingC focus:ring-supportingC border-supportingC hover:bg-supportingC/20;
+    }
+}
+
+//md filter action btn
+.educare-filter-action-btn {
+    .educare-primary-btn-md-fill,
+    .educare-dark-btn-md-fill,
+    .educare-secondary-btn-md-fill,
+    .educare-warning-btn-md-fill,
+    .educare-danger-btn-md-fill,
+    .educare-success-btn-md-fill,
+    .educare-tertiary-btn-md-fill,
+    .educare-gray-btn-md-fill {
+        @apply h-10 px-2.5 leading-10 text-center rounded-md inline-block;
+        i {
+            @apply translate-y-[3px] border-0 inline-block;
+            &::before {
+                @apply text-[20px] text-white;
+            }
+            &.icon-plus {
+                @apply translate-y-[2px];
+                &::before {
+                    @apply text-[18px] text-white;
+                }
+            }
+        }
+    }
+    .educare-primary-btn-md-fill {
+        @apply bg-primary focus:ring-primary hover:bg-primary;
+    }
+    .educare-dark-btn-md-fill {
+        @apply bg-dark focus:ring-dark hover:bg-dark;
+    }
+    .educare-secondary-btn-md-fill {
+        @apply bg-supportingA focus:ring-supportingA hover:bg-supportingA;
+    }
+    .educare-warning-btn-md-fill {
+        @apply bg-supportingB focus:ring-supportingB hover:bg-supportingB;
+    }
+    .educare-danger-btn-md-fill {
+        @apply bg-danger focus:ring-danger hover:bg-danger;
+    }
+    .educare-success-btn-md-fill {
+        @apply bg-success focus:ring-success hover:bg-success;
+    }
+    .educare-tertiary-btn-md-fill {
+        @apply bg-supportingC focus:ring-supportingC hover:bg-supportingC;
+    }
+    .educare-gray-btn-md-fill {
+        @apply focus:outline-none focus:ring-2 focus:ring-offset-2 bg-grayLight focus:ring-grayLight hover:bg-grayLight h-10;
+    }
+    .educare-dropdown-list {
+        @apply top-6;
+        button,
+        a {
+            @apply w-full px-4 py-2 text-left text-sm h-9 text-headingLight flex items-center gap-1 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out;
+            i {
+                &::before {
+                    @apply text-[20px] text-supportingA/80;
+                }
+            }
+        }
+    }
+}
+
+//count circle
+button.count-circle {
+    @apply relative;
+    span {
+        @apply h-5 min-w-[20px] rounded-[50%] text-[12px] leading-5 text-center absolute top-[-5px] right-[-5px] shadow-[0_2px_10px_0px_rgba(0,0,0,0.08)] inline-block;
+    }
+}

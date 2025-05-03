@@ -1,0 +1,110 @@
+// bulkMessages style
+.educare-bulk-messages-item {
+	@apply flex justify-between;
+
+	&:not(:last-child) {
+		@apply mb-[8px];
+	}
+
+	span {
+		@apply text-[14px] text-headingLight;
+	}
+
+	h6 {
+		@apply text-[14px] text-headingLight font-semibold;
+	}
+}
+
+//class discussion message style
+.class-discussion-chatbox {
+	@apply flex flex-col gap-5;
+
+	.chat-message {
+		.message-info {
+			@apply flex justify-end items-center flex-wrap gap-2 mb-3;
+
+			.delete-text-btn {
+				@apply flex items-center text-danger;
+
+				.icon-TrashSimple {
+					@apply mr-[2px];
+				}
+			}
+		}
+	}
+
+	.user-message-box {
+		@apply flex gap-4 justify-end;
+
+		.message-box {
+			@apply flex justify-end flex-wrap bg-info text-white px-5 py-3 rounded-tl-2xl rounded-b-2xl;
+		}
+
+		.message-user-logo {
+			@apply max-w-[30px] max-h-[30px];
+
+			img {
+				@apply rounded-full w-[100%];
+			}
+		}
+	}
+}
+
+//activity message style
+.activity-chatbox {
+	@apply flex justify-between gap-5;
+
+	.chat-message {
+		@apply w-[100%];
+
+		&.user-message {
+			@apply flex justify-end;
+		}
+
+		&.oponent-message {
+			@apply flex justify-start;
+		}
+
+		.activity-message-info {
+			@apply flex justify-end items-center flex-wrap mb-1;
+		}
+	}
+
+	.user-activity-message-box {
+		@apply flex gap-1 justify-end flex-col w-[100%];
+
+		.message-box {
+			@apply flex justify-start flex-wrap bg-grayLight border border-border text-white px-5 py-3 rounded-t-3xl rounded-bl-3xl;
+		}
+
+		.oponent-message-box {
+			@apply flex justify-start flex-wrap bg-grayLight border border-border text-white px-5 py-3 rounded-t-3xl rounded-br-3xl;
+		}
+	}
+}
+
+.message-wrapper{
+	@apply  max-h-[600px] h-full overflow-y-scroll;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	&::-webkit-scrollbar {
+	  @apply hidden;
+	}
+	.messageBox-wrap {
+		@apply max-w-full;
+	
+		.message {
+			@apply my-2.5 mx-0 py-2.5 px-[15px] rounded-[8px] max-w-[70%] font-[14px] leading-[1.4]; 
+	
+			&.reply {
+				@apply bg-grayLight/20 text-heading rounded-tl-none text-left;
+				align-self: flex-start;
+			}
+	
+			&.answer {
+				@apply bg-primary text-white rounded-br-none text-right ml-auto;
+				align-self: flex-end;
+			}
+		}
+	}
+}

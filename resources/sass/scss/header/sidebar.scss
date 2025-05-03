@@ -1,0 +1,106 @@
+.educare-sidebar-main {
+    @apply min-w-[320px] minMax2Xl:min-w-[280px] maxSm:min-w-[290px] bg-white;
+    box-shadow: 5px 0px 15px 0px rgba(0, 0, 0, 0.05); 
+    @apply maxSm:shadow-none;
+    min-height: calc(100vh - 50px);
+}
+.educare-sidebar-school {
+    @apply pl-[60px] py-[22px] minMax2Xl:pl-[30px] maxSm:pl-5 pr-5;
+    span {
+        @apply font-medium text-headingLight;
+        a {
+            @apply text-primary;
+        }
+    }
+}
+.educare-sidebar-nav-title,
+.educare-sidebar-nav-title-copyright {
+    @apply mx-5 py-3 border-t pl-10 maxSm:pl-5 border-borderLight/20;
+    span {
+        @apply font-medium text-headingLight;
+    }
+}
+.educare-sidebar-nav-title-copyright {
+    @apply pb-4;
+    span {
+        @apply text-[14px] font-normal font-primary text-headingLight/70 tracking-[-0.2px];
+    }
+}
+.educare-sidebar-navigation {
+    @apply px-5;
+
+    &.navigation-scroll{
+        @apply max-h-[520px] h-full overflow-y-scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+          @apply hidden;
+        }
+    }
+    nav {
+        ul {
+            li.sidenav-nav-item {
+                a {
+                    @apply font-medium text-headingLight hover:text-primary flex items-center gap-x-2 py-3 px-10 pr-5 minMax2Xl:px-[1.5rem] maxSm:px-5 rounded-lg relative;
+                }
+                &.active {
+                    a.sidenav-nav-link {
+                        @apply bg-primary text-white;
+                    }
+                }
+                .sidenav-nav-link-icon {
+                    @apply absolute right-[34px] top-4;
+                }
+                .sublevel-nav-A {
+                    @apply px-[27px] maxSm:px-6 font-primary;
+                    .sublevel-nav-item-A {
+                        .sublevel-nav-link {
+                            @apply hover:text-primary transition duration-300;
+                        }
+                        &.active > {
+                            .sublevel-nav-link {
+                                @apply text-primary;
+                            }
+                        }
+                        .sublevel-nav-item-B {
+                            @apply px-[15px] maxSm:px-3 font-primary;
+                            &.active > {
+                                .sublevel-nav-link {
+                                    @apply text-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.educare-sidebar-footer {
+    @apply pl-[60px] pr-2.5;
+    h5 {
+        @apply text-[18px] font-semibold mb-1 text-headingLight;
+    }
+    span {
+        @apply text-[14px] text-headingLight/70 block;
+    }
+    i {
+        @apply text-danger text-[20px] leading-none;
+    }
+}
+
+.sublevel-nav {
+    display: none;
+}
+
+.sublevel-nav-item {
+    position: relative;
+}
+
+.sidenav-nav-item.active .sublevel-nav {
+    display: block;
+}
+
+.sublevel-nav-item.active .sublevel-nav {
+    display: block;
+}

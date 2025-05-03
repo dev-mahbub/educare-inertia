@@ -1,0 +1,2 @@
+INSERT INTO `images` (`id`, `school_id`, `imageable_type`, `imageable_id`, `name`, `path`, `status`, `created_at`, `updated_at`) VALUES
+	(1, 1, 'App\\Models\\School', 1, 'no name', 'no image', 'Active', NULL, NULL);

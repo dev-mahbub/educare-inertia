@@ -1,0 +1,36 @@
+.educare-sidebar-nav-title.educare-student-sidebar-profile {
+    @apply text-center;
+    .educare-dashboard-header-info-profile-img {
+        img {
+            @apply h-[60px] w-[60px];
+        }
+    }
+}
+
+//student detail transport
+.vehicle-route-area {
+    @apply flex justify-between gap-2.5 relative z-[1];
+    &::before {
+        @apply absolute h-[2px] top-[50%] left-5 bg-supportingA z-[-1];
+        content: '';
+        width: calc(100% - 40px);
+    }
+}
+.vehicle-route-area-item {
+    @apply text-center;
+    h6 {
+        @apply text-[16px] font-semibold text-headingLight;
+    }
+    &-icon {
+        @apply my-2 px-4 bg-white inline-block;
+        i {
+            @apply text-headingLight text-[18px] h-10 w-10 rounded-[50%] border border-border bg-white inline-flex justify-center items-center;
+            &:before {
+                @apply text-headingLight text-[18px];
+            }
+        }
+    }
+    span {
+        @apply text-[15px] font-medium text-headingLight;
+    }
+}

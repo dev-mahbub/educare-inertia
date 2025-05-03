@@ -1,0 +1,80 @@
+//autocomplete input styles
+.educare-input-type-file-styles {
+    .MuiInputBase-root {
+        // height: 40px;
+        padding: 0 !important;
+        padding-left: 10px !important;
+        padding-right: 40px !important;
+        .MuiInputBase-input {
+            @apply p-0;
+        }
+        .MuiButtonBase-root {
+            margin: 5px !important;
+            margin-left: 0px !important;
+            max-width: calc(100% - 10px) !important;
+        }
+        .MuiButtonBase-root {
+            height: 28px;
+            line-height: 1 !important;
+            @apply font-primary bg-lightest text-headingLight;
+            .MuiChip-deleteIcon {
+                @apply text-border;
+            }
+            &.MuiIconButton-root {
+                margin-left: 5px !important;
+            }
+        }
+        div.MuiAutocomplete-endAdornment {
+            top: calc(50% - 0px) !important;
+            .MuiSvgIcon-root {
+                @apply min-w-[24px];
+            }
+        }
+        .MuiChip-label {
+            font-size: 12px !important;
+            font-weight: 500 !important;
+            font-family: 'Inter', sans-serif !important;
+        }
+        .MuiOutlinedInput-notchedOutline {
+            @apply border-border/50 hover:border-border/50;
+        }
+        &.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+            @apply border-border/50;
+        }
+    }
+}
+
+//count autocomplete input styles
+.educare-input-field-styles{
+    &.select-count{
+        .educare-input-type-file-styles{
+            div.MuiFormControl-root{
+                @apply m-0 min-w-[160px] w-full;
+    
+                div.MuiInputBase-root.MuiOutlinedInput-root{
+                    @apply font-primary bg-white/50 text-headingLight;
+                    div.MuiInputBase-input {
+                        @apply pt-[7.5px] pb-[7.5px] pl-1 pr-[5px];
+                    }
+
+                    fieldset {
+                        @apply -bottom-[2px] top-0; 
+                    }
+                }
+    
+                legend{
+                    @apply hidden;
+                }
+            }
+        }
+    }
+}
+
+div.MuiPaper-root.MuiPaper-elevation{
+    @apply max-h-[400px] overflow-y-scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      @apply hidden;
+    }
+}

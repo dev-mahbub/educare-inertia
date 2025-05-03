@@ -1,0 +1,24 @@
+import EnquiryHeaderMenus from '@/Components/Partials/Menus/Enquiry/EnquiryHeaderMenus';
+import React from 'react';
+import GatePassClassWiseTables from './GatePassClassWiseTables';
+
+const GatePassClassWiseInnerLayout = ({classroomData, gatePass}) => {
+    return (
+        <>
+             <div className="educare-dashboard-main-content-wrap">
+                <div className="educare-dashboard-main-content-body">
+                    <div className="educare-bottom-header z-10 relative">
+                        <div className="educare-bottom-header-middle bg-white">
+                            <EnquiryHeaderMenus title="Visitors Enquiry Management" />
+                        </div>
+                    </div>
+                    <div className="educare-dashboard-main-content-body-wrap">
+                        <GatePassClassWiseTables classroomData={classroomData} gatePass={gatePass}/>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
+};
+
+export default GatePassClassWiseInnerLayout;

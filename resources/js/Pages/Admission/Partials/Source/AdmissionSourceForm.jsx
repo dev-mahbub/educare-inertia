@@ -1,0 +1,236 @@
+import InputError from "@/Components/InputError";
+import InputLabel from "@/Components/InputLabel";
+import PrimaryButton from "@/Components/PrimaryButton";
+import TextInput from "@/Components/TextInput";
+import { Link, router, useForm } from "@inertiajs/react";
+import { Tooltip } from "@mui/material";
+import Swal from "sweetalert2";
+
+export default function AdmissionSourceForm({enquirySource}) {
+
+    const {
+        data,
+        setData,
+        errors,
+        post,
+        reset,
+        processing
+    } = useForm({
+        title: "",
+        description: "",
+    });
+
+    const handleAdmissionSourceData = (e) => {
+        e.preventDefault();
+        post(route("admission.enquiry_source.save"), {
+            preserveScroll: true,
+            onSuccess: () => reset()
+        });
+    };
+
+    const handleDelete = (id) => {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: 'You will not be able to recover this!',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Yes, delete it!',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                router.delete(route('admission.enquiry_source.delete', id));
+            }
+        });
+    }
+
+    // handle form reset start
+    const handleReset = () => {
+        reset();
+    }
+    // handle form reset end
+
+
+    return (
+        <>
+            <div className="educare-classroom-form-area">
+                <div className="grid grid-cols-12 gap-[20px]">
+                    <div className="lg:col-span-6 xl:col-span-6 col-span-12">
+                        <div className="educare-classroom-table-wrapper">
+                            <div className="educare-card-title">
+                                <h5>
+                                    <i className="icon-ListBullets"></i>
+                                    Admission Source
+                                    <span>
+                                        (Total : {enquirySource?.length})
+                                    </span>
+                                </h5>
+                            </div>
+                            <div className="educare-default-table xs:overflow-x-auto mb-[25px]">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Sl No.</th>
+                                            <th>Title</th>
+                                            <th>Description</th>
+                                            {/* <th>Status</th> */}
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {enquirySource?.length > 0 ?
+                                            enquirySource?.map((item, index) => (
+                                                <tr key={index}>
+                                                    <td>{index+1}</td>
+                                                    <td>{item?.title}</td>
+                                                    <td>{item?.description}</td>
+                                                    {/* <td>{item?.status}</td> */}
+                                                    <td>
+                                                        <div className='educare-list-action-btn flex flex-nowrap gap-1'>
+                                                            <div>
+                                                                <Tooltip
+                                                                    title="Edit"
+                                                                    placement="top"
+                                                                    arrow
+                                                                >
+                                                                    <Link
+                                                                        href={route('admission.enquiry_source.edit', item.id)}
+                                                                        className="educare-warning-btn-sm-fill"
+                                                                    >
+                                                                        <i className="icon-editing"></i>
+                                                                    </Link>
+                                                                </Tooltip>
+                                                            </div>
+                                                            <div>
+                                                                <Tooltip
+                                                                    title="Delete"
+                                                                    placement="top"
+                                                                    arrow
+                                                                >
+                                                                    <button
+                                                                        className="educare-danger-btn-sm-fill"
+                                                                        onClick={() => handleDelete(item.id)}
+                                                                    >
+                                                                        <i className="icon-TrashSimple"></i>
+                                                                    </button>
+                                                                </Tooltip>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            )) :
+                                            <tr>
+                                                <td className="text-center text-red-500" colSpan="7">Data not found</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="lg:col-span-6 xl:col-span-6 col-span-12">
+                        <div className="educare-class-form-box-wrapper">
+                            <div className="educare-create-school-details-form-wrap">
+                                <div className="educare-card-title">
+                                    <h5>
+                                        <i className="icon-ListBullets"></i>
+                                        Add Admission Source
+                                    </h5>
+                                </div>
+                                <div className="educare-class-form-box bg-white/70 shadow-[0_2px_10px_0px_rgba(0,0,0,0.08)] px-[25px] py-[30px] maxXs:p-[15px] rounded-lg">
+                                    <form onSubmit={handleAdmissionSourceData}>
+                                        <div className="grid grid-cols-12 gap-4">
+                                            <div className="col-span-12">
+                                                <div className="educare-input-field-styles">
+                                                    <div className="educare-input-field-styles-label-wrap">
+                                                        <div className="educare-input-field-styles-label">
+                                                            <InputLabel
+                                                                htmlFor="title"
+                                                                value="Title"
+                                                            />
+                                                            <sup>*</sup>
+                                                        </div>
+                                                    </div>
+                                                    <TextInput
+                                                        id="title"
+                                                        value={
+                                                            data.title
+                                                        }
+                                                        onChange={(e) =>
+                                                            setData(
+                                                                "title",
+                                                                e.target.value
+                                                            )
+                                                        }
+                                                        className="block"
+                                                    />
+                                                    <InputError
+                                                        message={
+                                                            errors.title
+                                                        }
+                                                        className="mt-2"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div className="col-span-12">
+                                                <div className="educare-input-field-styles">
+                                                    <InputLabel
+                                                        htmlFor="description"
+                                                        value="Description"
+                                                    />
+                                                    <TextInput
+                                                        id="description"
+                                                        value={
+                                                            data.description
+                                                        }
+                                                        onChange={(e) =>
+                                                            setData(
+                                                                "description",
+                                                                e.target.value
+                                                            )
+                                                        }
+                                                        className="block"
+                                                    />
+                                                    <InputError
+                                                        message={
+                                                            errors.description
+                                                        }
+                                                        className="mt-2"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div className="col-span-12">
+                                                <div className="flex flex-wrap gap-2.5 mt-2 justify-end">
+                                                    <PrimaryButton
+                                                        type="button"
+                                                        className="educare-gray-btn-lg-stroke"
+                                                        onClick={(e) => {
+                                                            handleReset()
+                                                        }}
+                                                    >
+                                                        Reset
+                                                    </PrimaryButton>
+                                                    {/* <Link
+                                                        className="educare-gray-btn-lg-stroke"
+                                                        href={route('admission.enquiry_source')}
+                                                    >
+                                                        Reset
+                                                    </Link> */}
+                                                    <PrimaryButton
+                                                        className="educare-primary-btn-lg-fill"
+                                                    >
+                                                        Save
+                                                    </PrimaryButton>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
+}

@@ -1,0 +1,10 @@
+
+.educare-breadcrumb-banner-area {
+    @apply overflow-hidden relative px-[100px] py-[60px] maxXs:px-[30px];
+    background: linear-gradient(0deg, rgba(83, 85, 223, 0.2) 0%, rgba(83, 85, 223, 0) 100%);
+}
+.educare-breadcrumb-banner-content {
+    h1 {
+        @apply text-[32px] maxSm:text-[28px] mb-[5px] font-semibold;
+    }
+}

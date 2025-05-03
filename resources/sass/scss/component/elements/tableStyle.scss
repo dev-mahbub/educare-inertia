@@ -1,0 +1,281 @@
+//Large list table styles
+.educare-admission-list {
+    @apply maxMd:pb-[300px] maxMd:overflow-x-auto overflow-y-visible;
+
+    &.custom-scroll-style {
+        @apply max-h-[500px] max-w-[1490px] overflow-x-auto overflow-y-auto;
+        scrollbar-width: thin;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    table {
+        @apply border-0 border-border w-full border-b-0 border-spacing-y-[2px] maxMd:min-w-[1000px] maxMd:cursor-grab maxMd:w-full border-separate;
+        tr {
+            @apply text-left h-12 relative;
+            th {
+                @apply font-semibold capitalize bg-primary/10 border-border/30 text-dark;
+            }
+            th,td {
+                @apply px-1 py-[9px] text-[14px] border-r first:rounded-l-lg first:pl-5 last:rounded-r-lg last:min-w-[130px] last:border-r-0;
+            }
+            td {
+                @apply bg-white/70 border-border/20 text-headingLight;
+            }
+            &.educare-table-row-active {
+                th,td {
+                    @apply bg-supportingA/5;
+                }
+            }
+        }
+        .educare-enq-arrow {
+            @apply h-[24px] w-[24px] text-center rounded-[50%] leading-6 text-[12px] border border-transparent bg-primary/20 text-primary float-right ml-2;
+        }
+        .educare-admission-list-action-btn {
+            @apply flex flex-wrap gap-1;
+            .educare-list-button-field-styles {
+                button, a {
+                    @apply h-6 w-6 text-white leading-6 text-center rounded-md;
+                    i {
+                        @apply translate-y-[0px];
+                        &::before {
+                            @apply text-[14px] text-white;
+                        }
+                        &.icon-TrashSimple {
+                            @apply translate-y-[2px] inline-block;
+                        }
+                    }
+                }
+                .educare-dropdown-list {
+                    @apply w-[240px] font-primary;
+                    button, a {
+                        @apply w-full px-4 py-2 text-left text-sm h-9 text-headingLight flex items-center gap-1 hover:bg-gray-100 hover:text-primary focus:outline-none focus:bg-gray-100 transition whitespace-nowrap duration-150 ease-in-out;
+                        i{
+                            &::before {
+                                @apply text-[20px] text-supportingA/80;
+                            }
+                        }
+                    }
+                }
+            }
+            .educare-dropdown-list {
+                @apply top-6;
+            }
+        }
+        .educare-admission-list-enq-inner-wrap {
+            @apply pr-4 bg-white/70;
+            tr {
+                th,td {
+                    @apply border-r border-border/30 bg-grayLight/10 last:border-r-0;
+                }
+            }
+            .educare-admission-list-enq-inner-head-bg{
+                thead{
+                    @apply bg-grayLight;
+                }
+            }
+        }
+    }
+    //full page table
+    &.educare-full-container-scrollable-table {
+        @apply max-w-[1490px] max3Xl:max-w-[1185px] max2Xl:max-w-[1055px] maxXl:max-w-[1140px] overflow-x-auto;
+    }
+
+    &.baseline-table-row{
+        table{
+            td{
+                @apply align-baseline;
+            }
+        }
+    }
+    
+}
+// small list table sms template
+.educare-sms-templates-list {
+    @apply maxMd:overflow-x-auto overflow-y-auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    table {
+        @apply border-0 border-border w-full border-b-0 border-spacing-y-[2px] maxMd:min-w-[1000px] maxMd:cursor-grab maxMd:w-full border-separate;
+        tr {
+            @apply text-left h-12 relative;
+            th {
+                @apply font-semibold capitalize bg-primary/10 border-border/30 text-dark;
+            }
+            th,td {
+                @apply px-3 py-[9px] text-[14px] border-r first:rounded-l-lg first:pl-5 first:min-w-[220px] last:rounded-r-lg last:min-w-[150px] last:border-r-0;
+            }
+            td {
+                @apply min-w-[180px] bg-white/70 border-border/20 text-headingLight;
+            }
+        }
+        .educare-enq-arrow {
+            @apply h-[24px] w-[24px] text-center rounded-[50%] leading-6 text-[12px] border border-transparent bg-primary/20 text-primary float-right ml-2;
+        }
+        .educare-admission-list-action-btn {
+            @apply flex flex-wrap gap-1;
+            .educare-list-button-field-styles {
+                button, a {
+                    @apply h-6 w-6 text-white leading-6 text-center rounded-md;
+                    i {
+                        @apply translate-y-[0px];
+                        &::before {
+                            @apply text-[14px] text-white;
+                        }
+                    }
+                }
+                .educare-dropdown-list {
+                    button, a {
+                        @apply w-full px-4 py-2 text-left text-sm h-9 text-headingLight flex items-center gap-1 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out;
+                        i{
+                            &::before {
+                                @apply text-[20px] text-supportingA/80;
+                            }
+                        }
+                    }
+                }
+            }
+            .educare-dropdown-list {
+                @apply top-6;
+            }
+        }
+        .educare-admission-list-enq-inner-wrap {
+            @apply pr-4 bg-white/70;
+            tr {
+                th,td {
+                    @apply border-r border-border/30 bg-grayLight/10 last:border-r-0;
+                }
+            }
+        }
+    }
+}
+.educare-default-table {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+}
+//min-width 1400px table
+.educare-admission-list.min-width-1400-table {
+    @apply maxXl:pb-[300px] maxXl:overflow-x-auto;
+    table {
+        @apply maxXl:min-w-[1390px] maxXl:cursor-grab maxXl:w-full;
+    }
+}
+
+// Material Table Styles
+.educare-common-mat-list {
+    .MuiPaper-root {
+        @apply bg-transparent shadow-none;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    table {
+        @apply w-full border-spacing-y-[1px] border-separate;
+        .MuiTableRow-root {
+            @apply text-left h-12 relative font-primary;
+            .MuiTableCell-head {
+                @apply font-semibold capitalize bg-primary/10 border-border/30 text-dark;
+            }
+            .MuiTableCell-head,.MuiTableCell-body {
+                @apply px-1 py-[0px] text-[14px] border-r first:rounded-l-lg first:pl-5 last:rounded-r-lg last:min-w-[130px] last:border-r-0 font-primary;
+            }
+            .MuiTableCell-body {
+                @apply bg-white/70 border-border/20 text-headingLight;
+            }
+            &.educare-table-row-active {
+                .MuiTableCell-head,.MuiTableCell-body {
+                    @apply bg-supportingA/5;
+                } 
+            }
+        }
+    }
+    .MuiTablePagination-root {
+        @apply min-h-[56px] bg-white/70 rounded-lg font-primary pl-5 last:pl-5;
+    }
+    .MuiTablePagination-selectLabel,
+    .MuiTablePagination-displayedRows {
+        @apply text-[16px] font-medium font-primary text-headingLight capitalize;
+    }
+    .MuiToolbar-gutters {
+        @apply ml-0 pl-0;
+    }
+    .MuiTablePagination-displayedRows {
+        @apply ml-auto;
+    }
+    .MuiTablePagination-input {
+        @apply border border-border rounded;
+    }
+    .MuiTablePagination-spacer {
+        @apply hidden;
+    }
+    .MuiTableSortLabel-root {
+        &.Mui-active,
+        &:hover {
+            @apply text-primary;
+            .MuiTableSortLabel-icon {
+                @apply opacity-100 fill-primary;
+            }
+        }
+    }
+    .MuiSvgIcon-root.MuiTableSortLabel-icon {
+        @apply fill-dark opacity-100;
+    }
+    .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium  {
+        @apply text-primary fill-border;
+    }
+    .Mui-selected {
+        .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium  {
+            @apply fill-primary;
+        }
+    }
+    .MuiTableCell-head  {
+        .Mui-checked,
+        .MuiCheckbox-indeterminate {
+            .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium  {
+                @apply fill-primary;
+            }
+        }
+    }
+}
+//educare default table
+.educare-default-table {
+    table {
+        @apply border-0 border-border w-full border-b-0 border-spacing-y-[2px] maxMd:min-w-[450px] maxMd:cursor-grab border-separate;
+        tr {
+            @apply text-left h-12 relative;
+            th {
+                @apply font-semibold capitalize bg-primary/10 border-border/30 text-dark;
+            }
+            th,td {
+                @apply px-1 py-[9px] text-[14px]  border-r first:rounded-l-lg first:pl-5 last:rounded-r-lg last:min-w-[95px] last:border-r-0 transition;
+            }
+            td {
+                @apply bg-white/70 border-border/20 text-headingLight;
+            }
+            &.educare-table-row-active {
+                th,td {
+                    @apply bg-supportingA/5;
+                }
+            }
+        }
+    }
+    &.table-body-dark{
+        tbody{
+            @apply bg-gray-300;
+        }
+    }
+} 
+
+.educare-enq-arrow {
+    @apply h-[24px] w-[24px] text-center rounded-[50%] leading-6 text-[12px] border border-transparent bg-primary/20 text-primary float-right ml-2;
+}

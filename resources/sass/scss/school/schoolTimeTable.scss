@@ -1,0 +1,53 @@
+.educare-time-table-controller-wrapper {
+    .educare-custom-table-body {
+        @apply border-0 w-full;
+        .educare-custom-table-row {
+            @apply text-left relative rounded-lg bg-white/70;
+            .educare-custom-column {
+                .day-name {
+                    span {
+                        @apply text-[16px];
+                    }
+                }
+            }
+            .educare-custom-table-column { 
+                @apply px-3 py-[9px] text-[14px] text-headingLight  last:border-r-0 align-middle;
+            }
+        }
+    }
+}
+.educare-custom-table-column {
+    h6 {
+        @apply text-[16px] font-semibold text-headingLight;
+    }
+}
+.educare-time-table-select {
+    .educare-input-field-styles {
+        @apply mb-[5px];
+    }
+}
+.assign-students-icon-wrap {
+    .educare-secondary-btn-md-fill {
+        @apply px-2;
+    }
+    i.icon-UsersThree {
+        @apply translate-y-[5px];
+        &::before {
+            @apply text-[26px];
+        }
+    }
+}
+//assign table order start
+.educare-assign-table-list {
+    @apply py-2 flex justify-between items-center border-b border-border/20 gap-4;
+    .educare-assign-table-heading {
+        width: calc(100% - 150px);
+        h6 {
+            @apply text-[16px] font-semibold text-headingLight font-primary;
+        }
+    }
+    .educare-assign-table-input {
+        @apply text-end;
+    }
+}
+//assign table order end

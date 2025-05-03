@@ -1,0 +1,74 @@
+.educare-dashboard-main {
+	@apply flex;
+	&-content {
+		&-body {
+			&-wrap {
+				@apply pl-[30px] py-[30px] pr-[60px] max2Xl:pr-[30px] maxXs:px-[15px] font-primary;
+			}
+		}
+	}
+}
+.educare-dashboard-main-sidebar {
+	&.show-dashboard-sidebar {
+		@apply ml-0;
+		@apply maxXl:absolute maxXl:-left-[320px] maxXl:top-[81px] maxSm:top-[73px] maxSm:-left-[300px] maxXl:z-10;
+		-webkit-transition: 0.5s;
+		-moz-transition: 0.5s;
+		-o-transition: 0.5s;
+		transition: 0.5s;
+	}
+	&.hidden-dashboard-sidebar {
+		@apply -ml-[320px] font-primary z-10;
+		@apply maxXl:absolute maxXl:left-0 maxXl:top-[81px]  maxSm:top-[73px] maxSm:left-0 maxXl:ml-0 maxXl:z-20;
+		-webkit-transition: 0.5s;
+		-moz-transition: 0.5s;
+		-o-transition: 0.5s;
+		transition: 0.5s;
+	}
+}
+.educare-mis-report-menu-area,
+.educare-header-search-bar-main,
+.educare-dashboard-main-content-body-wrap {
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+}
+.educare-dashboard-main-content {
+	&.hidden-dashboard-content { 
+		.educare-mis-report-menu-area,
+		.educare-dashboard-main-content-body-wrap {
+			@apply pl-[60px] font-primary;
+			-webkit-transition: 0.5s;
+			-moz-transition: 0.5s;
+			-o-transition: 0.5s;
+			transition: 0.5s;
+			@apply maxXl:pl-[30px] maxXs:pl-[15px] font-primary;
+		}
+	}
+}
+.educare-dashboard-main-content-wrap {
+	@apply minMaxXl:col-span-3;
+}
+
+.body-height-full{
+	@apply min-h-[calc(100vh-150px)];
+}
+.educare-dashboard-menu-overlay.hidden-menu-overlay {
+	@media screen and (max-width: 1400px) {
+		position: fixed;
+		min-height: 100vh;
+		height: 100%;
+		width: 100%;
+		background: rgba(0,0,0,0.6);
+		top: 0;
+		left: 0;
+		transition: all 0.3s;
+		z-index: 11;
+	}
+}
+
+//mobile navs
+.educare-dashboard-main-content {
+	@apply relative overflow-x-hidden;
+}

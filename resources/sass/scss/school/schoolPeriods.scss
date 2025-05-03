@@ -1,0 +1,75 @@
+.educare-card-title {
+    @apply pb-3;
+    &.card-title-no-padding{
+        @apply pb-0;
+    }
+    h5 {
+        @apply text-[18px] maxLg:text-[16px] font-semibold text-headingLight inline-flex flex-nowrap items-start leading-none gap-2;
+    }
+    i {
+        @apply text-[20px] ;
+    }
+}
+.educare-master-create-list-checkbox {
+    @apply flex gap-[7px];
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+.school-periods-select-item-wrapper {
+    @apply flex flex-wrap gap-[20px]; 
+}
+.school-periods-select-item {
+    .educare-input-field-styles {
+        @apply min-w-[300px] maxXs:min-w-full flex items-center;
+        label {
+            @apply w-[60px] min-w-[60px] mb-[0px];
+        }
+        select {
+            @apply mt-0;
+        }
+    }
+}
+.educare-school-shift-time-table {
+    @apply text-right leading-none;
+    ul {
+        @apply inline-flex flex-wrap justify-end gap-4 maxSm:justify-start;
+        li {
+            @apply inline-flex;
+            a {
+                @apply text-[14px] font-medium text-headingLight inline-flex gap-2 items-center hover:text-primary transition duration-300 ease-in-out;
+            }
+            .educare-dropdown-menu {
+                @apply max2Xl:gap-1;
+            }
+            .educare-dropdown-list {
+                a {
+                    @apply flex;
+                }
+            }
+        }
+    }
+    .educare-dropdown-list {
+        @apply top-[45px] bg-white mt-0 maxMd:right-auto maxSm:top-[32px];
+    }
+}
+
+.educare-school-shift-input-field {
+    margin-bottom: 20px;
+    .educare-input-field-styles {
+        @apply min-w-[300px] maxXs:min-w-full flex;
+        label {
+            @apply w-[120px] min-w-[120px] mb-[0px];
+        }
+        select {
+            @apply mt-0;
+        }
+    }
+}
+.master-create-class-timetable-select-top {
+    select {
+        label {
+            @apply pt-0;
+        }
+    }
+}

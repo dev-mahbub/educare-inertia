@@ -1,0 +1,11 @@
+h1 {
+    @apply font-primary;
+}
+
+.transport-icon-button i {
+    @apply inline-block;
+    transform: translateY(2px) !important;
+    &:before {
+        font-size: 16px !important;
+    }
+}

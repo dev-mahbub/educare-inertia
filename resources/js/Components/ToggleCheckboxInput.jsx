@@ -1,0 +1,12 @@
+export default function ToggleCheckboxInput({ className = '', ...props }) {
+    return (
+        <input
+            {...props}
+            type="checkbox"
+            className={
+                'rounded border-border text-primary shadow-sm translate-y-[-1px] focus:ring-primary' +
+                className
+            }
+        />
+    );
+}

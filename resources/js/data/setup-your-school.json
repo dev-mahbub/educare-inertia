@@ -1,0 +1,157 @@
+{
+    "id": "4",
+    "name": "Administration",
+    "items": [
+        "alumnis",
+        "assessments",
+        "assignments",
+        "authors",
+        "books",
+        "blood groups",
+        "certificates",
+        "courses",
+        "custom fields",
+        "course categories",
+        "drivers",
+        "emergency contacts",
+        "exams",
+        "exam roasters",
+        "exam attendances",
+        "exam dates",
+        "exam date ranges",
+        "exam terms",
+        "guardians",
+        "holidays",
+        "holiday polices",
+        "hostels",
+        "hostel rooms",
+        "hostel supervisors",
+        "houses",
+        "jobs",
+        "leaves",
+        "lesson plans",
+        "libraries",
+        "library self levels",
+        "materials",
+        "modules",
+        "occupations",
+        "profiles",
+        "phone books",
+        "questions",
+        "reports",
+        "remarks",
+        "result cards",
+        "salaries",
+        "site settings",
+        "stocks",
+        "staff",
+        "standard timezones",
+        "students",
+        "student admissions",
+        "student categories",
+        "student houses",
+        "student sections",
+        "student subjects",
+        "surveys",
+        "teams",
+        "teachers",
+        "teacher allotments",
+        "teacher categories",
+        "transports",
+        "users",
+        "vehicles",
+        "visitors",
+        "vendors"
+    ]
+},
+{
+    "name": "Setup Your School",
+    "items": [
+        
+        "assets",
+        "attendances",
+        "banks",
+        "bank accounts",
+        "boards",
+        "categories",
+        "classes",
+        "class periods",
+        "class attendances",
+        "class discussions",
+        "class groups",
+        "countries",
+        "designations",
+        "departments",
+        "documents",
+        "images",
+        "religions",
+        "reviews",
+        "schools",
+        "school settings",
+        "school shifts",
+        "school periods",
+        "school categories",
+        "school countries",
+        "school states",
+        "school timezones",
+        "school boards",
+        "subjects",
+        "sections",
+        "states",
+        "timezones",
+        "topics",
+        "types",
+        "videos"
+        
+    ]
+},
+{
+    "name": "Academics",
+    "items": [
+        "academics",
+        "academic sections" 
+    ]
+},
+{
+    "id": "3",
+    "name": "Dashboard",
+    "items": [
+        "accounts",
+        "locations"
+        
+    ]
+},
+{
+    "id": "5",
+    "name": "Finance",
+    "items": [
+        "admissions",
+        "admission categories"
+    ]
+},
+{
+    "id": "6",
+    "name": "Communication",
+    "items": [
+        "communications",
+        "events",
+        "event categories",
+        "sms settings",
+        "mail settings",
+        "messages",
+        "news",
+        "news categories",
+        "notices",
+        "templates",
+        "web messages"
+    ]
+},
+{
+    "id": "7",
+    "name": "Our Services",
+    "items": [
+        "orders",
+        "support tickets",
+        "vouchers"
+    ]
+}

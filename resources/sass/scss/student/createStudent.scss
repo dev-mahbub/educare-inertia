@@ -1,0 +1,85 @@
+.educare-create-school-settings-list.educare-create-school-settings-list-document {
+    @apply inline-flex;
+    &.check-large-width{
+        @apply  justify-start;
+    }
+    .educare-create-school-settings-list-title.width-full,
+    .educare-create-school-settings-list-check.width-full {
+        @apply w-auto;
+    }
+    label {
+        @apply text-[15px] text-headingLight font-medium cursor-pointer;
+    }
+}
+.secondary-button-styles {
+    button {
+        @apply text-supportingA bg-transparent border-supportingA hover:bg-supportingA/20 transition duration-300;
+    }
+}
+.warning-button-styles {
+    button {
+        @apply text-supportingB bg-transparent border-supportingB hover:bg-supportingB/20 transition duration-300;
+    }
+}
+.warning-eye-button-styles {
+    button {
+        @apply text-supportingC bg-transparent border-supportingC hover:bg-supportingC/20 transition duration-300;
+    }
+}
+.educare-student-parent-profile-image {
+    @apply pt-2;
+    h6 {
+        @apply text-[14px] text-headingLight mb-2;
+    }
+    label {
+        @apply h-[120px] w-[120px] block mb-3;
+        img {
+            @apply h-full w-full object-cover;
+        }
+    }
+    input {
+        @apply w-full max-w-full;
+    }
+}
+div.student-import-data {
+    @apply maxXs:gap-2.5 flex-wrap;
+    .educare-input-field-styles {
+        width: calc(100% - 160px);
+        @apply maxXs:w-full;
+    }
+}
+div.student-update-data {
+    @apply maxXs:gap-2.5 flex-wrap;
+    .educare-input-field-styles {
+        width: calc(100% - 240px);
+        @apply maxXs:w-full;
+    }
+}
+
+//multiple cheeck value style
+.educare-multiple-check-item {
+    ul {
+        @apply flex flex-col gap-1;
+        li {
+            @apply flex items-center justify-between bg-primary/5 px-4 py-1 rounded;
+            span {
+                @apply text-[14px] font-medium text-headingLight;
+            }
+            .educare-danger-btn-sm-fill {
+                @apply bg-danger/40 inline-flex justify-between items-center text-danger rounded-lg ring-danger/40;
+                i {
+                    @apply translate-y-[1px] inline-block;
+                }
+            }
+        }
+    }
+    &.educare-multiple-add-exam-check-item {
+        ul {
+            @apply inline-flex flex-row gap-2.5;
+            li {
+                @apply gap-2.5;
+            }
+        }
+
+    }
+}

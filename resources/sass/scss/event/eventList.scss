@@ -1,0 +1,23 @@
+.educare-event-list-item {
+  @apply flex items-center justify-between gap-x-[20px] gap-y-[20px] maxMd:flex-wrap;
+}
+.educare-event-list-wrapper {
+  ul {
+    li {
+      &:not(:last-child) {
+        @apply mb-3 pb-3 border-b border-border;
+      }
+    }
+  }
+}
+.educare-event-list-content {
+	p {
+		font-size: 14px;
+    strong {
+      @apply text-heading;
+    }
+	}
+}
+.educare-event-list-thumb {
+  height: 100%; 
+}

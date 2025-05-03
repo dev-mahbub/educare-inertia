@@ -1,0 +1,115 @@
+.educare-update-fee-structure {
+    ul {
+        li {
+            @apply flex items-center justify-between border-b border-border/20 px-5 py-2.5 last:border-b-0;
+            span,h5 {
+                @apply font-medium text-[15px] text-headingLight;
+            }
+            h5 {
+                @apply font-semibold;
+            }
+        }
+    }
+    .educare-update-fee-structure-heading {
+        @apply min-h-[48px] px-5 flex items-center gap-2 justify-between bg-supportingC/30;
+    }
+    &.educare-new-student-fee-structure {
+        .educare-update-fee-structure-heading {
+            @apply min-h-[48px] px-5 flex items-center gap-2 justify-between bg-primary/80;
+            .educare-create-school-settings-list.educare-create-school-settings-list-document label {
+                @apply text-white;
+            }
+        }
+    }
+    &.educare-old-student-fee-structure {
+        .educare-update-fee-structure-heading {
+            @apply min-h-[48px] px-5 flex items-center gap-2 justify-between bg-supportingA/80;
+            .educare-create-school-settings-list.educare-create-school-settings-list-document label {
+                @apply text-white;
+            }
+        }
+    }
+}
+
+
+//student search popup width handle
+.educare-modal-main-wrapper {
+    max-height: calc(100% - 60px);
+    overflow-y: auto !important;
+}
+div.educare-xl-width-modal {
+    @apply xxl:max-w-[1200px] lg:max-w-[1000px] font-primary;
+}
+
+//badge color
+.educare-admission-filtar-bar-count.educare-admission-filtar-bar-count-badge {
+    span {
+        @apply text-white border-0;
+    }
+}
+
+//student due stroke btn
+.educare-filter-action-btn.student-due-report-stroke-btn {
+    button, a {
+        @apply bg-transparent text-warning hover:bg-warning/20;
+        i,i::before {
+            @apply text-warning;
+        }
+    }
+}
+
+//fee structure styles
+.educare-update-fee-structure {
+    ul {
+        @apply max-h-[220px] overflow-y-auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+.educare-update-fee-structure .large-structure {
+    @apply maxSm:overflow-x-auto;
+    -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    ul {
+        @apply maxSm:min-w-[640px] maxSm:overflow-auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+
+// Fee Management Report
+.fee-management-head {
+    @apply flex items-center justify-between h-[50px] px-[10px] py-[5px];
+    background: linear-gradient(259deg, #0B52BD, #589BE7) !important;
+    border-radius: 4px 4px 0 0;
+}
+.fee-management-title-inner {
+    .title {
+        @apply text-[24px] text-white font-medium;
+    }
+}
+.fee-management-list {
+    @apply h-full bg-white;
+    ul {
+        li {
+            @apply px-[20px] py-[15px] text-[14px] border-b;
+            a {
+                @apply hover:text-primary;
+            }
+        }
+    }
+}
+.fee-management-icon {
+    span {
+        @apply text-white text-[28px];
+    }
+}

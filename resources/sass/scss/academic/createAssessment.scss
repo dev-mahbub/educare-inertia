@@ -1,0 +1,47 @@
+.educare-input-field-notes {
+    @apply p-2.5 bg-supportingA/10 rounded;
+    h6 {
+        @apply font-semibold text-headingLight;
+    }
+    ul {
+        li {
+            @apply text-[14px] text-headingLight font-normal;
+        }
+    }
+    &.note-danger{
+        @apply bg-warning/20;
+    }
+}
+.educare-repeatable-input-field-styles {
+    .educare-repeatable-input-field-style-single {
+        @apply flex items-center maxXs:flex-wrap;
+        .educare-input-field-styles {
+            width: calc(100% - 240px);
+            @apply maxXs:w-full maxXs:mb-2.5;
+        }
+        .educare-select-field-styles {
+            @apply w-[200px];
+            @media (max-width: 575px) {
+                width: calc(100% - 45px);
+            }
+        }
+        &-btn {
+            @apply ml-2.5;
+            button {
+                @apply h-8 w-8 leading-8 border border-border/50 rounded outline-none outline-0 text-[16px] font-semibold text-center  bg-supportingA/10 text-primary hover:bg-primary/80 hover:text-white transition duration-300;
+            }
+        }
+    }
+    
+}
+
+.assesment-activity{
+    .assesment-acitvity-info{
+        p{
+            @apply text-heading text-[15px];
+            span{
+                @apply text-headingLight;
+            }
+        }
+    }
+}

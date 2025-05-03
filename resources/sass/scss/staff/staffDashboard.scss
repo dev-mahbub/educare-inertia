@@ -1,0 +1,135 @@
+.teacher-academic-heading {
+    @apply mb-5;
+    h2 {
+        @apply m-0 text-[24px] border-b border-border;
+    }
+    .label {
+        @apply bg-grayLight text-white py-[5px] px-4 rounded-tl-[10px] rounded-tr-[10px];
+    }
+}
+.academic-content {
+    @apply bg-white/70 p-[30px] rounded-lg;
+}
+.academic-content {
+    @apply flex gap-10 items-center min-h-full pr-10 maxSm:p-5 maxXs:flex-wrap;
+    &-img {
+        @apply w-[250px] maxXs:w-full;
+        img {
+            @apply min-w-full;
+        }
+    }
+    h3 {
+        @apply text-[24px] font-semibold text-heading leading-tight mb-2.5;
+        span {
+            @apply text-primary block;
+        }
+    }
+    p {
+        @apply text-[15px] text-headingLight;
+    }
+}
+
+.work-detail {
+    .homework {
+        @apply bg-white/70 p-[30px] rounded-lg text-center;
+        img {
+            @apply h-[50px] mb-3;
+        }
+        h4 {
+            @apply text-[18px] text-heading font-semibold mb-2;
+        }
+        p {
+            @apply text-[15px] text-headingLight;
+        }
+    }
+}
+
+.assesment-content {
+    @apply flex gap-7 min-h-full maxXs:flex-wrap bg-white/70 p-[30px] rounded-lg;
+    &-img {
+        @apply w-[50px] min-w-[50px];
+        img {
+            @apply w-full;
+        }
+    }
+    &-text {
+        h3 {
+            @apply text-[24px] font-semibold text-heading mb-2.5 leading-none;
+        }
+        p {
+            @apply text-[15px] text-headingLight pr-16 maxXs:pr-0 mb-2.5;
+        }
+        ul {
+            li {
+                @apply text-[16px] font-medium text-headingLight pl-5 relative mb-0.5;
+                &::before {
+                    @apply absolute;
+                    content: '';
+                    @apply h-3 w-3 border-[2px] rounded-[50%] border-grayLight top-1.5 bg-grayLight left-0 leading-none mb-2.5 last:mb-0;
+                }
+                a:hover {
+                    @apply text-primary;
+                }
+            }
+        }
+    }
+}
+
+.manage-box {
+    @apply flex flex-col min-h-full bg-white/70 p-[30px] rounded-lg;
+    h4 {
+        @apply text-[18px] text-heading font-semibold mb-1 relative pl-5;
+        &::before {
+            @apply absolute;
+            content: '';
+            @apply h-3 w-3 border-[2px] rounded-[50%] border-grayLight top-1.5 bg-grayLight left-0 leading-none mb-2.5 last:mb-0;
+        }
+    }
+    p {
+        @apply text-[15px] text-headingLight pl-5;
+    }
+}
+.administrative-content {
+    @apply min-h-full bg-white/70 p-[30px] rounded-lg;
+    a {
+        @apply flex flex-col items-center;
+    }
+    img {
+        @apply max-w-[200px];
+    }
+}
+
+.customer-support a{
+    @apply flex gap-7 items-center min-h-full maxXs:flex-wrap bg-white/70 p-[30px] rounded-lg;
+    .customer-support-img {
+        @apply w-[150px] min-w-[150px];
+        img {
+            @apply w-full;
+        }
+    }
+    .customer-support-text {
+        h4 {
+            @apply text-[18px] text-heading font-semibold mb-2;
+        }
+        p {
+            @apply text-[15px] text-headingLight;
+        }
+    }
+}
+
+.support_title{
+    font-size: 24px;
+    font-weight: 500;
+    margin: 15px 0;
+}
+
+
+//Teacher Panel 
+.administrative-detail-teacher {
+    .educare-academic-category-icon {
+        @apply mb-2.5;
+        img {
+            @apply h-[50px] min-h-[50px];
+        }
+    }
+}

@@ -1,0 +1,15 @@
+
+// Communication sml list item
+.educare-sms-main-title {
+    p {
+        @apply text-[18px] font-semibold mb-2 text-headingLight; 
+    }
+}
+.educare-sms-main-list-content {
+	p {
+        @apply text-[15px] text-headingLight mb-1;
+		a {
+            @apply text-info; 
+		}
+	}
+}

@@ -1,0 +1,27 @@
+//list table style
+.educare-student-list-table-user-field {
+    @apply flex gap-2 items-center;
+    .educare-student-list-table-user-img {
+        img {
+            @apply h-10 w-10 rounded object-cover;
+        }
+    }
+}
+//student search
+.student-search-list-menus {
+    @apply flex flex-wrap gap-2 leading-none;
+}
+.educare-filter-attendances {
+    ul {
+        @apply inline-flex gap-1.5;
+        li {
+            @apply flex h-10 p-1 px-2 items-center bg-white/70 border border-border/50;
+            button {
+                @apply inline-block h-6 w-6 text-[14px] font-semibold bg-supportingA text-white;
+            }
+            span {
+                 @apply text-[14px] font-semibold pl-2 text-supportingA inline-block;
+            }
+        }
+    }
+}

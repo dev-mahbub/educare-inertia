@@ -1,0 +1,76 @@
+// Dashboard card style
+.educare-dashboard-card {
+	@apply px-[30px] pt-[20px] pb-[30px] maxXs:px-[20px] maxXs:py-[20px] shadow-[05px_2px_10px_0px_rgb(0,0,0,0.08)] bg-white rounded-lg;
+}
+.educare-card-header {
+	@apply flex justify-between items-center gap-x-[10px] border-b border-borderLight/20 pb-4;
+	&-title {
+		@apply text-[22px] minMax2Xl:text-[18px] maxXs:text-[18px] font-semibold;
+	}
+	&-icon {
+		span {
+			@apply bg-primary/10 text-heading block px-[8px] text-[20px] leading-[1] rounded-[3px] cursor-pointer;
+		}
+	}
+}
+.card-illustration-thumb {
+	@apply absolute xl:w-[150px] maxSm:hidden right-0 bottom-0;
+}
+// Dashboard common list style
+.educare-list-rounded {
+	ul {
+		li {
+			@apply relative pl-[13px];
+			&:before {
+				content: "";
+				@apply absolute w-[6px] h-[6px] bg-supportingA rounded-full top-[50%] translate-y-[-50%] left-0;
+			}
+			&:nth-child(2) {
+				&::before {
+					@apply bg-supportingB;
+				}
+			}
+			&:nth-child(3) {
+				&::before {
+					@apply bg-supportingC;
+				}
+			}
+			&:nth-child(4) {
+				&::before {
+					@apply bg-supportingD;
+				}
+			}
+		}
+	}
+}
+.educare-notice-list-title {
+	@apply relative text-headingLight;
+	a {
+		&:hover {
+			@apply text-primary;
+		}
+	}
+}
+.educare-notice-list {
+	ul {
+		li {
+			@apply flex justify-between items-center gap-[8px];
+			&:not(:last-child) {
+				@apply mb-[20px];
+			}
+		}
+	}
+}
+// Badge style
+.count-badge {
+	@apply text-[14px] bg-primary/10 px-[10px] py-[5px] rounded-[5px] text-primary font-medium;
+	&.unfulfilled-badge {
+		@apply bg-transparent border-[1px] border-border text-headingLight;
+	}
+}
+.educare-badge {
+	@apply text-[14px] ml-[10px] bg-primary/10 px-[9px] py-[5px] rounded-[3px] text-primary font-medium;
+	&.is-supporting-b {
+		@apply bg-supportingB/10 rounded-[3px] text-supportingB;
+	}
+}

@@ -1,0 +1,18 @@
+.lesson-plan-calendar-item-box {
+    @apply bg-white/70 shadow-[0_2px_10px_0px_rgba(0,0,0,0.08)] px-[25px] py-[25px] maxXs:p-[15px] rounded-lg;
+}
+.lesson-plan-calendar-title {
+    @apply flex items-center gap-[8px] mb-[8px];
+}
+.lesson-plan-calendar-box-list-title {
+    @apply flex items-center gap-1 mb-[10px];
+}
+.lesson-plan-calendar-box-list {
+    ul {
+        li {
+            &:not(:last-child) {
+                @apply mb-[8px];
+            }
+        }
+    }
+}

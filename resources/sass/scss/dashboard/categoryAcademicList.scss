@@ -1,0 +1,30 @@
+// AcademicCategoryList style
+.educare-academic-category-item {
+	@apply flex items-center flex-col gap-[8px] px-[20px] pb-[15px] py-[20px] bg-white shadow-[0_3.5px_5.5px_0px_rgb(0,0,0,0.02)] rounded-lg;
+}
+.educare-academic-category-content {
+	h5 {
+		@apply text-[18px] font-semibold;
+	}
+	p {
+		@apply text-[14px] text-headingLight;
+	}
+}
+.educare-academic-category-title {
+	@apply  border-b mb-[30px] border-borderLight/20 pb-2.5;
+	h5 {
+		@apply text-[18px] capitalize;
+	}
+}
+.academic-category-tag-wrap {
+	@apply gap-[10px] inline-flex;
+}
+.educare-academic-category-tag {
+	@apply text-[14px] px-[8px] py-[3px] shadow-[0_3.5px_5.5px_0px_rgb(0,0,0,0.02)] rounded-[30px] bg-white inline-block;
+	img {
+		@apply max-w-[15px] mr-[5px] translate-y-[-2px] inline-block;
+	}
+	h6 {
+		@apply text-headingLight inline-block hover:text-primary;
+	}
+}

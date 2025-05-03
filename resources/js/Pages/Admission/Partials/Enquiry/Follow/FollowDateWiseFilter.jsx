@@ -1,0 +1,102 @@
+import { Link, router, useForm  } from "@inertiajs/react";
+import { Tooltip } from "@mui/material";
+import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
+import DatePicker from "react-datepicker";
+
+const FollowDateWiseFilter = ({ dateWiseReport }) => {
+    const [startDate, setStartDate] = useState(null);
+
+    const {
+        data,
+        setData,
+        errors,
+        post,
+        reset,
+        processing,
+        recentlySuccessful,
+    } = useForm({
+        start_date: startDate,
+    });
+
+    useEffect(() =>  {
+        setData('start_data', startDate)
+    },[startDate])
+
+    const handleSearch = (e) => {
+        e.preventDefault();
+        router.post(route('admission.registration_setting_date_wise'), {start_date: startDate});
+    }
+
+    const followDateWiseData = (e) => {
+        e.preventDefault();
+
+        post(route("school.save"), {
+            preserveScroll: true,
+            onSuccess: () => reset(),
+            onError: (errors) => {
+                // if (errors.city) {
+                //     reset("city", "zip");
+                //     cityInput.current.focus();
+                // }
+            },
+        });
+    };
+    return (
+        <form onSubmit={followDateWiseData}>
+            <div className="activity-date-wise-filter-area flex gap-2.5 flex-wrap items-center justify-between mb-5">
+                <div className="activity-date-wise-filter-title inline-flex items-center gap-1">
+                    <i className="icon-ListBullets text-[20px] inline-block"></i>
+                    <h5 className="text-[18px] text-headingLight font-semibold">
+                        Follow Date Wise Report
+                    </h5>
+                </div>
+                <div className="activity-date-wise-filter-action flex gap-2.5">
+                    <div className="educare-admission-filtar-bar-count">
+                        <span>Total: {dateWiseReport.length}</span>
+                    </div>
+                    <div className="educare-input-field-styles">
+                        <DatePicker
+                            selected={startDate}
+                            onChange={(date) => setStartDate(date)}
+                            showYearDropdown
+                            showMonthDropdown
+                            useShortMonthInDropdown
+                            showPopperArrow={false}
+                            peekNextMonth
+                            dropdownMode="select"
+                            isClearable
+                            dateFormat="dd/MM/yyyy"
+                            placeholderText="Select Date"
+                            className="w-full"
+                        />
+                    </div>
+                    <div className="educare-filter-action-btn">
+                        <div>
+                            <Tooltip
+                                title="Search"
+                                placement="top"
+                                arrow
+                                as="button"
+                            >
+                                <button
+                                    type="button"
+                                    href="#"
+                                    className="educare-secondary-btn-md-fill"
+                                    onClick={(e) =>{
+                                        handleSearch(e)
+                                    }}
+                                >
+                                    <i className="icon-search-interface-symbol"></i>
+                                </button>
+                            </Tooltip>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    );
+};
+
+export default FollowDateWiseFilter;

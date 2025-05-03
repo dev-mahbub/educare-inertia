@@ -1,0 +1,28 @@
+.educare-header-search-bar-main {
+    @apply flex justify-between maxSm:flex-wrap items-center border-b border-borderLight/20 pb-2.5 gap-5;
+}
+.educare-header-search-bar-form {
+    form, .educare-header-search-form-box {
+        @apply inline-flex w-full;
+        input {
+            height: inherit;
+            @apply bg-transparent border-none outline-none outline-0 p-0 focus:border-none focus:outline-0 focus:border-light placeholder:text-[15px] placeholder:text-grayLight placeholder:font-medium px-4 text-grayLight text-[15px] font-medium;
+        }
+        input[type="text"]:focus, input:where(:not([type])):focus, textarea:focus, select:focus {
+            --tw-ring-color: #E6EEFA;
+            border-color: #E6EEFA;
+        }
+    }
+}
+.educare-student-header-search-bar-form {
+    form {
+        input {
+            @apply w-[400px] maxSm:w-auto font-medium;
+        }
+    }
+}
+.educare-header-search-bar-left {
+    i:before {
+        @apply text-headingLight;
+    }
+}

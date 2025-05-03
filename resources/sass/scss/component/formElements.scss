@@ -1,0 +1,214 @@
+
+.educare-input-field-styles,
+.educare-select-field-styles,
+.educare-textarea-field-styles,
+.educare-material-group-select-styles {
+    @apply relative;
+    label {
+        @apply text-[15px] font-medium font-primary text-headingLight block mb-1;
+    }
+    input,select,textarea {
+        @apply h-10 border border-border/50 rounded outline-none outline-0 focus:ring-primary focus:border-primary text-headingLight text-[15px] font-primary font-medium px-4 bg-white/50;
+        &.disabled {
+            @apply bg-primary/5 cursor-not-allowed;
+        }
+    }
+    input, textarea {
+        @apply placeholder:text-border placeholder:text-[14px] font-primary;
+    }
+    select {
+        @apply w-full pr-8;
+    }
+    textarea {
+        @apply h-[120px] w-full;
+    }
+    p {
+        @apply absolute text-[12px] -bottom-5;
+    }
+    .react-datepicker-wrapper {
+        @apply w-full;
+        input {
+            @apply w-full;
+        }
+    }
+    .react-datepicker__time-container {
+        @apply border-l w-[150px] min-w-[125px] border-border;
+        .react-datepicker__time .react-datepicker__time-box {
+            @apply w-full;
+        }
+    }
+    .react-datepicker {
+        @apply rounded-tr-none;
+    }
+    &.is-disabled {
+        textarea {
+            @apply h-[auto] resize-none;
+            &::placeholder {
+                @apply text-danger;
+            }
+        }
+    }
+    .react-datepicker-popper {
+        @apply z-[6];
+    }
+}
+.lesson-plan-description-form {
+    .educare-input-field-styles {
+        textarea{
+            height: 60px;
+        }
+    }
+}
+.educare-checkbox-field-styles {
+    label {
+        @apply text-[15px] font-medium text-headingLight block mb-1;
+    }
+}
+.educare-input-field-styles-label-wrap {
+    @apply flex justify-between items-center;
+    .educare-input-field-styles-label {
+        @apply inline-flex;
+        sup {
+            @apply text-[16px] top-2.5 text-danger/80;
+        }
+    }
+    a {
+        @apply mb-1 hover:bg-supportingA/20 transition duration-300;
+        i {
+            @apply mr-0.5;
+        }
+    }
+}
+.educare-single-role-checkbox {
+    @apply basis-1/4 inline-flex gap-2 h-full items-center border-border/20;
+    label {
+        @apply text-[15px] font-medium translate-y-[2px] text-headingLight cursor-pointer;
+    }
+    &.permission-role-checkbox-parent {
+        label {
+            @apply font-semibold text-heading;
+        }
+    }
+}
+// input type file styles
+div.educare-input-type-file-styles {
+    input {
+        @apply h-10 leading-10 border border-border/50 rounded outline-none outline-0 focus:ring-transparent focus:border-transparent focus:outline-primary text-headingLightest text-[14px] font-primary font-medium px-4 bg-white/50 w-full box-border cursor-pointer;
+    }
+    input::file-selector-button {
+    @apply bg-white rounded border border-solid border-transparent p-0 px-2 font-primary font-normal text-headingLight leading-none mr-3 cursor-pointer;
+    }
+}
+//btn styles
+.educare-button-field-styles {
+    .educare-educare-primary-btn-fill,
+    .educare-dark-btn-fill,
+    .educare-secondary-btn-fill,
+    .educare-warning-btn-fill,
+    .educare-danger-btn-fill {
+        @apply h-12 bg-primary text-white text-[16px] rounded-md font-medium px-6 font-primary inline-block capitalize;
+    }
+    .educare-educare-primary-btn-fill {
+        @apply bg-primary focus:ring-primary;
+    }
+    .educare-dark-btn-fill {
+        @apply bg-dark focus:ring-dark hover:bg-dark ;
+    }
+    .educare-secondary-btn-fill {
+        @apply bg-supportingA focus:ring-supportingA hover:bg-supportingA;
+    }
+    .educare-warning-btn-fill {
+        @apply bg-supportingB focus:ring-supportingB hover:bg-supportingB;
+    }
+    .educare-danger-btn-fill {
+        @apply bg-danger focus:ring-danger hover:bg-danger;
+    }
+}
+// Tinymce style customize
+.educare-input-field-styles .tox-tinymce {
+    border: 1px solid #ddd;
+    border-radius: 0;
+}
+
+.educare-input-field-styles-px-8 {
+    .educare-input-field-styles {
+        input {
+            @apply px-2;
+        }
+    }
+}
+.educare-input-field-styles-small-width {
+    .educare-input-field-styles {
+        @apply max-w-[85px];
+        input {
+            @apply px-2;
+        }
+    }
+}
+
+
+//material group select input start
+.educare-material-group-select-styles {
+    .MuiFormControl-root {
+        @apply w-full bg-white/50;
+    }
+    .MuiInputBase-root {
+        @apply border border-border/50 rounded outline-none outline-0 focus:ring-primary focus:border-primary text-headingLight text-[15px] font-primary font-medium px-4 bg-white/50 hover:border-border/50 leading-none;
+    }
+    div.MuiSelect-select {
+        @apply min-h-0 px-0 pr-4 bg-white/50;
+    }
+    fieldset.MuiOutlinedInput-notchedOutline {
+        @apply border-0 border-transparent hidden;
+    }
+    .MuiFormLabel-root.MuiFormLabel-filled,
+    .MuiFormLabel-root.Mui-focused {
+        @apply hidden bg-transparent;
+    }
+    li.MuiListSubheader-root {
+        @apply text-[16px] font-semibold text-heading;
+    }
+    ul {
+        li {
+            @apply font-primary;
+        }
+    }
+    .MuiOutlinedInput-input{
+        @apply px-3.5 py-[12.5px];
+    }
+}
+li.MuiListSubheader-root.material-selet-subheader {
+    @apply text-[16px] font-semibold text-heading font-primary;
+}
+li.MuiButtonBase-root.MuiMenuItem-root {
+    @apply text-[15px] font-medium text-headingLight font-primary;
+}
+//material group select input end
+
+// input eye password styles
+.educare-input-eye-style {
+    input {
+        @apply py-0 border-0 rounded-tr-none rounded-tl-none;
+
+        &::placeholder {
+            @apply text-border opacity-100 font-primary;
+        }
+    }
+
+    .MuiInputBase-root {
+        @apply w-full p-0;
+
+        &::after,
+        &::before {
+            @apply hidden;
+        }
+    }
+
+    .MuiButtonBase-root {
+        @apply text-border mr-0 translate-x-[-5px];
+    }
+
+    .MuiFilledInput-root {
+        @apply bg-transparent hover:bg-transparent border border-border;
+    }
+}

@@ -1,0 +1,98 @@
+// survey Feedback Style
+.educare-survey-feedback-box {
+    @apply p-5 bg-white flex gap-5 rounded-lg min-h-full minMaxLg:flex-col maxXs:flex-col;
+    .educare-survey-feedback-box-thumb {
+        @apply w-[40%] min-w-[40%] minMaxLg:w-full maxXs:w-full;
+    }
+    img {
+        @apply min-h-full object-fill;
+    }
+}
+.educare-survey-feedback-box-content {
+    h4 {
+        @apply font-semibold text-[20px] text-danger/60 mb-1;
+    }
+    p {
+        @apply mb-[10px] text-[14px];
+    }
+}
+// survey timeline Style
+.educare-survey-timeline-wrapper {
+    @apply relative z-[2] font-primary;
+    &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 2px;
+        background: #a2cce5;
+        top: 30px;
+        bottom: 20px;
+        left: 0;
+        margin-left: 20px;
+        z-index: -1;
+    }
+}
+.educare-survey-timeline-item {
+    @apply ml-[60px]
+}
+.educare-survey-input-timeline-box {
+    @apply relative;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 14px 14px 14px 0;
+        border-color: transparent #edf4fd transparent transparent;
+        left: 0;
+        top: 10px;
+        margin-left: -14px;
+        z-index: 2
+    }
+}
+.timeline-icon {
+    @apply text-white block w-[40px] h-[40px] flex items-center justify-center rounded-full float-left;
+}
+.survey-timeline-close-btn {
+    @apply absolute top-[5px] right-5;
+    .educare-primary-btn-xs-fill,
+    .educare-dark-btn-xs-fill,
+    .educare-secondary-btn-xs-fill,
+    .educare-warning-btn-xs-fill,
+    .educare-danger-btn-xs-fill,
+    .educare-success-btn-xs-fill,
+    .educare-tertiary-btn-xs-fill {
+        @apply rounded-[0];
+    }
+}
+
+// Survery Audience ====
+
+ 
+
+.extraGroup_bgImg {
+    background-image: linear-gradient(to right, rgb(0 9 18 / 10%), rgb(83 155 181 / 44%)),
+    url(../../../images/survey/feedbackSurvey.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    padding-top: 120px;
+    padding-bottom: 100px;
+    position: relative;
+    border-radius: 5px;
+    
+}
+ 
+.divSurveyList h3{
+    font-size: 24px;
+    line-height: 40px;
+    color: rgb(80 94 115 / var(--tw-text-opacity));
+}
+
+.add_new_survey {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}

@@ -1,0 +1,90 @@
+.educare-exam-info-between {
+    @apply flex justify-between gap-5 flex-wrap;
+
+    p {
+        @apply text-heading leading-8;
+
+        span {
+            @apply text-headingLight ml-1;
+        }
+    }
+}
+
+.online-exam-question-wrapper {
+    .question-wrapper {
+        @apply flex items-center gap-2;
+
+        i {
+            @apply text-[20px] text-heading;
+        }
+    }
+    .question-title{
+        @apply text-[16px] text-headingLight ml-[60px];
+    }
+}
+
+.online-exam-answer-wrapper {
+    .answer-wrapper {
+        @apply flex items-center gap-2;
+
+        i {
+            @apply text-[20px] text-heading;
+        }
+    }
+    .multiple-answer{
+        @apply ml-[60px];
+        .answer-title{
+            @apply flex items-center gap-2;
+            span{
+                @apply text-[16px] text-headingLight;
+            }
+            i{
+                @apply text-success font-semibold;
+            }
+        }
+    }
+    .descriptive-answer{
+        @apply ml-[60px];
+
+        .answer-title{
+            
+            .answer{
+                @apply text-[16px] text-headingLight ;
+            }
+            .descriptive-answer{
+                @apply ml-[30px] flex items-center gap-2.5 text-heading text-[14px];
+                i{
+                    @apply font-medium;
+                }
+            }
+        }
+    }
+}
+
+.summary-list{
+    ul {
+        li{
+            @apply flex items-center mb-5 last:mb-0;
+            .summary-title{
+                @apply w-[30%] text-heading;
+            }
+            .summary-value{
+                @apply w-[50%] text-headingLight;
+            }
+        }
+    }
+}
+
+.exam-details-wrapper{
+    ul{
+        li{
+            @apply flex items-center leading-[30px];
+            p{
+                @apply w-[50%];
+            }
+            span{
+                @apply w-[50%] text-headingLight;
+            }
+        }
+    }
+}

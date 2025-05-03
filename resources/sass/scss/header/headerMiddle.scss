@@ -1,0 +1,109 @@
+.educare-mis-report-menu-area {
+    @apply pr-[60px] pl-[30px] max2Xl:pr-[30px] maxXs:px-[15px] py-2.5 w-full maxXs:overflow-x-clip bg-white;
+}
+.educare-mis-report-menu {
+    @apply flex items-center maxXs:flex-wrap justify-between gap-5 maxSm:gap-3 maxXs:gap-4;
+}
+.educare-mis-report-menu-left-inner {
+    @apply flex items-center gap-2;
+    i {
+        @apply h-[34px] min-w-[34px] w-[34px] inline-flex justify-center items-center rounded-[50%] bg-dark;
+        &:before {
+            @apply text-[18px] text-white;
+        }
+    }
+    h4 {
+        @apply text-[20px] maxXs:text-[18px] leading-tight font-semibold text-heading;
+    }
+}
+.educare-mis-report-category {
+    @apply text-right leading-none;
+    ul {
+        @apply inline-flex justify-end gap-1 flex-wrap maxSm:justify-start;
+        li {
+            @apply inline-flex;
+            a,button {
+                @apply text-[14px] font-medium text-white rounded inline-flex gap-0.5 items-center bg-[#38B3FE] px-2 py-[9px] leading-none transition duration-300 ease-in-out whitespace-nowrap;
+            }
+            .educare-dropdown-list {
+                @apply top-full max-w-[290px] font-primary;
+                button, a {
+                    @apply w-full px-4 py-2 text-left text-sm h-9 text-headingLight flex bg-transparent items-center gap-1 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 hover:text-primary transition duration-150 whitespace-nowrap ease-in-out;
+                    i{
+                        &::before {
+                            @apply text-[20px] text-supportingA/80 hover:text-primary transition duration-150 ease-in-out;
+                        }
+                    }
+                }
+            }
+            .educare-dropdown-menu {
+                @apply text-[14px] font-medium whitespace-nowrap text-white rounded inline-flex gap-0.5 items-center bg-[#38B3FE] px-2 py-[9px] leading-none transition duration-300 ease-in-out;
+            }
+        }
+        li.educare-dropdown-menu-width-220 {
+            .educare-dropdown-list {
+                @apply min-w-[220px] font-primary;
+            }
+        }
+    }
+    &.fix-height-menu-button{
+        ul{
+            li{
+                button, a {
+                    @apply py-[6px];
+                }
+            }
+        }
+    }
+
+    //front header menu start
+    &.front-header-category{
+        ul{
+            li{
+                a,button{
+                    @apply bg-transparent text-heading;
+                }
+                .educare-dropdown-menu{
+                    @apply bg-transparent text-heading;
+                }
+            }
+        }
+    }
+    //front header menu end
+}
+
+//mis menu gray style for teacher panel
+.educare-mis-report-category.educare-mis-report-category-teacher {
+    @apply text-right leading-none;
+    ul {
+        @apply inline-flex justify-end gap-1.5 flex-wrap maxSm:justify-start;
+        li {
+            @apply inline-flex;
+            a,button {
+                @apply text-[14px] font-semibold rounded inline-flex flex-col gap-0.5 items-center bg-light/20 px-1 py-[6px] leading-none transition duration-300 ease-in-out whitespace-nowrap text-headingLight border border-light;
+                img {
+                    @apply h-[30px] min-h-[30px] mb-1;
+                }
+            }
+            // .educare-dropdown-list {
+            //     @apply top-full max-w-[290px] font-primary;
+            //     button, a {
+            //         @apply w-full px-4 py-2 text-left text-sm h-9 text-headingLight flex bg-transparent items-center gap-1 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 hover:text-primary transition duration-150 whitespace-nowrap ease-in-out;
+            //         i{
+            //             &::before {
+            //                 @apply text-[20px] text-supportingA/80 hover:text-primary transition duration-150 ease-in-out;
+            //             }
+            //         }
+            //     }
+            // }
+            // .educare-dropdown-menu {
+            //     @apply text-[14px] font-medium whitespace-nowrap text-white rounded inline-flex gap-0.5 items-center bg-[#38B3FE] px-2 py-[9px] leading-none transition duration-300 ease-in-out;
+            // }
+        }
+        li.educare-dropdown-menu-width-220 {
+            .educare-dropdown-list {
+                @apply min-w-[220px] font-primary;
+            }
+        }
+    }
+}

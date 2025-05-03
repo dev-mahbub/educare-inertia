@@ -1,0 +1,21 @@
+//common card styles
+.educare-common-card-title {
+    @apply pb-3 flex justify-between leading-none;
+    h5 {
+        @apply text-[18px] maxLg:text-[16px] font-semibold text-headingLight inline-flex items-center gap-2;
+    }
+    i {
+        @apply h-6 w-6 min-w-[24px] text-center rounded-[50%] leading-[22px] text-[14px] border border-headingLight text-headingLight inline-block;
+        &.icon-message {
+            @apply text-[12px] font-primary;
+        }
+        &.icon-info {
+            @apply border-0 text-[20px] h-auto w-auto;
+        }
+    }
+}
+//common Chart styles
+.educare-chart-title {
+    font-size: 18px;
+    font-weight: 600;
+}

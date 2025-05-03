@@ -1,0 +1,554 @@
+[
+	{
+		"id": "1",
+		"name": "Setup Your School",
+        "items": [
+			{
+                "id": "1",
+		        "name": "Academic Years",
+		        "key": "academic_years",
+		        "value": "academic_years",
+                "id2": "2",
+		        "name2": "Blood Groups",
+		        "key2": "blood_groups",
+		        "value2": "blood_groups"
+            },
+            {
+                "id": "3",
+		        "name": "Categories",
+		        "key": "categories",
+		        "value": "categories",
+                "id2": "4",
+		        "name2": "Classes",
+		        "key2": "classes",
+		        "value2": "classes"
+            },
+            {
+                "id": "5",
+		        "name": "Class Groups",
+		        "key": "class_groups",
+		        "value": "class_groups",
+                "id2": "6",
+		        "name2": "Custom Fields",
+		        "key2": "custom_fields",
+		        "value2": "custom_fields"
+            },
+            {
+                "id": "7",
+		        "name": "Designations",
+		        "key": "designations",
+		        "value": "designations",
+                "id2": "8",
+		        "name2": "Departments",
+		        "key2": "departments",
+		        "value2": "departments"
+            },
+            {
+                "id": "9",
+		        "name": "Emergency Contacts",
+		        "key": "emergency_contacts",
+		        "value": "emergency_contacts",
+                "id2": "10",
+		        "name2": "Holidays",
+		        "key2": "holidays",
+		        "value2": "holidays"
+            },
+            {
+                "id": "11",
+		        "name": "Holiday Policies",
+		        "key": "holiday_policies",
+		        "value": "holiday_policies",
+                "id2": "12",
+		        "name2": "Houses",
+		        "key2": "houses",
+		        "value2": "houses"
+            },
+            {
+                "id": "13",
+		        "name": "Improve Presence on Internet",
+		        "key": "improve_presence_on_internet",
+		        "value": "improve_presence_on_internet",
+                "id2": "14",
+		        "name2": "Religions",
+		        "key2": "religions",
+		        "value2": "religions"
+            },
+            {
+                "id": "15",
+		        "name": "Occupations",
+		        "key": "occupations",
+		        "value": "occupations",
+                "id2": "16",
+		        "name2": "Schools",
+		        "key2": "schools",
+		        "value2": "schools"
+            },
+            {
+                "id": "17",
+		        "name": "Auto Sms/Mail Settings",
+		        "key": "mail_settings",
+		        "value": "mail_settings",
+                "id2": "18",
+		        "name2": "School Settings",
+		        "key2": "school_settings",
+		        "value2": "school_settings"
+            },
+            {
+                "id": "19",
+		        "name": "SMS Settings",
+		        "key": "sms_settings",
+		        "value": "sms_settings",
+                "id2": "20",
+		        "name2": "Social Shares",
+		        "key2": "social_shares",
+		        "value2": "social_shares"
+            },
+            {
+                "id": "21",
+		        "name": "Timezones",
+		        "key": "timezones",
+		        "value": "timezones",
+                "id2": "22",
+		        "name2": "Permissions",
+		        "key2": "permissions",
+		        "value2": "permissions"
+            },
+            {
+                "id": "23",
+		        "name": "Import",
+		        "key": "school_import",
+		        "value": "school_import",
+				"id2": "24",
+		        "name2": "Export",
+		        "key2": "school_export",
+		        "value2": "school_export"
+            },
+            {
+                "id": "25",
+		        "name": "Enquiry",
+		        "key": "enquiry",
+		        "value": "enquiry",
+				"id2": "26",
+		        "name2": "Registration",
+		        "key2": "registration",
+		        "value2": "registration"
+            }
+        ]
+	},
+    {
+		"id": "2",
+		"name": "Administration",
+        "items": [
+            {
+				"id": "1",
+				"name": "Alumni",
+				"key": "alumni",
+				"value": "alumni",
+				"id2": "2",
+				"name2": "Attendance(Stf)",
+				"key2": "attendance_staff",
+				"value2": "attendance_staff"
+			},
+			{
+				"id": "3",
+				"name": "Attendance(Stu)",
+				"key": "attendance_student",
+				"value": "attendance_student",
+				"id2": "4",
+				"name2": "Calendar",
+				"key2": "calendar",
+				"value2": "calendar"
+			},
+			{
+				"id": "5",
+				"name": "Document",
+				"key": "document",
+				"value": "document",
+				"id2": "6",
+				"name2": "Download",
+				"key2": "download",
+				"value2": "download"
+			},
+			{
+				"id": "7",
+				"name": "Visitor Enquiry",
+				"key": "visitor_enquiry",
+				"value": "visitor_enquiry",
+				"id2": "8",
+				"name2": "Hostel",
+				"key2": "hostel",
+				"value2": "hostel"
+			},
+			{
+				"id": "9",
+				"name": "Helpdesk",
+				"key": "helpdesk",
+				"value": "helpdesk",
+				"id2": "10",
+				"name2": "Leave",
+				"key2": "leave",
+				"value2": "leave"
+			},
+			{
+				"id": "11",
+				"name": "Library",
+				"key": "library",
+				"value": "library",
+				"id2": "12",
+				"name2": "Post Jobs",
+				"key2": "post_jobs",
+				"value2": "post_jobs"
+			},
+			{
+				"id": "13",
+				"name": "Staffs",
+				"key": "staffs",
+				"value": "staffs",
+				"id2": "14",
+				"name2": "Student",
+				"key2": "student",
+				"value2": "student"
+			},
+			{
+				"id": "15",
+				"name": "Summary",
+				"key": "summary",
+				"value": "summary",
+				"id2": "16",
+				"name2": "Survey",
+				"key2": "survey",
+				"value2": "survey"
+			},
+			{
+				"id": "17",
+				"name": "Team",
+				"key": "team",
+				"value": "team",
+				"id2": "18",
+				"name2": "Transport",
+				"key2": "transport",
+				"value2": "transport"
+			}     
+        ]
+	},
+	{
+		"id": "3",
+		"name": "Academics",
+        "items": [
+			{
+				"id": "1",
+				"name": "Academic",
+				"key": "academic",
+				"value": "academic",
+				"id2": "2",
+				"name2": "Academic Content/E-Learning",
+				"key2": "academic_content",
+				"value2": "academic_content"
+			},
+			{
+				"id": "3",
+				"name": "Assessment",
+				"key": "assessment",
+				"value": "assessment",
+				"id2": "4",
+				"name2": "Classwork",
+				"key2": "classwork",
+				"value2": "classwork"
+			},
+
+			{
+				"id": "5",
+				"name": "Homework",
+				"key": "homework",
+				"value": "homework",
+				"id2": "6",
+				"name2": "Lesson Plan/Academic Planner",
+				"key2": "lesson_plan",
+				"value2": "lesson_plan"
+			},
+			{
+				"id": "7",
+				"name": "Virtual Class",
+				"key": "online_class",
+				"value": "online_class",
+				"id2": "8",
+				"name2": "Online Exam",
+				"key2": "online_exam",
+				"value2": "online_exam"
+			},
+			{
+				"id": "9",
+				"name": "Time Table",
+				"key": "time_table",
+				"value": "time_table",
+				"id2": "10",
+				"name2": "Syllabus",
+				"key2": "syllabus",
+				"value2": "syllabus"
+			},
+			{
+				"id": "11",
+				"name": "Academic Grade",
+				"key": "academic_grade",
+				"value": "academic_grade",
+				"id2": "12",
+				"name2": "Certificate",
+				"key2": "certificate",
+				"value2": "certificate"
+			}
+
+        ]
+	},
+    {
+		"id": "4",
+		"name": "Finance",
+        "items": [
+			{
+				"id": "1",
+				"name": "Enrollment",
+				"key": "admission",
+				"value": "admission",
+				"id2": "2",
+				"name2": "Fees",
+				"key2": "fees",
+				"value2": "fees"
+			},
+			{
+				"id": "3",
+				"name": "Accountancy",
+				"key": "accounts",
+				"value": "accounts",
+				"id2": "4",
+				"name2": "HR Management",
+				"key2": "salary",
+				"value2": "salary"
+			}
+        ]
+	},
+    {
+		"id": "5",
+		"name": "Communication",
+        "items": [
+            {
+				"id": "1",
+				"name": "Event",
+				"key": "event",
+				"value": "event",
+				"id2": "2",
+				"name2": "Message",
+				"key2": "message",
+				"value2": "message"
+			},
+			{
+				"id": "3",
+				"name": "News",
+				"key": "news",
+				"value": "news",
+				"id2": "4",
+				"name2": "Notice",
+				"key2": "notice",
+				"value2": "notice"
+			},
+			{
+				"id": "5",
+				"name": "Broadcast",
+				"key": "broadcast",
+				"value": "broadcast",
+				"id2": "6",
+				"name2": "Birthday",
+				"key2": "birthday",
+				"value2": "birthday"
+			},
+			{
+				"id": "7",
+				"name": "Notification",
+				"key": "notification",
+				"value": "notification",
+				"id2": "8",
+				"name2": "Complaints",
+				"key2": "complaints",
+				"value2": "complaints"
+			},
+			{
+				"id": "9",
+				"name": "Notification",
+				"key": "notification",
+				"value": "notification",
+				"id2": "10",
+				"name2": "Feedback",
+				"key2": "feedback",
+				"value2": "feedback"
+			},
+			{
+				"id": "11",
+				"name": "SMS",
+				"key": "sms",
+				"value": "sms",
+				"id2": "12",
+				"name2": "Mail",
+				"key2": "mail",
+				"value2": "mail"
+			}
+
+        ]
+	},
+    {
+		"id": "6",
+		"name": "Our Services",
+        "items": [
+            {
+				"id": "1",
+				"name": "Buy SMS",
+				"key": "buy_sms",
+				"value": "buy_sms",
+				"id2": "2",
+				"name2": "Support Tickets",
+				"key2": "support_tickets",
+				"value2": "support_tickets"
+			},
+			{
+				"id": "3",
+				"name": "Billing",
+				"key": "billing",
+				"value": "billing",
+				"id2": "4",
+				"name2": "Buy Services",
+				"key2": "buy_services",
+				"value2": "buy_services"
+			}
+        ]
+	},
+	{
+		"id": "7",
+		"name": "My Profile",
+        "items": [
+            {
+				"id": "1",
+				"name": "Pay Slip",
+				"key": "pay_slip",
+				"value": "pay_slip",
+				"id2": "2",
+				"name2": "Attendance",
+				"key2": "attendance",
+				"value2": "attendance"
+			},
+			{
+				"id": "3",
+				"name": "Manage Leave",
+				"key": "manage_leave",
+				"value": "manage_leave",
+				"id2": "4",
+				"name2": "Manage Your Profile",
+				"key2": "manage_your_profile",
+				"value2": "manage_your_profile"
+			},
+			{
+				"id": "5",
+				"name": "Transport Details(Teacher Panel)",
+				"key": "transport_details",
+				"value": "transport_details",
+				"id2": "6",
+				"name2": "Extra Duty(Teacher Panel)",
+				"key2": "extra_duty",
+				"value2": "extra_duty"
+			}
+			
+        ]
+	},
+	{
+		"id": "8",
+		"name": "Accountancy",
+        "items": [
+            {
+                "id": "1",
+		        "name": "Account Group",
+		        "key": "account_group",
+		        "value": "account_group"
+            },
+            {
+                "id": "2",
+		        "name": "Voucher Type",
+		        "key": "voucher_type",
+		        "value": "voucher_type"
+            },
+            {
+                "id": "3",
+		        "name": "Stock Group",
+		        "key": "stock_group",
+		        "value": "stock_group"
+            },
+            {
+                "id": "4",
+		        "name": "Sale Group",
+		        "key": "sale_group",
+		        "value": "sale_group"
+            },
+            {
+                "id": "5",
+		        "name": "Ledger",
+		        "key": "ledger",
+		        "value": "ledger"
+            },
+            {
+                "id": "6",
+		        "name": "Transaction",
+		        "key": "transaction",
+		        "value": "transaction"
+            },
+            {
+                "id": "7",
+		        "name": "Inventory Allocation",
+		        "key": "inventory_allocation",
+		        "value": "inventory_allocation"
+            },
+            {
+                "id": "8",
+		        "name": "Asset Allocation",
+		        "key": "asset_allocation",
+		        "value": "asset_allocation"
+            },
+            {
+                "id": "9",
+		        "name": "Account Setting",
+		        "key": "account_setting",
+		        "value": "account_setting"
+            },
+            {
+                "id": "10",
+		        "name": "Product",
+		        "key": "product",
+		        "value": "product"
+            },
+            {
+                "id": "11",
+		        "name": "Sale",
+		        "key": "sale",
+		        "value": "sale"
+            },
+            {
+                "id": "12",
+		        "name": "Vendor",
+		        "key": "vendor",
+		        "value": "vendor"
+            },
+            {
+                "id": "13",
+		        "name": "Infra Level",
+		        "key": "infra_level",
+		        "value": "infra_level"
+            },
+            {
+                "id": "14",
+		        "name": "Account Import/Export",
+		        "key": "account_import_export",
+		        "value": "account_import_export"
+            },
+            {
+                "id": "15",
+		        "name": "Account Company",
+		        "key": "account_company",
+		        "value": "account_company"
+            }
+        ]
+	}
+]

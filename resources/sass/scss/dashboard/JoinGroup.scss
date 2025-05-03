@@ -1,0 +1,29 @@
+// JoinGroup style
+.educare-Joining-group-item {
+	@apply min-w-[420px] flex justify-between items-center gap-3;
+}
+.educare-Joining-group-inner {
+	@apply min-w-[320px] flex items-center gap-3;
+}
+.educare-Joining-group-thumb {
+	span {
+		@apply h-[60px] w-[60px] flex items-center justify-center;
+		img {
+			@apply w-full rounded-[50%];
+		}
+	}
+}
+.educare-Joining-group-content {
+	h6  {
+		@apply text-[16px] mb-[5px] font-semibold;
+		&:hover  {
+			@apply text-primary;
+		}
+	}
+	span {
+		@apply block text-[14px] text-headingLight/70;
+	}
+}
+.join-btn {
+	@apply text-[14px] px-[8px] py-[6px] leading-[1] rounded-[3px] font-medium text-primary bg-primary/10 block;
+}

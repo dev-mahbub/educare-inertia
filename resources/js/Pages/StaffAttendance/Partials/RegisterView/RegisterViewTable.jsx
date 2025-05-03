@@ -1,0 +1,197 @@
+import { Tooltip } from "@mui/material";
+import React from "react";
+
+const RegisterViewTable = () => {
+    return (
+        <>
+            <div className="educare-admission-list-inner-wrapper">
+                <div className="educare-admission-list educare-full-container-scrollable-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>
+                                    Emp Id
+                                </th>
+                                <th>Mobile</th>
+                                <th>Email</th>
+                                <th>Designation</th>
+                                <th>Teacher Name</th>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                                <th>4</th>
+                                <th>5</th>
+                                <th>6</th>
+                                <th>7</th>
+                                <th>8</th>
+                                <th>9</th>
+                                <th>10</th>
+                                <th>11</th>
+                                <th>12</th>
+                                <th>13</th>
+                                <th>14</th>
+                                <th>15</th>
+                                <th>16</th>
+                                <th>17</th>
+                                <th>18</th>
+                                <th>19</th>
+                                <th>20</th>
+                                <th>21</th>
+                                <th>22</th>
+                                <th>23</th>
+                                <th>24</th>
+                                <th>25</th>
+                                <th>26</th>
+                                <th>27</th>
+                                <th>28</th>
+                                <th>29</th>
+                                <th>30</th>
+                                <th>
+                                    <Tooltip
+                                        title="TP"
+                                        placement="top"
+                                        arrow
+                                        as="button"
+                                    >
+                                        <span>TP</span>
+                                    </Tooltip>
+                                </th>
+                                <th>
+                                    <Tooltip
+                                        title="TA"
+                                        placement="top"
+                                        arrow
+                                        as="button"
+                                    >
+                                        <span>TA</span>
+                                    </Tooltip>
+                                </th>
+                                <th>
+                                    <Tooltip
+                                        title="THD"
+                                        placement="top"
+                                        arrow
+                                        as="button"
+                                    >
+                                        <span>THD</span>
+                                    </Tooltip>
+                                </th>
+                                <th>
+                                    <Tooltip
+                                        title="TL"
+                                        placement="top"
+                                        arrow
+                                        as="button"
+                                    >
+                                        <span>TL</span>
+                                    </Tooltip>
+                                </th>
+                                <th>
+                                    <Tooltip
+                                        title="TWO"
+                                        placement="top"
+                                        arrow
+                                        as="button"
+                                    >
+                                        <span>TWO</span>
+                                    </Tooltip>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>01999999999</td>
+                                <td>rakibhasan1234@gmail.com</td>
+                                <td>Teacher</td>
+                                <td>Neha Kamar</td>
+                                <td></td>
+                                <td>H</td>
+                                <td></td>
+                                <td>P</td>
+                                <td></td>
+                                <td>H</td>
+                                <td>A</td>
+                                <td></td>
+                                <td></td>
+                                <td>H</td>
+                                <td>H</td>
+                                <td>H</td>
+                                <td></td>
+                                <td>A</td>
+                                <td>H</td>
+                                <td>P</td>
+                                <td>P</td>
+                                <td></td>
+                                <td>P</td>
+                                <td></td>
+                                <td>H</td>
+                                <td>H</td>
+                                <td></td>
+                                <td>P</td>
+                                <td></td>
+                                <td>P</td>
+                                <td></td>
+                                <td></td>
+                                <td>H</td>
+                                <td>P</td>
+                                <td>
+                                    <Tooltip
+                                        title="TP"
+                                        placement="top"
+                                        arrow
+                                        as="button"
+                                    >
+                                        <span className='badge success'>0</span>
+                                    </Tooltip>
+                                </td>
+                                <td>
+                                    <Tooltip
+                                        title="TA"
+                                        placement="top"
+                                        arrow
+                                        as="button"
+                                    >
+                                        <span className='badge success'>0</span>
+                                    </Tooltip>
+                                </td>
+                                <td>
+                                    <Tooltip
+                                        title="THD"
+                                        placement="top"
+                                        arrow
+                                        as="button"
+                                    >
+                                        <span className='badge success'>0</span>
+                                    </Tooltip>
+                                </td>
+                                <td>
+                                    <Tooltip
+                                        title="TL"
+                                        placement="top"
+                                        arrow
+                                        as="button"
+                                    >
+                                        <span className='badge success'>0</span>
+                                    </Tooltip>
+                                </td>
+                                <td>
+                                    <Tooltip
+                                        title="TWO"
+                                        placement="top"
+                                        arrow
+                                        as="button"
+                                    >
+                                        <span className='badge success'>0</span>
+                                    </Tooltip>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </>
+    );
+};
+
+export default RegisterViewTable;
